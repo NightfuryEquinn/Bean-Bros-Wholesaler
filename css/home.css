@@ -1,0 +1,35 @@
+/* 
+Color Palettes 
+
+-- Font Color --
+Thamar Black - 181818 
+Cornsilk - FEFAE0
+
+-- Design Color --
+Cape Palliser - 784830
+Liver Dogs - BC6C25
+Fawn - DDA15E
+Kombu Green - 283618
+Dark Oliver Green - 606C38
+*/
+
+*
+{
+    box-sizing: border-box;
+}
+
+html 
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    font-family: 'Old Standard TT', serif;
+}
+
+h1
+{
+    font-family: 'Oxygen', sans-serif;
+}
