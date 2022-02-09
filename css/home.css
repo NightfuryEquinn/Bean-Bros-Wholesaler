@@ -14,22 +14,56 @@ Dark Oliver Green - 606C38
 */
 
 *
-{
+{   
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-html 
-{
-    margin: 0;
-    padding: 0;
-}
-
-body
+body, p
 {
     font-family: 'Old Standard TT', serif;
 }
 
-h1
+h1, h2, h3, h4, h5, h6
 {
     font-family: 'Oxygen', sans-serif;
 }
+
+/* Homepage Parallax */
+.homepage-parallax
+{
+    perspective: 1px;
+    height: 700px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.homepage-parallax-group {
+    position: relative;
+    height: 700px;
+    transform-style: preserve-3d;
+}
+
+.homepage-parallax-back
+{
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    transform: translateZ(-2px) scale(3);
+}
+
+.homepage-parallax-base
+{
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    transform: translateZ(0);
+}
+
+
+
