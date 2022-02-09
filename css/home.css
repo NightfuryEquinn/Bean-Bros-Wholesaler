@@ -30,6 +30,66 @@ h1, h2, h3, h4, h5, h6
     font-family: 'Oxygen', sans-serif;
 }
 
+/* Sticky Navigation Bar */
+.nav-bar
+{
+    top: 25px;
+    height: 100px;
+    width: auto;
+    background-color: white;
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.nav-bar-left
+{
+    padding-right: 200px;
+    height: 100px;
+    width: 700px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-bar-left h3 
+{
+    margin: 5px;
+    padding: 10px;
+}
+
+.nav-bar-logo
+{
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 100px;
+    width: 100px;
+    background-color: #21817b;
+}
+
+.nav-bar-right
+{
+    padding-left: 200px;
+    height: 100px;
+    width: 700px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-bar-right h3
+{
+    margin: 5px;
+    padding: 10px;
+}
+
 /* Homepage Parallax */
 .homepage-parallax
 {
@@ -52,7 +112,19 @@ h1, h2, h3, h4, h5, h6
     bottom: 0;
     left: 0;
     position: absolute;
-    transform: translateZ(-2px) scale(3);
+    transform: translateX(-650px) translateY(-100px) translateZ(-2px) scale(3);
+}
+
+.hpb-image-container
+{
+    width: fit-content;
+    height: 700px;
+    overflow: hidden;
+}
+
+.homepage-parallax-back img
+{
+    opacity: 0.75;
 }
 
 .homepage-parallax-base
@@ -62,8 +134,15 @@ h1, h2, h3, h4, h5, h6
     bottom: 0;
     left: 0;
     position: absolute;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
     transform: translateZ(0);
 }
 
-
-
+.homepage-parallax-base p 
+{
+    color: white;
+    font-size: 28px;
+}
