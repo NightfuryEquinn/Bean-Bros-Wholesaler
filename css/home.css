@@ -33,16 +33,16 @@ h1, h2, h3, h4, h5, h6
 /* Sticky Navigation Bar */
 .nav-bar
 {
-    top: 25px;
+    top: 15px;
     height: 100px;
     width: auto;
-    background-color: white;
-    position: sticky;
+    background-color: #FEFAE080;
+    position: fixed;
     display: flex;
     flex-direction: row;
     align-content: center;
     justify-content: center;
-    z-index: 10;
+    z-index: 100;
 }
 
 .nav-bar-left
@@ -91,7 +91,7 @@ h1, h2, h3, h4, h5, h6
 }
 
 /* Homepage Parallax */
-.homepage-parallax
+.homepage
 {
     perspective: 1px;
     height: 700px;
@@ -99,6 +99,12 @@ h1, h2, h3, h4, h5, h6
     overflow-y: auto;
 }
 
+.homepage::-webkit-scrollbar 
+{
+    display: none;
+}
+
+/* Quote and Parallax Background */
 .homepage-parallax-group {
     position: relative;
     height: 700px;
@@ -143,6 +149,6 @@ h1, h2, h3, h4, h5, h6
 
 .homepage-parallax-base p 
 {
-    color: white;
+    color: #FEFAE0;
     font-size: 28px;
 }
