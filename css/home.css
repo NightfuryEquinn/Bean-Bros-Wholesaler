@@ -47,7 +47,7 @@ h1, h2, h3, h4, h5, h6
 
 .nav-bar-left
 {
-    padding-right: 200px;
+    padding-right: 175px;
     height: 100px;
     width: 700px;
     display: flex;
@@ -61,6 +61,8 @@ h1, h2, h3, h4, h5, h6
 {
     margin: 5px;
     padding: 10px;
+    font-size: 16px;
+    letter-spacing: 1.5px;
 }
 
 .nav-bar-logo
@@ -74,7 +76,7 @@ h1, h2, h3, h4, h5, h6
 
 .nav-bar-right
 {
-    padding-left: 200px;
+    padding-left: 175px;
     height: 100px;
     width: 700px;
     display: flex;
@@ -88,26 +90,23 @@ h1, h2, h3, h4, h5, h6
 {
     margin: 5px;
     padding: 10px;
+    font-size: 16px;
+    letter-spacing: 1.5px;
 }
 
 /* Homepage Parallax */
 .homepage
 {
     perspective: 1px;
-    height: 700px;
+    height: 100vh;
     overflow-x: hidden;
     overflow-y: auto;
 }
 
-.homepage::-webkit-scrollbar 
-{
-    display: none;
-}
-
-/* Quote and Parallax Background */
+/* Homepage Parallax Background */
 .homepage-parallax-group {
     position: relative;
-    height: 700px;
+    height: 100vh;
     transform-style: preserve-3d;
 }
 
@@ -133,6 +132,7 @@ h1, h2, h3, h4, h5, h6
     opacity: 0.75;
 }
 
+/* Homepage Parallax Quote */
 .homepage-parallax-base
 {
     top: 0;
@@ -141,14 +141,74 @@ h1, h2, h3, h4, h5, h6
     left: 0;
     position: absolute;
     display: flex;
+    flex-direction: column;
     align-content: center;
     justify-content: center;
     align-items: center;
     transform: translateZ(0);
 }
 
-.homepage-parallax-base p 
+.quote-container
 {
-    color: #FEFAE0;
-    font-size: 28px;
+    margin: auto;
+    padding: 15px;
+    width: auto;
+    height: auto;
+    background-color: #FEFAE080;
+    border-radius: 5px;
+    box-shadow: 5px 5px #FEFAE0;
 }
+
+.quote-container p 
+{
+    color: #181818;
+    font-size: 28px;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+/* Recommendation Container */
+.recommendation-container
+{
+    height: auto;
+    width: 1520px;
+    background-color: #FEFAE0;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.premium-selection-container
+{
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.ps-text-container
+{
+    height: auto;
+    width: auto;
+}
+
+.ps-text-container h2
+{
+    font-size: 30px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transform: rotate(-90deg);
+}
+
+.ps-beans-container
+{
+    height: 400px;
+    width: 350px;
+    background-color: #FEFAE080;
+}
+
