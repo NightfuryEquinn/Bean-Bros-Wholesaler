@@ -33,7 +33,9 @@ h1, h2, h3, h4, h5, h6
 /* Sticky Navigation Bar */
 .nav-bar
 {
-    top: 15px;
+    top: 10px;
+    left: 0;
+    right: 0;
     height: 100px;
     width: auto;
     background-color: #FEFAE080;
@@ -47,7 +49,6 @@ h1, h2, h3, h4, h5, h6
 
 .nav-bar-left
 {
-    padding-right: 175px;
     height: 100px;
     width: 700px;
     display: flex;
@@ -71,12 +72,16 @@ h1, h2, h3, h4, h5, h6
     margin-right: 10px;
     height: 100px;
     width: 100px;
-    background-color: #21817b;
+}
+
+.nav-bar-logo img
+{
+    height: 100px;
+    width: 100px;
 }
 
 .nav-bar-right
 {
-    padding-left: 175px;
     height: 100px;
     width: 700px;
     display: flex;
@@ -117,7 +122,7 @@ h1, h2, h3, h4, h5, h6
     bottom: 0;
     left: 0;
     position: absolute;
-    transform: translateX(-650px) translateY(-100px) translateZ(-2px) scale(3);
+    transform: translateX(-850px) translateY(-100px) translateZ(-3px) scale(4);
 }
 
 .hpb-image-container
@@ -142,26 +147,22 @@ h1, h2, h3, h4, h5, h6
     position: absolute;
     display: flex;
     flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
     transform: translateZ(0);
 }
 
 .quote-container
 {
-    margin: auto;
+    margin: 325px 300px 0 300px;
     padding: 15px;
     width: auto;
     height: auto;
-    background-color: #FEFAE080;
+    background-color: #181818;
     border-radius: 5px;
-    box-shadow: 5px 5px #FEFAE0;
 }
 
 .quote-container p 
 {
-    color: #181818;
+    color: #FEFAE0;
     font-size: 28px;
     letter-spacing: 0.5px;
     text-align: center;
@@ -170,8 +171,9 @@ h1, h2, h3, h4, h5, h6
 /* Recommendation Container */
 .recommendation-container
 {
+    margin-top: 250px;
     height: auto;
-    width: 1520px;
+    width: auto;
     background-color: #FEFAE0;
     display: flex;
     flex-direction: column;
@@ -199,10 +201,12 @@ h1, h2, h3, h4, h5, h6
 
 .ps-text-container h2
 {
+    padding-bottom: 5px;
     font-size: 30px;
-    letter-spacing: 0.5px;
+    letter-spacing: 1.5px;
     text-transform: uppercase;
     transform: rotate(-90deg);
+    border-bottom: 10px solid #BC6C25;
 }
 
 .ps-beans-container
