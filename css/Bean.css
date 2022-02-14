@@ -98,7 +98,7 @@ h6 {
 }
 
 /* Homepage Parallax */
-.homepage {
+.bean-homepage {
   perspective: 1px;
   height: 100vh;
   overflow-x: hidden;
@@ -106,13 +106,13 @@ h6 {
 }
 
 /* Homepage Parallax Background */
-.homepage-parallax-group {
+.bean-homepage-parallax-group {
   position: relative;
   height: 100vh;
   transform-style: preserve-3d;
 }
 
-.homepage-parallax-back {
+.bean-homepage-parallax-back {
   top: 0;
   right: 0;
   bottom: 0;
@@ -121,19 +121,19 @@ h6 {
   transform: translateX(-850px) translateY(-100px) translateZ(-3px) scale(4);
 }
 
-.hpb-image-container {
-  height: 700px;
+.image-container {
+  height: 750px;
   width: 200rem;
   overflow: hidden;
 }
 
-.homepage-parallax-back img {
-  opacity: 0.8;
-  width: 120rem;
+.bean-homepage-parallax-back img {
+  opacity: 0.75;
+  width: 115rem;
 }
 
 /* Homepage Parallax Quote */
-.homepage-parallax-base {
+.bean-homepage-parallax-base {
   top: 0;
   right: 0;
   bottom: 0;
@@ -149,12 +149,23 @@ h6 {
   padding: 15px;
   width: auto;
   height: auto;
+  background-color: #181818;
+  border-radius: 5px;
 }
 
 .quote-container p {
-  color: #fff;
-  font-size: 35px;
+  color: #fefae0;
+  font-size: 28px;
   letter-spacing: 0.5px;
   text-align: center;
-  font-family: "Redressed", cursive;
+}
+
+#mysidenav {
+  background-color: #dda15e;
+  height: 500px;
+  margin-left: 75%;
+}
+.sidenav {
+  margin-top: 1550px;
+  margin-left: 60%;
 }
