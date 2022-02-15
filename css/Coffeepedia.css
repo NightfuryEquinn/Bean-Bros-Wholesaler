@@ -1,1 +1,212 @@
-/* Edited by Marcus*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body,
+  p {
+    font-family: "Old Standard TT", serif;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Oxygen", sans-serif;
+  }
+  
+  /* Sticky Navigation Bar */
+  .nav-bar {
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    width: auto;
+    background-color: #fefae080;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    z-index: 100;
+  }
+  
+  .nav-bar-left {
+    height: 100px;
+    width: 700px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .nav-bar-left h3 {
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+  }
+  
+  .nav-bar-logo {
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 100px;
+    width: 100px;
+  }
+  
+  .nav-bar-logo img {
+    height: 100px;
+    width: 100px;
+  }
+  
+  .nav-bar-right {
+    height: 100px;
+    width: 700px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .nav-bar-right h3 {
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+  }
+  
+  /* Homepage Parallax */
+  .homepage {
+    perspective: 1px;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  
+  /* Homepage Parallax Background */
+  .homepage-parallax-group {
+    position: relative;
+    height: 100vh;
+    transform-style: preserve-3d;
+    z-index: 5;
+  }
+  
+  .homepage-parallax-group:nth-child(2) {
+    margin-top: 2430px;
+    position: relative;
+    height: 100vh;
+    transform-style: preserve-3d;
+    z-index: 4;
+  }
+  
+  .homepage-parallax-back {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: relative;
+    transform: translateX(-850px) translateY(-200px) translateZ(-2.5px) scale(4.5);
+  }
+  
+  .hpb-image-container {
+    width: fit-content;
+    height: 700px;
+    overflow: hidden;
+  }
+  
+  .homepage-parallax-back img {
+    opacity: 0.75;
+  }
+  
+  /* Homepage Parallax Quote */
+  .homepage-parallax-base {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    transform: translateZ(0);
+  }
+  
+  .quote-container {
+    margin: 325px 300px 0 300px;
+    padding: 15px;
+    width: auto;
+    height: auto;
+    background-color: #181818;
+    border-radius: 5px;
+  }
+  
+  .quote-container p {
+    color: #fefae0;
+    font-size: 28px;
+    letter-spacing: 0.5px;
+    text-align: center;
+  }
+  
+  /* Recommendation Container */
+  .recommendation-container {
+    margin-top: 625px;
+    height: auto;
+    width: auto;
+    background-color: #fefae0;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .premium-selection-container, .fresh-arrival-container {
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .ps-text-container, .fa-text-container {
+    margin: 125px 30px;
+    height: 400px;
+    width: auto;
+  }
+  
+  .ps-text-container h2 {
+    padding-right: 5px;
+    font-size: 30px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    writing-mode: vertical-lr;
+    text-orientation: sideways;
+    border-right: 10px solid #bc6c25;
+  }
+  
+  .fa-text-container h2 {
+    padding-left: 5px;
+    font-size: 30px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    writing-mode: vertical-lr;
+    text-orientation: sideways;
+    border-left: 10px solid #DDA15E;
+  }
+
+  .search {
+    margin: 125px 30px;
+    height: 400px;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
