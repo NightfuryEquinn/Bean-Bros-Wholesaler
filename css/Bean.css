@@ -42,7 +42,8 @@ h6 {
   right: 0;
   height: 100px;
   width: auto;
-  background-color: #fefae080;
+  color: #fefae0;
+  background-color: #181818;
   position: fixed;
   display: flex;
   flex-direction: row;
@@ -128,7 +129,6 @@ h6 {
 }
 
 .bean-homepage-parallax-back img {
-  opacity: 0.75;
   width: 115rem;
 }
 
@@ -149,7 +149,7 @@ h6 {
   padding: 15px;
   width: auto;
   height: auto;
-  background-color: #181818;
+  background-color: #181818DD;
   border-radius: 5px;
 }
 
