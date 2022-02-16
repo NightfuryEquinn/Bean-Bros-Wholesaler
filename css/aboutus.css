@@ -188,6 +188,7 @@ h6 {
     height: auto;
     width: auto;
     font-size: 30px;
+    text-transform: uppercase;
     letter-spacing: 1.5px;
     border-bottom: 10px double #606C38;
 }

@@ -158,3 +158,359 @@ h6 {
 }
 
 /* Our Connection Container */
+.our-connection-container {
+    margin-top: 450px;
+    height: auto;
+    width: auto;
+    display: flex;
+    color: #fefae0;
+    background-color: #181818;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.connection-container {
+    margin: 50px;
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.connection-title {
+    margin: 20px;
+    height: auto;
+    width: auto;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: left;
+    letter-spacing: 1.5px;
+}
+
+.connection-title h2 {
+    margin-right: 800px;
+    padding-bottom: 10px;
+    height: auto;
+    width: auto;
+    border-bottom: 10px solid #DDa15e;
+}
+
+.all-brand-container {
+    margin: 50px;
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.brand-container {
+    margin: 37.5px;
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.brand-logo {
+    margin-bottom: 25px;
+    height: 300px;
+    width: 300px;
+}
+
+.brand-logo img {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+}
+
+.brand-name {
+    margin-top: 25px;
+    height: auto;
+    width: auto;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.question-container {
+    margin: 50px;
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.question-title {
+    margin: 20px;
+    height: auto;
+    width: auto;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: right;
+    letter-spacing: 1.5px;
+}
+
+.question-title h2 {
+    margin-left: 900px;
+    padding-bottom: 10px;
+    height: auto;
+    width: auto;
+    border-bottom: 10px solid #DDa15e;
+}
+
+.contact-information-container {
+    margin: 50px;
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cic-left {
+    margin: 20px;
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.cl-content-one, .cl-content-two, .cl-content-three, .cl-content-four, .cl-content-five, .cl-content-six {
+    margin: 10px;
+    height: auto;
+    width: auto;
+    font-size: 18px;
+    text-align: left;
+    letter-spacing: 1.5px;
+    line-height: 1.5;
+}
+
+.cic-right {
+    margin: 20px;
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.cr-content-one, .cr-content-two, .cr-content-three, .cr-content-four, .cr-content-five {
+    margin: 10px;
+    height: auto;
+    width: auto;
+    font-size: 18px;
+    text-align: right;
+    letter-spacing: 1.5px;
+    line-height: 1.5;
+}
+
+/* Submit Form */
+form input {
+    right: 0;
+    margin: 10px;
+    padding: 10px;
+    width: 300px;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    font-family: "Old Standard TT", serif;
+    background: linear-gradient(to left, #fefae0 50%, #283618 50%) right;
+    background-size: 200%;
+    border: none;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+}
+
+form input[type=submit] {
+    width: 125px;
+    background: linear-gradient(to left, #fefae0 50%, #283618 50%) right;
+    background-size: 200%;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+}
+
+form input:focus {
+    color: #fefae0;
+    background-position: left;
+    outline: none;
+}
+
+form input[type=submit]:hover {
+    color: #fefae0;
+    background-position: left;
+}
+
+form textarea {
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    font-family: "Old Standard TT", serif;
+    background: linear-gradient(to left, #fefae0 50%, #DDa15e 50%) right;
+    background-size: 200%;
+    resize: none;
+    border: none;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+}
+
+form textarea:focus {
+    background-position: left;  
+    outline: none;
+}
+
+/* Footer */
+.footer-container {
+    height: auto;
+    width: auto;
+    color: #181818;
+    background-color: #F3EEC8;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+  
+.footer-quote-container {
+    margin: 50px;
+    height: auto;
+    width: auto;
+}
+  
+.footer-quote {
+    height: auto;
+    width: auto;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+  
+.footer-sub-container {
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+}
+  
+.footer-nav {
+    height: auto;
+    width: auto;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+  
+.footer-nav p {
+    margin-top: 15px;
+}
+  
+.footer-social-media {
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+  
+.fsm-title {
+    margin: 15px;
+    height: auto;
+    width: auto;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+  
+.fsm-content {
+    height: auto;
+    width: auto;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+  
+.fsm-content p {
+    margin-top: 15px;
+}
+  
+.footer-contact-us {
+    margin: 15px;
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+  
+.fcu-title {
+    margin: 15px;
+    height: auto;
+    width: auto;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+  
+.fcu-content {
+    margin-top: 15px;
+    height: auto;
+    width: auto;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+  
+.fcu-content p {
+    margin-top: 15px;
+}
+  
+.footer-copyright {
+    margin: 25px;
+    height: auto;
+    width: auto;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    text-align: right;
+    border-top: 2.5px solid #181818;
+}
+  
+.footer-copyright p {
+    margin-top: 25px;
+}
