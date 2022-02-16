@@ -111,6 +111,7 @@ h6 {
   position: relative;
   height: 100vh;
   transform-style: preserve-3d;
+  z-index: -1;
 }
 
 .bean-homepage-parallax-back {
@@ -120,6 +121,7 @@ h6 {
   left: 0;
   position: absolute;
   transform: translateX(-850px) translateY(-100px) translateZ(-3px) scale(4);
+  z-index: -1;
 }
 
 .image-container {
@@ -142,6 +144,7 @@ h6 {
   display: flex;
   flex-direction: column;
   transform: translateZ(0);
+  z-index: -1;
 }
 
 .quote-container {
@@ -149,8 +152,9 @@ h6 {
   padding: 15px;
   width: auto;
   height: auto;
-  background-color: #181818DD;
+  background-color: #181818dd;
   border-radius: 5px;
+  z-index: -1;
 }
 
 .quote-container p {
@@ -160,12 +164,28 @@ h6 {
   text-align: center;
 }
 
-#mysidenav {
-  background-color: #dda15e;
+.column1 {
+  float: left;
+  width: 75%;
+  padding: 10px;
+  background-color: orange;
   height: 500px;
-  margin-left: 75%;
 }
-.sidenav {
-  margin-top: 1550px;
-  margin-left: 60%;
+.column2 {
+  float: left;
+  width: 25%;
+  padding: 10px;
+  background-color: #ff0000;
+  height: 500px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.row {
+  margin: 0;
+  background-color: #fff;
+  height: 1500px;
+  z-index: 1;
 }
