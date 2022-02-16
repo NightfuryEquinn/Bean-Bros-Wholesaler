@@ -156,3 +156,186 @@ h6 {
     letter-spacing: 0.5px;
     text-align: center;
 }
+
+/* About Us Description */
+.description-container {
+    margin-top: 450px;
+    height: auto;
+    width: auto;
+    color: #fefae0;
+    background-color: #181818;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.research-to-perfection-text-container, .how-we-farm-text-container, .our-coffee-bean-text-container {
+    margin: 30px 30px 50px 30px;
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.rtp-title, .hwf-title, .ocb-title {
+    margin: 20px;
+    padding-bottom: 10px;
+    height: auto;
+    width: auto;
+    font-size: 30px;
+    letter-spacing: 1.5px;
+    border-bottom: 10px double #606C38;
+}
+
+.rtp-content, .hwf-content, .ocb-content {
+    margin: 20px 250px;
+    height: auto;
+    width: auto;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    line-height: 2;
+    text-align: justify;
+}
+
+
+/* Footer */
+.footer-container {
+    height: auto;
+    width: auto;
+    color: #181818;
+    background-color: #F3EEC8;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+  
+.footer-quote-container {
+    margin: 50px;
+    height: auto;
+    width: auto;
+}
+  
+.footer-quote {
+    height: auto;
+    width: auto;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+  
+.footer-sub-container {
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+}
+  
+.footer-nav {
+    height: auto;
+    width: auto;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+  
+.footer-nav p {
+    margin-top: 15px;
+}
+  
+.footer-social-media {
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+  
+.fsm-title {
+    margin: 15px;
+    height: auto;
+    width: auto;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+  
+.fsm-content {
+    height: auto;
+    width: auto;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+  
+.fsm-content p {
+    margin-top: 15px;
+}
+  
+.footer-contact-us {
+    margin: 15px;
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+  
+.fcu-title {
+    margin: 15px;
+    height: auto;
+    width: auto;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+  
+.fcu-content {
+    margin-top: 15px;
+    height: auto;
+    width: auto;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+  
+.fcu-content p {
+    margin-top: 15px;
+}
+  
+.footer-copyright {
+    margin: 25px;
+    height: auto;
+    width: auto;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    text-align: right;
+    border-top: 2.5px solid #181818;
+}
+  
+.footer-copyright p {
+    margin-top: 25px;
+}
