@@ -120,12 +120,12 @@ h6 {
     bottom: 0;
     left: 0;
     position: relative;
-    transform: translateX(-850px) translateY(-200px) translateZ(-1.625px) scale(4.5);
+    transform: translateX(-450px) translateY(-200px) translateZ(-1.625px) scale(2.5);
 }
   
 .aub-image-container {
-    width: fit-content;
-    height: 700px;
+    width: max-content;
+    height: max-content;
     overflow: hidden;
 }
   
