@@ -201,6 +201,7 @@ h6 {
     rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
   display: inline-block;
 }
+
 .product-display {
   height: 350px;
   width: 350px;
@@ -208,11 +209,13 @@ h6 {
   position: absolute;
   opacity: 0;
 }
+
 .product-container:hover .product-display {
   opacity: 1;
   transition: visibility 0s, opacity 0.5s linear;
   transition-duration: 1s;
 }
+
 .product-container:hover img {
   display: none;
 }
@@ -251,9 +254,11 @@ h6 {
     inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2),
     inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
 }
+
 .search-box:hover > .search-input {
   width: 350px;
 }
+
 .search-box .search-input {
   background: transparent;
   border: none;
@@ -263,9 +268,11 @@ h6 {
   font-size: 16px;
   transition: 0.8s;
 }
+
 .search-box .search-btn .fas {
   color: #a0522d;
 }
+
 @keyframes hoverShake {
   0% {
     transform: skew(0deg, 0deg);
