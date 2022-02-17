@@ -170,7 +170,7 @@ h6 {
   float: left;
   width: 25%;
   padding: 10px;
-  background-color: #ff0000;
+  background-color: #dda15e;
   height: 3000px;
 }
 
@@ -204,24 +204,108 @@ h6 {
 .product-display {
   height: 350px;
   width: 350px;
-  transition: 0.5s ease;
-  background-color: #008cba;
-  display: none;
+  background-color: #bc6c25;
   position: absolute;
+  opacity: 0;
 }
 .product-container:hover .product-display {
-  display: inline-block;
+  opacity: 1;
+  transition: visibility 0s, opacity 0.5s linear;
+  transition-duration: 1s;
 }
 .product-container:hover img {
   display: none;
 }
 
 .desc {
-  color: #000;
+  color: #fff;
   font-size: 20px;
   position: relative;
   height: 100%;
   text-align: center;
   vertical-align: middle;
   top: calc(50% - 6px);
+}
+
+.search-text {
+  margin-top: 45px;
+  margin-left: 5px;
+  margin-bottom: 15px;
+  font-size: 30px;
+  color: #fff;
+  font-family: "Old Standard TT";
+}
+
+.search-box {
+  background: #fff;
+  height: 30px;
+  border-radius: 30px;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.8s;
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3),
+    -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
+    inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2),
+    inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
+}
+.search-box:hover > .search-input {
+  width: 350px;
+}
+.search-box .search-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  width: 0;
+  font-weight: 500;
+  font-size: 16px;
+  transition: 0.8s;
+}
+.search-box .search-btn .fas {
+  color: #a0522d;
+}
+@keyframes hoverShake {
+  0% {
+    transform: skew(0deg, 0deg);
+  }
+  25% {
+    transform: skew(5deg, 5deg);
+  }
+  75% {
+    transform: skew(-5deg, -5deg);
+  }
+  100% {
+    transform: skew(0deg, 0deg);
+  }
+}
+
+.search-box:hover {
+  animation: hoverShake 0.25s linear 3;
+}
+
+.filter-text {
+  margin-top: 120px;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  font-size: 30px;
+  color: #fff;
+  font-family: "Old Standard TT";
+}
+
+.design {
+  height: 13px;
+  width: 300px;
+  background-color: #606c38;
+  margin-bottom: 35px;
+  margin-left: -10px;
+}
+
+#filter-list {
+  padding: 10px;
+  margin-bottom: 25px;
+  border-radius: 50px;
+  border: 1px solid #ccc;
+  width: 85%;
 }
