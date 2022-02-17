@@ -97,40 +97,41 @@ h6 {
     font-size: 16px;
     letter-spacing: 1.5px;
 }
-  
-/* FAQ Parallax */
-.faq {
+
+/* Register / Login Parallax */
+.register-login {
     perspective: 1px;
     height: 100vh;
     overflow-x: hidden;
     overflow-y: auto;
 }
   
-/* FAQ Parallax Background */
-.faq-parallax-group {
+/* Register / Login Parallax Background */
+.register-login-parallax-group {
     position: relative;
     height: 100vh;
     transform-style: preserve-3d;
     z-index: 5;
 }
   
-.faq-parallax-back {
+  
+.register-login-parallax-back {
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     position: relative;
-    transform: translateX(-450px) translateY(-200px) translateZ(-1.625px) scale(2.5);
+    transform: translateX(-1050px) translateY(-2650px) translateZ(-1.25px);
 }
   
-.faqb-image-container {
+.rlb-image-container {
     width: max-content;
     height: max-content;
     overflow: hidden;
 }
   
-/* FAQ Parallax Quote */
-.faq-parallax-base {
+/* Sign Up / Register / Forgot All-in-One Container */
+.register-login-parallax-base {
     top: 0;
     right: 0;
     bottom: 0;
@@ -140,30 +141,13 @@ h6 {
     flex-direction: column;
     transform: translateZ(0);
 }
-  
-.quote-container {
-    margin: 325px 300px 0 300px;
-    padding: 15px;
-    width: auto;
+
+.all-in-one-container {
+    margin: 325px 200px 0 200px;
     height: auto;
+    width: auto;
+    color: #fefae0;
     background-color: #181818DD;
-    border-radius: 5px;
-}
-  
-.quote-container p {
-    color: #fefae0;
-    font-size: 28px;
-    letter-spacing: 0.5px;
-    text-align: center;
-}
-
-/* FAQ Section */
-.faq-container {
-    margin-top: 450px;
-    height: auto;
-    width: auto;
-    color: #fefae0;
-    background-color: #181818;
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -171,37 +155,57 @@ h6 {
     align-items: center;
 }
 
-.faq-title {
-    margin: 50px;
-    padding-bottom: 10px;
-    height: auto;
-    width: auto;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 10px double #606C38;
-}
-
-.faq-title h3 {
-    font-size: 60px;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-}
-
-.faq-question-container {
+.all-in-one-selection {
     margin: 50px;
     height: auto;
     width: auto;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-content: center;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 }
 
-.question-container {
+.signup-select, .login-select, .forgot-password-select, .forgot-username-select {
     margin: 20px;
+    padding: 20px;
+    height: auto;
+    width: auto;
+    background: linear-gradient(to left, #606C38 50%, #283618 50%) right;
+    background-size: 200%;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+    cursor: pointer;
+}
+
+.signup-select:hover, .login-select:hover, .forgot-password-select:hover, .forgot-username-select:hover {
+    background-position: left;
+}
+
+.signup-select h4, .login-select h4, .forgot-password-select h4, .forgot-username-select h4 {
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.title-container {
+    margin: 37.5px;
+    padding: 10px 20px;
+    height: auto;
+    width: auto;
+    border: 10px double #BC6C25;
+}
+
+.title-container h1 {
+    font-size: 45px;
+    letter-spacing: 1.5px;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1.5;
+}
+
+.signup-input-area, .login-input-area, .forgot-password-input-area, .forgot-username-input-area {
+    margin: 50px 100px;
     height: auto;
     width: auto;
     display: flex;
@@ -210,78 +214,49 @@ h6 {
     justify-content: center;
 }
 
-.question {
-    margin: 10px 150px;
-    padding: 15px;
-    height: auto;
-    width: auto;
+form label {
     font-size: 20px;
-    font-weight: bold;
     letter-spacing: 1.5px;
-    line-height: 1.5;
-    border-left: 10px solid #283618;
 }
 
-.question i {
-    margin: 10px 10px 0 10px;
-    cursor: pointer;
-    transition-duration: 0.25s;
-    transition-timing-function: ease-in;
-}
-
-.active-i {
-    transform: rotate(90deg);
-}
-
-.active-j {
-    transform: rotate(-90deg);
-}
-
-.answer {
-    margin: 10px 150px;
+form input {
+    right: 0;
+    margin: 10px 10px 25px 10px;
     padding: 10px;
-    height: auto;
-    width: auto;
-    display: none;
+    width: 300px;
     font-size: 16px;
     font-weight: bold;
     letter-spacing: 1.5px;
-    line-height: 1.5;
-    text-align: justify;
+    font-family: "Old Standard TT", serif;
+    background: linear-gradient(to left, #fefae0 50%, #DDa15e 50%) right;
+    background-size: 200%;
+    border: none;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
 }
 
-.active-answer {
-    opacity: 0;
-    transform: translateY(-100px);
-    display: block;
-    animation-name: toggled;
-    animation-duration: 1s;
-    animation-timing-function: ease;
-    animation-fill-mode: forwards;
+form input[type=submit] {
+    margin-left: 87.5px;
+    width: 150px;
+    background: linear-gradient(to left, #fefae0 50%, #283618 50%) right;
+    background-size: 200%;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
 }
 
-@keyframes toggled {
-    0% {
-        opacity: 0;
-        transform: translateY(-100px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+form input:focus {
+    background-position: left;
+    outline: none;
 }
 
-.question-container:nth-child(even) .question {
-    border-left: none;
-    border-right: 10px solid #283618;
-}
-
-.question-container:nth-child(even) .question, .question-container:nth-child(even) .answer{
-    text-align: right;
+form input[type=submit]:hover {
+    color: #fefae0;
+    background-position: left;
 }
 
 /* Footer */
 .footer-container {
+    margin-top: 450px;
     height: auto;
     width: auto;
     color: #181818;
