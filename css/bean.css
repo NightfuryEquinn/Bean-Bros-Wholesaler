@@ -163,7 +163,7 @@ h6 {
   width: 75%;
   padding: 10px;
   background-color: #fff;
-  height: 3000px;
+  height: 1700px;
 }
 
 .column2 {
@@ -171,20 +171,19 @@ h6 {
   width: 25%;
   padding: 10px;
   background-color: #dda15e;
-  height: 3000px;
-}
-
-.row::after {
-  content: "";
-  display: table;
-  clear: both;
+  height: 1700px;
 }
 
 .row {
   margin: 0;
   background-color: #fff;
-  height: 3000px;
+  height: 2200px;
   z-index: 1;
+}
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .product-container {
@@ -205,7 +204,7 @@ h6 {
 .product-display {
   height: 350px;
   width: 350px;
-  background-color: #bc6c25;
+  background-color: #784830;
   position: absolute;
   opacity: 0;
 }
@@ -232,7 +231,7 @@ h6 {
 
 .search-text {
   margin-top: 45px;
-  margin-left: 5px;
+  margin-left: 15px;
   margin-bottom: 15px;
   font-size: 30px;
   color: #fff;
@@ -289,12 +288,12 @@ h6 {
 }
 
 .search-box:hover {
-  animation: hoverShake 0.25s linear 3;
+  animation: hoverShake 0.3s linear 3;
 }
 
 .filter-text {
-  margin-top: 120px;
-  margin-left: 5px;
+  margin-top: 100px;
+  margin-left: 15px;
   margin-bottom: 5px;
   font-size: 30px;
   color: #fff;
@@ -303,16 +302,162 @@ h6 {
 
 .design {
   height: 13px;
-  width: 300px;
-  background-color: #606c38;
-  margin-bottom: 35px;
+  width: 250px;
+  background-color: #784830;
+  margin-bottom: 25px;
   margin-left: -10px;
 }
 
 #filter-list {
   padding: 10px;
   margin-bottom: 25px;
-  border-radius: 50px;
+  border-radius: 15px;
   border: 1px solid #ccc;
   width: 85%;
+}
+
+.end-product-container {
+  display: inline-block;
+  margin-top: 170px;
+  margin-left: 158px;
+  width: 300px;
+  font-family: "Old Standard TT", "serif";
+  font-size: 25px;
+}
+
+/* Footer */
+.footer-container {
+  height: 24%;
+  width: 100%;
+  color: #181818;
+  background-color: #f3eec8;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+.footer-quote-container {
+  margin: 50px;
+  height: auto;
+  width: auto;
+}
+
+.footer-quote {
+  height: auto;
+  width: auto;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+.footer-sub-container {
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer-nav {
+  height: auto;
+  width: auto;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+.footer-nav p {
+  margin-top: 15px;
+}
+
+.footer-social-media {
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.fsm-title {
+  margin: 15px;
+  height: auto;
+  width: auto;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+.fsm-content {
+  height: auto;
+  width: auto;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+.fsm-content p {
+  margin-top: 15px;
+}
+
+.footer-contact-us {
+  margin: 15px;
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+.fcu-title {
+  margin: 15px;
+  height: auto;
+  width: auto;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+.fcu-content {
+  margin-top: 15px;
+  height: auto;
+  width: auto;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+.fcu-content p {
+  margin-top: 15px;
+}
+
+.footer-copyright {
+  margin: 25px;
+  height: auto;
+  width: auto;
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  text-align: right;
+  border-top: 2.5px solid #181818;
+}
+
+.footer-copyright p {
+  margin-top: 25px;
 }
