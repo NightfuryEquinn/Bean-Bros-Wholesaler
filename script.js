@@ -86,7 +86,6 @@ function popup(num, imgurl) {
     var country1 = document.getElementsByClassName("desc-country")[newnum + 1].innerHTML;
     var roast1 = document.getElementsByClassName("desc-roast")[newnum + 1].innerHTML;
     var price1 = document.getElementsByClassName("desc-price")[newnum + 1].innerHTML;
-    // alert(name1);
 
     if (img.onclick){
     modal.style.display = "block";

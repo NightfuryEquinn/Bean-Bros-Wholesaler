@@ -269,7 +269,7 @@ h6 {
   text-align: center;
   color: #ccc;
   padding: 10px 0;
-  height: 150px;
+  height: 20%;
 }
 /* Add Animation - Zoom in the Modal */
 .modal-content,
@@ -554,12 +554,11 @@ h6 {
 .desc-price {
   display: none;
 }
-
 .desc-name:first-child,
 .desc-country:first-child,
 .desc-roast:first-child,
 .desc-price:first-child {
-  display: block;
+  display: flex;
 }
 #desc-container {
   margin: auto;
@@ -569,5 +568,5 @@ h6 {
   text-align: center;
   color: #ccc;
   padding: 10px 0;
-  height: 100%;
+  height: 30%;
 }

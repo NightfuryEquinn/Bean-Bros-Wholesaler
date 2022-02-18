@@ -58,6 +58,7 @@
     <title>Bean Bros - Bean</title>
   </head>
   <body>
+    <!--popup for bean product-->
     <div id="myModal" class="modal">
       <span
         class="closebtn"
@@ -66,14 +67,12 @@
       >
       <img class="modal-content" id="img1" />
       <div id="caption"></div>
-      <div class="desc-container">
+      <div id="desc-container">
         <div class="desc-name"></div>
-      </div>
-      <div class="desc-container">
         <div class="desc-country"></div>
+        <div class="desc-roast"></div>
+        <div class="desc-price"></div>
       </div>
-      <div class="desc-roast"></div>
-      <div class="desc-price"></div>
     </div>
     <!-- </div> -->
     <!--Sticky Navigation Bar-->
@@ -140,7 +139,12 @@
               src="img/hawaiian-kona.jpg"
               width="350"
               height="350"
+              alt="Description"
             />
+            <div class="desc-name">Name: Hawaii Kona Coffee</div>
+            <div class="desc-country">Country: USA</div>
+            <div class="desc-roast">Roasts: Medium Roast</div>
+            <div class="desc-price">Price per kilogram: RM40</div>
             <div class="product-display">
               <div class="desc">Hawaii Kona Coffee</div>
             </div>
@@ -154,7 +158,12 @@
               src="img/mocha-java-coffee.jpg"
               width="350"
               height="350"
+              alt="Description"
             />
+            <div class="desc-name">Name: Mocha Java Coffee</div>
+            <div class="desc-country">Country: Yemen & Indonesia</div>
+            <div class="desc-roast">Roasts: Medium Roast</div>
+            <div class="desc-price">Price per kilogram: RM70</div>
             <div class="product-display">
               <div class="desc">Mocha Java Coffee</div>
             </div>
@@ -168,13 +177,28 @@
               src="img/guatemala.jpg"
               width="350"
               height="350"
+              alt="Description"
             />
+            <div class="desc-name">Name: Guatemala Antigua Coffee</div>
+            <div class="desc-country">Country: Antigua, Guatemala</div>
+            <div class="desc-roast">Roasts: Medium Roast</div>
+            <div class="desc-price">Price per kilogram: RM55</div>
             <div class="product-display">
               <div class="desc">Guatemala Antigua Coffee</div>
             </div>
           </div>
           <div class="product-container" onclick="popup('4','img/KenyaAA.jpg')">
-            <img id="imgPopup" src="img/KenyaAA.jpg" width="350" height="350" />
+            <img
+              id="imgPopup"
+              src="img/KenyaAA.jpg"
+              width="350"
+              height="350"
+              alt="Description"
+            />
+            <div class="desc-name">Name: KenyaAA</div>
+            <div class="desc-country">Country: Kenya</div>
+            <div class="desc-roast">Roasts: Medium Roast</div>
+            <div class="desc-price">Price per kilogram: RM80</div>
             <div class="product-display">
               <div class="desc">Kenya AA Coffee</div>
             </div>
@@ -188,7 +212,12 @@
               src="img/ethiopia.jpg"
               width="350"
               height="350"
+              alt="Description"
             />
+            <div class="desc-name">Name: Ethiopian Yirgacheffe Coffee</div>
+            <div class="desc-country">Country: Southern Ethiopia</div>
+            <div class="desc-roast">Roasts: Light-Medium Roast</div>
+            <div class="desc-price">Price per kilogram: RM75</div>
             <div class="product-display">
               <div class="desc">Ethiopian Yirgacheffe Coffee</div>
             </div>
