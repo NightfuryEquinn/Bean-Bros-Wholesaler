@@ -58,6 +58,24 @@
     <title>Bean Bros - Bean</title>
   </head>
   <body>
+    <div id="myModal" class="modal">
+      <span
+        class="closebtn"
+        onclick="document.getElementById('myModal').style.display='none'"
+        >&times;</span
+      >
+      <img class="modal-content" id="img1" />
+      <div id="caption"></div>
+      <div class="desc-container">
+        <div class="desc-name"></div>
+      </div>
+      <div class="desc-container">
+        <div class="desc-country"></div>
+      </div>
+      <div class="desc-roast"></div>
+      <div class="desc-price"></div>
+    </div>
+    <!-- </div> -->
     <!--Sticky Navigation Bar-->
     <div class="nav-bar">
       <div class="nav-bar-left">
@@ -93,39 +111,84 @@
       <!-- split container -->
       <div class="row">
         <div class="column1">
-          <div class="product-container">
-            <img src="img/tanzanian-peaberry.jpg" width="350" height="350" />
+          <div
+            class="product-container"
+            onclick="popup('0','img/tanzanian-peaberry.jpg')"
+          >
+            <img
+              id="imgPopUp"
+              src="img/tanzanian-peaberry.jpg"
+              width="350"
+              height="350"
+              alt="Description"
+            />
+            <div class="desc-name">Name: Tanzanian Peaberry Coffee</div>
+            <div class="desc-country">Country: Tanzania</div>
+            <div class="desc-roast">Roasts: Dark Roast</div>
+            <div class="desc-price">Price per kilogram: RM50</div>
             <div class="product-display">
               <div class="desc">Tanzanian Peaberry Coffee</div>
             </div>
           </div>
 
-          <div class="product-container">
-            <img src="img/hawaiian-kona.jpg" width="350" height="350" />
+          <div
+            class="product-container"
+            onclick="popup('1','img/hawaiian-kona.jpg')"
+          >
+            <img
+              id="imgPopUp"
+              src="img/hawaiian-kona.jpg"
+              width="350"
+              height="350"
+            />
             <div class="product-display">
               <div class="desc">Hawaii Kona Coffee</div>
             </div>
           </div>
-          <div class="product-container">
-            <img src="img/mocha-java-coffee.jpg" width="350" height="350" />
+          <div
+            class="product-container"
+            onclick="popup('2','img/mocha-java-coffee.jpg')"
+          >
+            <img
+              id="imgPopUp"
+              src="img/mocha-java-coffee.jpg"
+              width="350"
+              height="350"
+            />
             <div class="product-display">
               <div class="desc">Mocha Java Coffee</div>
             </div>
           </div>
-          <div class="product-container">
-            <img src="img/guatemala.jpg" width="350" height="350" />
+          <div
+            class="product-container"
+            onclick="popup('3','img/guatemala.jpg')"
+          >
+            <img
+              id="imgPopUp"
+              src="img/guatemala.jpg"
+              width="350"
+              height="350"
+            />
             <div class="product-display">
               <div class="desc">Guatemala Antigua Coffee</div>
             </div>
           </div>
-          <div class="product-container">
-            <img src="img/KenyaAA.jpg" width="350" height="350" />
+          <div class="product-container" onclick="popup('4','img/KenyaAA.jpg')">
+            <img id="imgPopup" src="img/KenyaAA.jpg" width="350" height="350" />
             <div class="product-display">
               <div class="desc">Kenya AA Coffee</div>
             </div>
           </div>
-          <div class="product-container">
-            <img src="img/ethiopia.jpg" width="350" height="350" />
+          <div
+            class="product-container"
+            onclick="popup('5','img/ethiopia.jpg')"
+          >
+            <img
+              id="imgPopUp"
+              src="img/ethiopia.jpg"
+              width="350"
+              height="350"
+            />
             <div class="product-display">
               <div class="desc">Ethiopian Yirgacheffe Coffee</div>
             </div>
