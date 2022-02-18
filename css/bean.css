@@ -554,12 +554,6 @@ h6 {
 .desc-price {
   display: none;
 }
-.desc-name:first-child,
-.desc-country:first-child,
-.desc-roast:first-child,
-.desc-price:first-child {
-  display: flex;
-}
 #desc-container {
   margin: auto;
   display: block;
@@ -569,4 +563,17 @@ h6 {
   color: #ccc;
   padding: 10px 0;
   height: 30%;
+}
+
+#desc-container .desc-name {
+  display: flex;
+}
+#desc-container .desc-country {
+  display: flex;
+}
+#desc-container .desc-roast {
+  display: flex;
+}
+#desc-container .desc-price {
+  display: flex;
 }
