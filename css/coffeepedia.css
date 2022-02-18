@@ -88,6 +88,17 @@
     overflow-x: hidden;
     overflow-y: auto;
   }
+
+  .homepage-parallax-base {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    transform: translateZ(0);
+  }
   
   /* Homepage Parallax Background */
   .homepage-parallax-group {
@@ -115,9 +126,12 @@
   }
   
   .hpb-image-container {
-    width: fit-content;
-    height: 700px;
-    overflow: hidden;
+    height: max-content;
+    width: max-content;
+    left: 0px;
+    top: 0px;
+    background: url(Nicholas-Keeler-Vineyard-Night.jpg);
+    opacity: 0.75;
   }
   
   /* Homepage Parallax Quote */
@@ -133,19 +147,22 @@
   }
   
   .quote-container {
-    margin: 325px 300px 0 300px;
-    padding: 15px;
-    width: auto;
-    height: auto;
-    background-color: #181818DD;
-    border-radius: 5px;
+    position: absolute;
+    width: 603px;
+    height: 131px;
+    left: 458px;
+    top: 399px;
   }
   
   .quote-container p {
-    color: #fefae0;
-    font-size: 28px;
-    letter-spacing: 0.5px;
+    font-family: Old Standard TT;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 44px;
     text-align: center;
+
+    color: #FFFFFF;
   }
   
   /* Recommendation Container */
@@ -206,4 +223,123 @@
     align-content: center;
     justify-content: center;
     align-items: center;
+  }
+
+  .product-container {
+    display: inline-block;
+    width: 350px;
+    margin-top: 50px;
+    margin-left: 100px;
+    height: 350px;
+  }
+  
+  .product-container img {
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+      rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+      rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    display: inline-block;
+  }
+  
+  .product-display {
+    height: 350px;
+    width: 350px;
+    background-color: #bc6c25;
+    position: absolute;
+    opacity: 0;
+  }
+  
+  .product-container:hover .product-display {
+    opacity: 1;
+    transition: visibility 0s, opacity 0.5s linear;
+    transition-duration: 1s;
+  }
+  
+  .product-container:hover img {
+    display: none;
+  }
+  
+  .desc {
+    color: #fff;
+    font-size: 20px;
+    position: relative;
+    height: 100%;
+    text-align: center;
+    vertical-align: middle;
+    top: calc(50% - 6px);
+  }
+
+  .row1 {
+    margin: 0;
+    background-color: #fff;
+    height: 3000px;
+    z-index: 1;
+  }
+
+  .row2 {
+    float: center;
+    width: 100%;
+    padding: 10px;
+    background-color: #ffffff;
+    height: 3000px;
+  }
+  
+  .search-box {
+    position: absolute;
+    width: 346px;
+    height: 40px;
+    left: 587px;
+    top: 760px;
+    font-family: Old Standard TT;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 44px;
+    text-align: center;
+    color: #000000;
+  }
+
+  .column {
+    float: center;
+    padding: 10px;
+    background-color: #fff;
+    height: 3000px;
+  }
+
+  .box2 {
+    position: absolute;
+    width: 400px;
+    height: 20px;
+    left: 560px;
+    top: 814px;
+    border: 15px solid rgba(128, 0, 0, 0.61);
+  }
+  
+  .search-box:hover > .search-input {
+    width: 200px;
+  }
+  
+  .search-box .search-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 0;
+    font-weight: 500;
+    font-size: 16px;
+    transition: 0.8s;
+  }
+  
+  .search-text {
+    position: absolute;
+    width: 346px;
+    height: 40px;
+    left: 587px;
+    top: 760px;
+    font-family: Old Standard TT;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 44px;
+    text-align: center;
+    color: #000000;
+
   }
