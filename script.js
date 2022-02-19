@@ -66,6 +66,7 @@ function select4() {
     aim4.style.display = "flex"
 }
 
+// Popup Function
 function popup(num, imgurl) {
     // Get the modal
     var modal = document.getElementById("myModal");
