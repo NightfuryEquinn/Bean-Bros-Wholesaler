@@ -269,7 +269,7 @@ h6 {
   text-align: center;
   color: #ccc;
   padding: 10px 0;
-  height: 20%;
+  height: 7%;
 }
 /* Add Animation - Zoom in the Modal */
 .modal-content,
@@ -548,11 +548,24 @@ h6 {
 .footer-copyright p {
   margin-top: 25px;
 }
+.content {
+  display: none;
+}
 .desc-name,
 .desc-country,
 .desc-roast,
 .desc-price {
   display: none;
+}
+#desc-text {
+  margin: auto;
+  display: block;
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 18%;
 }
 #desc-container {
   margin: auto;
@@ -562,9 +575,12 @@ h6 {
   text-align: center;
   color: #ccc;
   padding: 10px 0;
-  height: 30%;
+  height: 25%;
 }
 
+#desc-text .content {
+  display: flex;
+}
 #desc-container .desc-name {
   display: flex;
 }
