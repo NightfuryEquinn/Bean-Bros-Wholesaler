@@ -67,6 +67,81 @@ function select4() {
 }
 
 /**
+ * Popup Function (Customer Profile Page) (Inefficient)
+ */
+// Edit Personal Details
+var targetModal1 = document.getElementById("modal-1")
+var targetOpenButton1 = document.getElementById("function-1")
+var targetCloseButton1 = document.getElementById("close-1")
+
+targetOpenButton1.onclick = () => {
+    targetModal1.style.display = "block"
+}
+
+targetCloseButton1.onclick = () => {
+    targetModal1.style.display = "none"
+}
+
+// Manage Subscription
+var targetModal2 = document.getElementById("modal-2")
+var targetOpenButton2 = document.getElementById("function-2")
+var targetCloseButton2 = document.getElementById("close-2")
+
+targetOpenButton2.onclick = () => {
+    targetModal2.style.display = "block"
+}
+
+targetCloseButton2.onclick = () => {
+    targetModal2.style.display = "none"
+}
+
+// Confirm Subscription
+var targetModal2b = document.getElementById("modal-2b")
+var targetOpenButtonSilver = document.getElementById("change-1")
+var targetOpenButtonGold = document.getElementById("change-2")
+var targetOpenButtonPlatinum = document.getElementById("change-3")
+var targetCloseButton2b = document.getElementById("close-2b")
+
+targetOpenButtonSilver.onclick = () => {
+    targetModal2b.style.display = "block"
+}
+
+targetOpenButtonGold.onclick = () => {
+    targetModal2b.style.display = "block"
+}
+
+targetOpenButtonPlatinum.onclick = () => {
+    targetModal2b.style.display = "block"
+}
+
+targetCloseButton2b.onclick = () => {
+    targetCloseButton2b.style.display = "none"
+}
+
+// Order Form
+
+
+
+// Pending Invoice 
+
+
+
+// Order History
+
+
+
+// Close Popup
+window.onclick = (event) => {
+    if (event.target == targetModal1) {
+        targetModal1.style.display = "none"
+    } else if (event.target == targetModal2) {
+        targetModal2.style.display = "none"
+    } else if (event.target == targetModal2b) {
+        targetModal2b.style.display = "none"
+    }
+}
+
+/**
  *  Popup Function (Bean Page)
  * */ 
 function popup(num, imgurl) {
@@ -108,46 +183,5 @@ function popup(num, imgurl) {
     // When the user clicks on <span> (x), close the modal
     span.onclick = function() { 
         modal.style.display = "none";
-    }
-}
-
-/**
- * Popup Function (Customer Profile Page) (Inefficient)
- */
-// Edit Personal Details
-var targetModal1 = document.getElementById("modal-1")
-var targetOpenButton1 = document.getElementById("function-1")
-var targetCloseButton1 = document.getElementById("close-1")
-
-targetOpenButton1.onclick = function() {
-    targetModal1.style.display = "block"
-}
-
-targetCloseButton1.onclick = function() {
-    targetModal1.style.display = "none"
-}
-
-window.onclick = function(event) {
-    if (event.target == targetModal1) {
-        targetModal1.style.display = "none"
-    }
-}
-
-// Manage Subscription
-var targetModal2 = document.getElementById("modal-2")
-var targetOpenButton2 = document.getElementById("function-2")
-var targetCloseButton2 = document.getElementById("close-2")
-
-targetOpenButton2.onclick = function() {
-    targetModal2.style.display = "block"
-}
-
-targetCloseButton2.onclick = function() {
-    targetModal2.style.display = "none"
-}
-
-window.onclick = function(event) {
-    if (event.target == targetModal2) {
-        targetModal2.style.display = "none"
     }
 }

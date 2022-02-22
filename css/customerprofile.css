@@ -157,52 +157,6 @@ h6 {
     width: auto;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-}
-
-form label {
-    font-size: 20px;
-    letter-spacing: 1.5px;
-}
-
-form input {
-    right: 0;
-    margin: 10px 10px 25px 10px;
-    padding: 10px;
-    width: 300px;
-    font-size: 16px;
-    font-weight: bold;
-    letter-spacing: 1.5px;
-    font-family: "Old Standard TT", serif;
-    background: linear-gradient(to left, #fefae0 50%, #DDa15e 50%) right;
-    background-size: 200%;
-    border: none;
-    transition-duration: 0.5s;
-    transition-timing-function: ease-out;
-}
-
-form input[type=submit] {
-    width: 200px;
-    background: linear-gradient(to left, #fefae0 50%, #283618 50%) right;
-    background-size: 200%;
-    transition-duration: 0.5s;
-    transition-timing-function: ease-out;
-}
-
-form input:focus {
-    background-position: left;
-    outline: none;
-}
-
-form input[type=submit]:hover {
-    color: #fefae0;
-    background-position: left;
-}
-
 /* Manage Subscription Popup */
 .subscription-modal {
     top: 0;
@@ -330,9 +284,136 @@ form input[type=submit]:hover {
     line-height: 1.5;
 }
 
-/* Silver, Gold, Platinum Subscription Confirm Popup */
+/* Subscription Confirm Popup */
+.confirm-subscription-modal {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #18181880;
+    position: fixed;
+    display: none;
+    z-index: 300;
+    overflow: auto;
+}
 
+.confirm-subscription-modal-container {
+    margin: 20% auto;
+    height: auto;
+    width: 50%;
+    color: #fefae0;
+    background-color: #BC6C25;
+}
 
+.confirm-subscription {
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.confirm-subscription-title {
+    margin: 20px;
+    height: auto; 
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.confirm-subscription-title h2 {
+    margin: 20px;
+    padding-bottom: 10px;
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border-bottom: 10px solid #DDA15E;
+}
+
+.confirm-subscription-notes {
+    margin: 20px;
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.confirm-subscription-notes p {
+    margin: 20px 30px;
+    font-size: 22px;
+    letter-spacing: 1.5px;
+    line-height: 1.5;
+}
+
+.confirm-payment-container {
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.confirm-payment-container p {
+    margin: 20px 30px;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    line-height: 1.5;
+}
+
+/* Form in Popups */
+form {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+form label {
+    font-size: 20px;
+    letter-spacing: 1.5px;
+}
+
+form input {
+    right: 0;
+    margin: 10px 10px 25px 10px;
+    padding: 10px;
+    width: 300px;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    font-family: "Old Standard TT", serif;
+    background: linear-gradient(to left, #fefae0 50%, #DDa15e 50%) right;
+    background-size: 200%;
+    border: none;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+}
+
+form input[type=submit] {
+    width: 200px;
+    background: linear-gradient(to left, #fefae0 50%, #283618 50%) right;
+    background-size: 200%;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+}
+
+form input:focus {
+    background-position: left;
+    outline: none;
+}
+
+form input[type=submit]:hover {
+    color: #fefae0;
+    background-position: left;
+}
 
 /* Customer Profile Page Parallax */
 .customer-profile-page {

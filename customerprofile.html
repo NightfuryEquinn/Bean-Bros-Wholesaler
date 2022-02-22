@@ -102,7 +102,7 @@
                                 <i class="fas fa-chess-pawn fa-3x"></i>
                             </div>
                             <div class="silver-description">
-                                <h1>Silver</h1>
+                                <h1 id="change-1">Silver</h1>
                                 <p>RM39.90/month</p>
                                 <p>Special and unique monthly gifts</p>
                                 <p>Notify for exclusive promotions via newsletter</p>
@@ -114,7 +114,7 @@
                                 <i class="fas fa-chess-rook fa-3x"></i>
                             </div>
                             <div class="gold-description">
-                                <h1>Gold</h1>
+                                <h1 id="change-2">Gold</h1>
                                 <p>RM79.90/month</p>
                                 <p>Prioritized delivery</p>
                                 <p>Special and unique monthly gifts</p>
@@ -127,7 +127,7 @@
                                 <i class="fas fa-chess-king fa-3x"></i>
                             </div>
                             <div class="platinum-description">
-                                <h1>Platinum</h1>
+                                <h1 id="change-3">Platinum</h1>
                                 <p>RM159.90/month</p>
                                 <p>Special access to VIP room</p>
                                 <p>Prioritized delivery</p>
@@ -141,15 +141,45 @@
             </div>
         </div>    
         
-        <!--Silver Subscription Confirm Popup-->
+        <!--Subscription Confirm Popup-->
+        <div class="confirm-subscription-modal" id="modal-2b">
+            <div class="confirm-subscription-modal-container">
+                <div class="confirm-subscription">
+                    <div class="confirm-subscription-title">
+                        <h2>Current Tier: Silver</h2>
+                        <i class="fas fa-times fa-2x" id="close-2b"></i>
+                    </div>
+                    <div class="confirm-subscription-notes">
+                        <p>You are changing your subscription to Gold.</p>
+                    </div>
+                    <div class="confirm-payment-container">
+                        <form>
+                            <label>Credit Card Number: </label><br>
+                            <input type="number" placeholder="xxxx-xxxx-xxxx-xxxx" maxlength="16" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}"  required><br>
+                            
+                            <label>Expiring Date: </label><br>
+                            <input type="number" placeholder="xx-xx" maxlength="4" pattern="[0-9]{2}-[0-9]{2}" required><br>
+                            
+                            <label>CVV:</label><br>
+                            <input type="number" placeholder="xxx" maxlength="3" pattern="[0-9]{3}" required><br>
+                        
+                            <input type="submit" value="Confirm Subscription">
+                        </form>
+                        <p>**We send the invoice to your email address and notify you each month when we charged for the subscription.**</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Order Form Popup-->
 
 
 
-        <!--Gold Subscription Confirm Popup-->
+        <!--Pending Invoice Popup-->
 
 
 
-        <!--Platinum Subscription Confirm Popup-->
+        <!--Order History Popup-->
 
 
 
