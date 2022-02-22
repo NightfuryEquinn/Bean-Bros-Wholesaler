@@ -66,7 +66,9 @@ function select4() {
     aim4.style.display = "flex"
 }
 
-// Popup Function
+/**
+ *  Popup Function (Bean Page)
+ * */ 
 function popup(num, imgurl) {
     // Get the modal
     var modal = document.getElementById("myModal");
@@ -106,5 +108,27 @@ function popup(num, imgurl) {
     // When the user clicks on <span> (x), close the modal
     span.onclick = function() { 
         modal.style.display = "none";
+    }
+}
+
+/**
+ * Popup Function (Customer Profile Page) (Inefficient)
+ */
+// Edit Personal Details
+var targetModal1 = document.getElementById("modal-1")
+var targetOpenButton1 = document.getElementById("function-1")
+var targetCloseButton1 = document.getElementById("close-1")
+
+targetOpenButton1.onclick = function() {
+    targetModal1.style.display = "block"
+}
+
+targetCloseButton1.onclick = function() {
+    targetModal1.style.display = "none"
+}
+
+window.onclick = function(event) {
+    if (event.target == targetModal1) {
+        targetModal1.style.display = "none"
     }
 }

@@ -1,0 +1,231 @@
+<!--Coded by Yip Zi Xian-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--How code being decoded-->
+        <meta charset = "utf-8">
+
+        <!--How page being display based on viewport-->
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1 shrink-to-fit = no">
+
+        <!--Add author, web description, keywords for search engine, and copyright-->
+        <meta name = "author" content = "Yip Zi Xian | Kishanraj a/l K.Alagayah | Ong Lit Tsen | Marcus Ong Jin Rong">
+        <meta name = "description" content = "Bean Bros Wholesaler website is not a real website, it is just a final year project website.">
+        <meta name = "keywords" content = "Bean Bros, Coffee Beans Wholesaler, Wholesaler, Coffee Beans">
+        <meta name = "copyright" content = "Copyright 2022 @ Bean Bros Wholesaler">
+
+        <!--Link to CSS-->
+        <link rel = "stylesheet" href = "css/customerprofile.css">
+
+        <!--Link to JavaScript-->
+        <script src="script.js" defer></script>
+
+        <!--Link to Font Awesome v4 and v5-->
+        <link rel = "stylesheet" href = "https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+        <link rel = "stylesheet" href = "https://use.fontawesome.com/releases/v5.15.4/css/v4-shims.css">
+
+        <!--Link to Google Font-->
+        <link rel = "preconnect" href = "https://fonts.googleapis.com">
+        <link rel = "preconnect" href = "https://fonts.gstatic.com" crossorigin>
+        <link href = "https://fonts.googleapis.com/css2?family=Old+Standard+TT&family=Oxygen:wght@700&display=swap" rel = "stylesheet">
+        
+        <!--Link to Pictures file-->
+        <link rel = "icon" type = image/png href = "img\BeanBrosLogo.png">
+
+        <!--Title-->
+        <title>Bean Bros - Profile</title>
+    </head>
+    <body>
+        <!--Sticky Navigation Bar-->
+        <div class="nav-bar">
+            <div class="nav-bar-left">
+                <h3>Bean</h3>
+                <h3>Coffeepedia</h3>
+                <h3>About Us</h3>
+                <h3>Contact Us</h3>
+            </div>
+            <div class="nav-bar-logo">
+                <img src="img\BeanBrosLogo1.png">
+            </div>
+            <div class="nav-bar-right">
+                <h3>Profile</h3>
+                <h3>Feedback</h3>
+                <h3>Log Out</h3>
+            </div>
+        </div>
+
+        <!--All Popup Container-->
+        <!--Edit Personal Details Popup-->
+        <div class="edit-modal" id="modal-1">
+            <div class="edit-modal-container">
+                <div class="edit-personal-information-container">
+                    <div class="edit-personal-information-title">
+                        <h2>Edit Personal Details</h2>
+                        <i class="fas fa-times fa-2x" id="close-1"></i>
+                    </div>
+                    <div class="editable-personal-information">
+                        <form>
+                            <label>Username:</label><br>
+                            <input type="text" placeholder="Your Username" required><br>
+                            
+                            <label>Email Address:</label><br>
+                            <input type="email" placeholder="Your Company Email" required><br>
+                            
+                            <label>Contact Number (Work)</label><br>
+                            <input type="tel" placeholder="Company Contact" pattern="[0-9]{2}-[0-9]{7}" required><br>
+                            
+                            <label>Contact Number (Personal)</label><br>
+                            <input type="tel" placeholder="Personal Contact" pattern="[0-9]{3}-[0-9]{7}" required><br>
+                            
+                            <input type="submit" value="Confirm Changes">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Manage Subscription Popup--> 
+        <div class="subscription-modal">
+            <div class="subscription-modal-container">
+                <div class="subscription-container">
+                    <div class="subscription-title">
+                        <h2>Current Tier: Silver</h2>
+                        <i class="fas fa-times fa-2x"></i>
+                    </div>
+                    <div class="subscription-notes-container">
+                        <p>**Noted that your current tier benefits will be changed immediately after subscription. Refunds are not available.**<br><br>**Charges will be calculated per month starting on the purchase date.**</p>                    
+                    </div>
+                    <div class="subscription-selection-container">
+                        <div class="silver-container">
+                            <div class="silver-icon">
+                                <i class="fas fa-chess-pawn fa-3x"></i>
+                            </div>
+                            <div class="silver-description">
+                                <h1>Silver</h1>
+                                <p>RM39.90/month</p>
+                                <p>Special and unique monthly gifts</p>
+                                <p>Notify for exclusive promotions via newsletter</p>
+                                <p>15% off for total coffee bean purchases</p>
+                            </div>
+                        </div>
+                        <div class="gold-container">
+                            <div class="gold-icon">
+                                <i class="fas fa-chess-rook fa-3x"></i>
+                            </div>
+                            <div class="gold-description">
+                                <h1>Gold</h1>
+                                <p>RM79.90/month</p>
+                                <p>Prioritized delivery</p>
+                                <p>Special and unique monthly gifts</p>
+                                <p>Notify for exclusive promotions via newsletter</p>
+                                <p>25% off for total coffee bean purchases</p>
+                            </div>
+                        </div>
+                        <div class="platinum-container">
+                            <div class="platinum-icon">
+                                <i class="fas fa-chess-king fa-3x"></i>
+                            </div>
+                            <div class="platinum-description">
+                                <h1>Platinum</h1>
+                                <p>RM159.90/month</p>
+                                <p>Special access to VIP room</p>
+                                <p>Prioritized delivery</p>
+                                <p>Special and unique monthly gifts</p>
+                                <p>Notify for exclusive promotions via newsletter</p>
+                                <p>40% off for total coffee purchases</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>       
+
+        <!--Customer Profile Page Parallax-->
+        <div class="customer-profile-page">
+
+            <!--Customer Profile First Parallax-->
+            <div class="customer-profile-parallax-group">
+                <div class="customer-profile-parallax-back">
+                    <!--Customer Profile Parallax Background-->
+                    <div class="cpb-image-container">
+                        <img src="img/couple_hands_love_tenderness_coffee_118921_1920x1080.jpg">
+                    </div>
+                </div>
+                <div class="customer-profile-parallax-base">
+                    <!--Customer Profile Parallax Quote-->
+                    <div class="quote-container">
+                        <p>Feel Free to Manage Your Profile</p>
+                    </div>
+                    <!--Customer Profile Personal Information Container-->
+                    <div class="customer-profile-container">
+                        <div class="personal-information-container">
+                            <div class="personal-information-title">
+                                <h3>Personal Details</h3>
+                            </div>
+                            <div class="personal-information">
+                                <p>Username: </p>
+                                <p>Email: </p>
+                                <p>Contact Number (Personal): </p>
+                                <p>Contact Number (Work): </p>
+                                <p>Password: </p>
+                                <p>Subscription Tier: </p>
+                            </div>
+                        </div>
+                        <div class="customer-function-container">
+                            <div class="cfc-top">
+                                <h5 id="function-1">Edit Personal Details</h5>
+                                <h5 id="function-2">Manage Subscription</h5>
+                                <h5 id="function-3">Submit a Feedback</h5>
+                            </div>
+                            <div class="cfc-bottom">
+                                <h5 id="function-4">Coffee Beans Needed</h5>
+                                <h5 id="function-5">View Order History</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Footer-->
+                    <div class="footer-container">
+                        <div class="footer-quote-container">
+                            <div class="footer-quote">
+                                <p>When you need beans, <br>you know where to find us.</p>
+                            </div>
+                        </div>
+                        <div class="footer-sub-container">
+                            <div class="footer-nav">
+                                <p>Home</p>
+                                <p>Beans</p>
+                                <p>Coffeepedia</p>
+                                <p>About Us</p>
+                                <p>Contact Us</p>
+                            </div>
+                            <div class="footer-social-media">
+                                <div class="fsm-title">
+                                    <p>Social Media</p>
+                                </div>
+                                <div class="fsm-content">
+                                    <p>Facebook</p>
+                                    <p>Instagram</p>
+                                    <p>Twitter</p>
+                                    <p>FAQ</p>
+                                </div>
+                            </div>
+                            <div class="footer-contact-us">
+                                <div class="fcu-title">
+                                    <p>Have a coffee with us</p>
+                                </div>
+                                <div class="fcu-content">
+                                    <p>Customer Service: <br>03-222-3333</p>
+                                    <p>Address: <br>85a, 85b, 85c, Jalan Bukit Bintang, <br>Kuala Lumpur, <br>55100 Malaysia</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-copyright">
+                            <p>Est. 2022 @ Bean Bros Wholesaler</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
