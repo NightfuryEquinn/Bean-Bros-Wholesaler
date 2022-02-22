@@ -105,7 +105,7 @@ h6 {
 /* Homepage Parallax Background */
 .homepage-parallax-group {
   position: relative;
-  height: 100vh;
+  height: 60vh;
   transform-style: preserve-3d;
   z-index: -1;
 }
@@ -124,7 +124,7 @@ h6 {
   bottom: 0;
   left: 0;
   position: absolute;
-  transform: translateX(-550px) translateY(-750px) translateZ(-1.625px) scale(2.5);
+  transform: translateX(-550px) translateY(-1350px) translateZ(-1.625px) scale(2.5);
 }
 
 .hpb-image-container {
@@ -135,7 +135,7 @@ h6 {
 
 /* Homepage Parallax Quote */
 .homepage-parallax-base {
-  top: 0;
+  top: -40px;
   right: 0;
   bottom: 0;
   left: 0;
@@ -242,8 +242,8 @@ h6 {
 
 .row2 {
   margin: 0;
-  background-color: #fff;
-  height: 550px;
+  background: #ffffff;
+  height: 1200px;
   z-index: 1;
 }
 
@@ -289,12 +289,12 @@ h6 {
 }
 
 .search-box .search-input {
-  background: transparent;
+  background: whitesmoke;
   border: none;
   outline: none;
   width: 0;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 32px;
   transition: 0.8s;
 }
 
@@ -676,107 +676,3 @@ h6 {
   background: #283618;
 }
 
-.edit1 {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  left: 196px;
-  top: 1283px;
-}
-
-.edit2 {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  left: 677px;
-  top: 1283px;
-}
-
-.edit3 {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  left: 1158px;
-  top: 1283px;
-}
-
-.edit4 {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  left: 196px;
-  top: 1832px;
-}
-
-.edit5 {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  left: 677px;
-  top: 1832px;
-}
-
-.edit6 {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  left: 1158px;
-  top: 1832px;
-}
-
-.delete1 {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  left: 312px;
-  top: 1283px;
-}
-
-.delete2 {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  left: 793px;
-  top: 1283px;
-}
-
-.delete3 {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  left: 1274px;
-  top: 1283px;
-}
-
-.delete4 {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  left: 312px;
-  top: 1832px;
-}
-
-.delete5 {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  left: 793px;
-  top: 1832px;
-}
-
-.delete6 {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  left: 1274px;
-  top: 1832px;
-}
-
-.addicon {
-  position: absolute;
-  width: 75px;
-  height: 75px;
-  left: 26px;
-  top: 2006px;
-  mix-blend-mode: darken;
-}  
