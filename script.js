@@ -132,3 +132,22 @@ window.onclick = function(event) {
         targetModal1.style.display = "none"
     }
 }
+
+// Manage Subscription
+var targetModal2 = document.getElementById("modal-2")
+var targetOpenButton2 = document.getElementById("function-2")
+var targetCloseButton2 = document.getElementById("close-2")
+
+targetOpenButton2.onclick = function() {
+    targetModal2.style.display = "block"
+}
+
+targetCloseButton2.onclick = function() {
+    targetModal2.style.display = "none"
+}
+
+window.onclick = function(event) {
+    if (event.target == targetModal2) {
+        targetModal2.style.display = "none"
+    }
+}
