@@ -333,6 +333,10 @@ h6 {
     border-bottom: 10px solid #DDA15E;
 }
 
+.confirm-subscription-title i {
+    cursor: pointer;
+}
+
 .confirm-subscription-notes {
     margin: 20px;
     height: auto;
@@ -367,6 +371,143 @@ h6 {
     line-height: 1.5;
 }
 
+/* Order Form Popup */
+.order-modal {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #18181880;
+    position: fixed;
+    display: none;
+    z-index: 200;
+    overflow: auto;
+}
+
+.order-modal-container {
+    margin: 20% auto;
+    height: auto;
+    width: 50%;
+    color: #fefae0;
+    background-color: #BC6C25;
+}
+
+.order {
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.order-title {
+    margin: 20px;
+    height: auto; 
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.order-title h2 {
+    margin: 20px;
+    padding-bottom: 10px;
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border-bottom: 10px solid #DDA15E;
+}
+
+.order-title i {
+    cursor: pointer;
+}
+
+.order-notes {
+    margin: 20px;
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.order-notes p {
+    margin: 0 30px;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    line-height: 1.5;
+}
+
+.order-container {
+    margin: 20px;
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.order-container span {
+    margin-bottom: 20px;
+    color: #fefae0;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    cursor: pointer;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+}
+
+.order-container span:hover {
+    color: #181818;
+}
+
+.order-container input:checked ~ span {
+    color: #181818;
+}
+
+.order-container p {
+    margin: 2.5px 5px 5px 5px;
+    font-size: 16px;
+    font-weight: bolder;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    display: none;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+}
+
+.order-container input:checked ~ span p {
+    display: block;
+}
+
+.coffee-bean-container {
+    margin: 20px;
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.coffee-bean-container h6 {
+    font-size: 20px;
+}
+
+.coffee-bean {
+    margin: 10px;
+    height: 250px;
+    width: 200px;
+    background-color: #784830;
+}
+
 /* Form in Popups */
 form {
     display: flex;
@@ -376,9 +517,29 @@ form {
     align-items: center;
 }
 
+.order-container form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
 form label {
     font-size: 20px;
     letter-spacing: 1.5px;
+}
+
+.order-container form label {
+    margin: 10px;
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
 }
 
 form input {
@@ -403,6 +564,12 @@ form input[type=submit] {
     background-size: 200%;
     transition-duration: 0.5s;
     transition-timing-function: ease-out;
+}
+
+form input[type=radio] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
 }
 
 form input:focus {

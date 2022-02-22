@@ -119,8 +119,17 @@ targetCloseButton2b.onclick = () => {
 }
 
 // Order Form
+var targetModal3 = document.getElementById("modal-3")
+var targetOpenButton3 = document.getElementById("function-3")
+var targetCloseButton3 = document.getElementById("close-3")
 
+targetOpenButton3.onclick = () => {
+    targetModal3.style.display = "block"
+}
 
+targetCloseButton3.onclick = () => {
+    targetModal3.style.display = "none"
+}
 
 // Pending Invoice 
 
@@ -138,6 +147,8 @@ window.onclick = (event) => {
         targetModal2.style.display = "none"
     } else if (event.target == targetModal2b) {
         targetModal2b.style.display = "none"
+    } else if (event.target == targetModal3) {
+        targetModal3.style.display = "none"
     }
 }
 
