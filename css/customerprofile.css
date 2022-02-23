@@ -508,6 +508,252 @@ h6 {
     background-color: #784830;
 }
 
+/* Pending Invoice Popup */
+.invoice-modal {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #18181880;
+    position: fixed;
+    display: none;
+    z-index: 300;
+    overflow: auto;
+}
+
+.invoice-modal-container {
+    margin: 20% auto;
+    height: auto;
+    width: 50%;
+    color: #fefae0;
+    background-color: #BC6C25;
+}
+
+.invoice {
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.invoice-title {
+    margin: 20px;
+    height: auto; 
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.invoice-title h2 {
+    margin: 20px;
+    padding-bottom: 10px;
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border-bottom: 10px solid #DDA15E;
+}
+
+.invoice-title i {
+    cursor: pointer;
+}
+
+.invoice-notes {
+    margin: 20px;
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.invoice-notes p {
+    margin: 0 30px;
+    font-size: 18px;
+    font-weight: bolder;
+    letter-spacing: 1.5px;
+    line-height: 1.5;
+}
+
+.invoice-details-container {
+    margin: 20px;
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.invoice-details-container p {
+    margin: 0 30px 15px 30px;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    line-height: 1.5;
+}
+
+.invoice-coffee-bean-container {
+    margin: 50px;
+    height: auto;
+    width: auto;
+    background-color: #784830;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+}
+
+.invoice-coffee-bean {
+    margin: 50px;
+    height: 250px;
+    width: 200px;
+    background-color: #DDA15E;
+}
+
+.invoice-coffee-bean-details {
+    margin: 50px;
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.invoice-coffee-bean-details p {
+    margin: 0 30px;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    line-height: 1.5;
+}
+
+/* Order History Popup */
+.history-modal {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #18181880;
+    position: fixed;
+    display: none;
+    z-index: 200;
+    overflow: auto;
+}
+
+.history-modal-container {
+    margin: 20% auto;
+    height: auto;
+    width: 50%;
+    color: #fefae0;
+    background-color: #BC6C25;
+}
+
+.history {
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.history-title {
+    margin: 20px;
+    height: auto; 
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.history-title h2 {
+    margin: 20px;
+    padding-bottom: 10px;
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border-bottom: 10px solid #DDA15E;
+}
+
+.history-title i {
+    cursor: pointer;
+}
+
+.history-notes {
+    margin: 20px;
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.history-notes p {
+    margin: 0 30px;
+    font-size: 18px;
+    font-weight: bolder;
+    letter-spacing: 1.5px;
+    line-height: 1.5;
+}
+
+.history-container {
+    margin: 50px;
+    height: auto;
+    width: auto;
+    background-color: #784830;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+}
+
+table {
+    margin: 50px;
+    height: auto;
+    width: auto;
+}
+
+table tr {
+    height: auto;
+    width: auto;
+}
+
+table th {
+    padding: 20px 10px;
+    height: auto;
+    width: auto;
+    font-family: "Oxygen", sans-serif;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    text-align: center;
+    text-transform: uppercase;
+    border-top: 10px double #DDA15E;
+    border-bottom: 10px double #DDA15E;
+}
+
+table td {
+    padding: 20px 10px;
+    height: auto;
+    width: auto;
+    font-family: "Old Standard TT", serif;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    text-align: center;
+    border-bottom: 10px double #DDA15E;
+
+}
+
+
+
+
+
 /* Form in Popups */
 form {
     display: flex;
@@ -524,6 +770,27 @@ form {
     align-content: center;
     justify-content: center;
     align-items: center;
+}
+
+form button {
+    right: 0;
+    margin: 10px 10px 25px 10px;
+    padding: 10px;
+    width: 200px;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    font-family: "Old Standard TT", serif;
+    background: linear-gradient(to left, #fefae0 50%, #283618 50%) right;
+    background-size: 200%;
+    border: none;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+}
+
+form button:hover {
+    color: #fefae0;
+    background-position: left;
 }
 
 form label {

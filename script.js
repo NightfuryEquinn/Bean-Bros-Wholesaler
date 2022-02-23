@@ -132,12 +132,30 @@ targetCloseButton3.onclick = () => {
 }
 
 // Pending Invoice 
+var targetModal3b = document.getElementById("modal-3b")
+var targetOpenButton3b = document.getElementById("roast")
+var targetCloseButton3b = document.getElementById("close-3b")
 
+targetOpenButton3b.onclick = () => {
+    targetModal3b.style.display = "block"
+}
 
+targetCloseButton3b.onclick = () => {
+    targetModal3b.style.display = "none"
+}
 
 // Order History
+var targetModal4 = document.getElementById("modal-4")
+var targetOpenButton4 = document.getElementById("function-4")
+var targetCloseButton4 = document.getElementById("close-4")
 
+targetOpenButton4.onclick = () => {
+    targetModal4.style.display = "block"
+}
 
+targetCloseButton4.onclick = () => {
+    targetModal4.style.display = "none"
+}
 
 // Close Popup
 window.onclick = (event) => {
@@ -149,6 +167,10 @@ window.onclick = (event) => {
         targetModal2b.style.display = "none"
     } else if (event.target == targetModal3) {
         targetModal3.style.display = "none"
+    } else if (event.target == targetModal3b) {
+        targetModal3b.style.display = "none"
+    } else if (event.target == targetModal4) {
+        targetModal4.style.display = "none"
     }
 }
 
