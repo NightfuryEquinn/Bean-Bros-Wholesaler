@@ -151,6 +151,9 @@ h6 {
   height: 131px;
   left: 458px;
   top: 399px;
+  background-color: #181818dd;
+  border-radius: 5px;
+  padding: 15px;
 }
 
 .quote-container p {
@@ -161,45 +164,6 @@ h6 {
   line-height: 44px;
   text-align: center;
   color: #FFFFFF;
-}
-
-/* Recommendation Container */
-.recommendation-container {
-  margin-top: 625px;
-  height: auto;
-  width: auto;
-  background-color: #fefae0;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-}
-
-.premium-selection-container, .fresh-arrival-container {
-  height: auto;
-  width: auto;
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-}
-
-.ps-text-container, .fa-text-container {
-  margin: 125px 30px;
-  height: 400px;
-  width: auto;
-}
-
-.ps-text-container h2 {
-  padding-right: 5px;
-  font-size: 30px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  writing-mode: vertical-lr;
-  text-orientation: sideways;
-  border-right: 10px solid #bc6c25;
 }
 
 .fa-text-container h2 {

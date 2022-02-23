@@ -151,6 +151,9 @@ h6 {
   height: 131px;
   left: 458px;
   top: 399px;
+  background-color: #181818dd;
+  border-radius: 5px;
+  padding: 15px;
 }
 
 .quote-container p {
