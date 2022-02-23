@@ -105,7 +105,7 @@ h6 {
 /* Homepage Parallax Background */
 .homepage-parallax-group {
   position: relative;
-  height: 60vh;
+  height: 320px;
   transform-style: preserve-3d;
   z-index: -1;
 }
@@ -324,22 +324,6 @@ h6 {
   z-index: 1;
 }
 
-.follow-us-text-container {
-  margin: 75px 30px;
-  height: auto;
-  width: 600px;
-  border-top: 10px solid #bc6c25;
-  border-bottom: 10px solid #DDA15E;
-}
-
-.follow-us-text-container h2 {
-  padding: 10px 0;
-  font-size: 30px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  text-align: center;
-}
-
 .blog-content-container {
   height: auto;
   width: auto;
@@ -349,86 +333,7 @@ h6 {
   justify-content: space-evenly;
   align-items: center;
   z-index: 1;
-}
-
-.social-media-container {
-  margin: 20px;
-  height: auto;
-  width: auto;
-}
-
-.social-media {
-  margin: 50px 20px;
-  height: auto;
-  width: auto;
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-  justify-content: space-between;
-  align-items: center;
-  background: linear-gradient(to left, #DDA15E 50%, #784830 50%) right;
-  background-size: 200%;
-  border-radius: 10px;
-  transition-duration: 0.5s;
-  transition-timing-function: ease-out;
-}
-
-.social-media:hover {
-  background-position: left;
-}
-
-.social-media i {
-  margin: 20px;
-  padding: 20px;
-  color: #784830;
-  transition-delay: 0.25s;
-  transition-duration: 0.5s;
-  transition-timing-function: ease-out;
-}
-
-.social-media:hover i {
-  color: #fefae0;
-}
-
-.social-media h4 {
-  margin: 20px 20px 20px 50px;
-  padding: 20px;
-  color: #784830;
-  font-size: 18px;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  transition-delay: 0.5s;
-  transition-duration: 0.5s;
-  transition-timing-function: ease-out;
-}
-
-.social-media:hover h4 {
-  color: #fefae0;
-}
-
-.location-map-container {
-  margin: 20px 20px 20px 100px;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
-}
-
-.location-map-container h3 {
-  margin: 20px;
-  padding-bottom: 10px;
-  font-size: 24px;
-  text-align: right;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  border-bottom: 10px solid #784830;
-}
-
-.location-map-container iframe {
-  margin: 20px;
-  height: 450px;
-  width: 600px;
-  border: none;
+  background-color: #ffffff;
 }
 
 /* Footer */
@@ -675,4 +580,3 @@ h6 {
   top: 1459px;
   background: #283618;
 }
-
