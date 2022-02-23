@@ -98,23 +98,23 @@ h6 {
   letter-spacing: 1.5px;
 }
 
-/* Homepage Parallax */
-.bean-homepage {
+/* Report Page Parallax */
+.report-homepage {
   perspective: 1px;
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
 }
 
-/* Homepage Parallax Background */
-.bean-homepage-parallax-group {
+/* Report page Parallax Background */
+.report-parallax-group {
   position: relative;
   height: 100vh;
   transform-style: preserve-3d;
   z-index: -1;
 }
 
-.bean-homepage-parallax-back {
+.report-parallax-back {
   top: 0;
   right: 0;
   bottom: 0;
@@ -130,8 +130,8 @@ h6 {
   overflow: hidden;
 }
 
-/* Homepage Parallax Quote */
-.bean-homepage-parallax-base {
+/* Report page Parallax Quote */
+.report-parallax-base {
   top: 0;
   right: 0;
   bottom: 0;
@@ -156,4 +156,79 @@ h6 {
   font-size: 28px;
   letter-spacing: 0.5px;
   text-align: center;
+}
+
+.row {
+  margin: 0;
+  background-color: #fff;
+  height: 2200px;
+  z-index: 1;
+}
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.report-column {
+  width: 100%;
+  padding: 10px;
+  background-color: #fff;
+  height: 1700px;
+}
+
+.report-title {
+  display: flex;
+  margin-top: 80px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 30px;
+  font-family: "Old Standard TT";
+}
+
+.design {
+  display: flex;
+  height: 13px;
+  width: 580px;
+  background-color: #784830;
+  margin-left: 32%;
+}
+
+.select-column {
+  margin-top: 65px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 25px;
+  font-family: "Old Standard TT";
+}
+
+.report-container {
+  display: flex;
+  height: 1500px;
+  width: 1000px;
+  background-color: #dda15e;
+  margin-left: 20%;
+  margin-top: 50px;
+}
+
+.logo-container {
+  margin-top: 60px;
+  margin-left: 60px;
+}
+
+.title-design {
+  height: 15px;
+  width: 580px;
+  background-color: #bc6c25;
+  margin-left: 100px;
+  margin-top: 85px;
+}
+
+.content-title {
+  font-family: "Old Standard TT";
+  margin-top: 100px;
+  margin-left: 200px;
+  font-size: 30px;
 }
