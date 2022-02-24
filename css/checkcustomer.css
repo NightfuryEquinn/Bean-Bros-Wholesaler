@@ -1,0 +1,99 @@
+/* 
+Color Palettes 
+
+-- Font Color --
+Thamar Black - 181818 
+Cornsilk - FEFAE0
+
+-- Design Color --
+Cape Palliser - 784830
+Liver Dogs - BC6C25
+Fawn - DDA15E
+Kombu Green - 283618
+Dark Oliver Green - 606C38
+*/
+
+/* Coded by Yip Zi Xian */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+p {
+    font-family: "Old Standard TT", serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Oxygen", sans-serif;
+}
+
+/* Sticky Navigation Bar */
+.nav-bar {
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    width: auto;
+    color: #fefae0;
+    background-color: #181818;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.nav-bar-left {
+    height: 100px;
+    width: 700px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-bar-left h3 {
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+}
+
+.nav-bar-logo {
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 100px;
+    width: 100px;
+}
+
+.nav-bar-logo img {
+    height: 100px;
+    width: 100px;
+}
+
+.nav-bar-right {
+    height: 100px;
+    width: 700px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-bar-right h3 {
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+}
