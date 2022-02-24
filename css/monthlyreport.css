@@ -196,6 +196,7 @@ h6 {
 }
 
 .select-column {
+  display: flex;
   margin-top: 65px;
   justify-content: center;
   align-items: center;
@@ -216,19 +217,24 @@ h6 {
 .logo-container {
   margin-top: 60px;
   margin-left: 60px;
+  max-width: 180px;
+  max-height: 180px;
 }
 
+.title-container {
+  margin-left: 100px;
+  margin-top: 75px;
+}
 .title-design {
   height: 15px;
   width: 580px;
   background-color: #bc6c25;
-  margin-left: 100px;
-  margin-top: 85px;
 }
 
 .content-title {
   font-family: "Old Standard TT";
-  margin-top: 100px;
-  margin-left: 200px;
   font-size: 30px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-align: center;
 }
