@@ -161,7 +161,7 @@ h6 {
 .row {
   margin: 0;
   background-color: #fff;
-  height: 2200px;
+  height: 3200px;
   z-index: 1;
 }
 .row::after {
@@ -175,7 +175,7 @@ h6 {
   padding: 10px;
   padding-left: 200px;
   padding-right: 200px;
-  height: 1700px;
+  height: 2200px;
 }
 
 .report-title {
@@ -193,7 +193,7 @@ h6 {
   height: 13px;
   width: 580px;
   background-color: #784830;
-  margin-left: 29%;
+  margin-left: 24%;
 }
 
 .select-column {
@@ -211,12 +211,13 @@ h6 {
   background-color: #dda15e;
   height: fit-content;
   width: 100%;
+  height: 120%;
 }
 .top-container {
   display: inline-block;
-  height: 20%;
+  height: 10%;
   width: 100%;
-  padding: 20px;
+  padding: 50px;
 }
 .logo-container {
   display: inline-block;
@@ -237,18 +238,183 @@ h6 {
 .content-title {
   font-family: "Old Standard TT";
   font-size: 30px;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  margin-left: 13%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-left: 12%;
 }
 .bottom-container {
-  display: flex;
+  display: inline-block;
   width: 100%;
   height: 20%;
   padding: 20px;
 }
 .line-design {
-  height: 5px;
-  width: 580px;
+  height: 1.5px;
+  width: 80%;
   background-color: #000;
+  margin-left: 11%;
+  margin-top: 5%;
+  margin-bottom: 4%;
+}
+.content {
+  margin-left: 35%;
+  font-family: "Old Standard TT";
+  font-size: 30px;
+}
+
+.description {
+  height: 50%;
+  width: 70%;
+  background-color: #c0c0c0;
+  margin-top: 5%;
+  margin-left: 17%;
+}
+.total-profit {
+  margin-left: 7%;
+  font-family: "Old Standard TT";
+  font-size: 25px;
+  margin-bottom: 3%;
+}
+.total-coffee {
+  margin-left: 7%;
+  font-family: "Old Standard TT";
+  font-size: 25px;
+}
+
+/* Footer */
+.footer-container {
+  height: auto;
+  width: 100%;
+  color: #181818;
+  background-color: #f3eec8;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  margin-top: 60%;
+}
+
+.footer-quote-container {
+  margin: 50px;
+  height: auto;
+  width: auto;
+}
+
+.footer-quote {
+  height: auto;
+  width: auto;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+.footer-sub-container {
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer-nav {
+  height: auto;
+  width: auto;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+.footer-nav p {
+  margin-top: 15px;
+}
+
+.footer-social-media {
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.fsm-title {
+  margin: 15px;
+  height: auto;
+  width: auto;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+.fsm-content {
+  height: auto;
+  width: auto;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+.fsm-content p {
+  margin-top: 15px;
+}
+
+.footer-contact-us {
+  margin: 15px;
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+.fcu-title {
+  margin: 15px;
+  height: auto;
+  width: auto;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+.fcu-content {
+  margin-top: 15px;
+  height: auto;
+  width: auto;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+.fcu-content p {
+  margin-top: 15px;
+}
+
+.footer-copyright {
+  margin: 25px;
+  height: auto;
+  width: auto;
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  text-align: right;
+  border-top: 2.5px solid #181818;
+}
+
+.footer-copyright p {
+  margin-top: 25px;
 }
