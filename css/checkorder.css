@@ -1,0 +1,158 @@
+/* 
+Color Palettes 
+
+-- Font Color --
+Thamar Black - 181818 
+Cornsilk - FEFAE0
+
+-- Design Color --
+Cape Palliser - 784830
+Liver Dogs - BC6C25
+Fawn - DDA15E
+Kombu Green - 283618
+Dark Oliver Green - 606C38
+*/
+
+/* Coded by Yip Zi Xian */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+p {
+    font-family: "Old Standard TT", serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Oxygen", sans-serif;
+}
+
+/* Sticky Navigation Bar */
+.nav-bar {
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    width: auto;
+    color: #fefae0;
+    background-color: #181818;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.nav-bar-left {
+    height: 100px;
+    width: 700px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-bar-left h3 {
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+}
+
+.nav-bar-logo {
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 100px;
+    width: 100px;
+}
+
+.nav-bar-logo img {
+    height: 100px;
+    width: 100px;
+}
+
+.nav-bar-right {
+    height: 100px;
+    width: 700px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-bar-right h3 {
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+}
+
+/* Admin Order List Page Parallax */
+.admin-order-list-page {
+    perspective: 1px;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+  
+/* Admin Order List Parallax Background */
+.admin-order-list-parallax-group {
+    position: relative;
+    height: 100vh;
+    transform-style: preserve-3d;
+    z-index: 5;
+}
+  
+.admin-order-list-parallax-back {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: relative;
+    transform: translateX(-450px) translateY(-200px) translateZ(-1.625px) scale(2.5);
+}
+  
+.aolb-image-container {
+    width: max-content;
+    height: max-content;
+    overflow: hidden;
+}
+  
+/* Admin Order List Parallax Quote */
+.admin-order-list-parallax-base {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    transform: translateZ(0);
+}
+  
+.quote-container {
+    margin: 325px 300px 0 300px;
+    padding: 15px;
+    width: auto;
+    height: auto;
+    background-color: #181818DD;
+    border-radius: 5px;
+}
+  
+.quote-container p {
+    color: #fefae0;
+    font-size: 28px;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
