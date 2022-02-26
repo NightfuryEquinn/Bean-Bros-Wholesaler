@@ -266,7 +266,7 @@ h6 {
 
 .feedback-right form input[type=submit] {
     width: 150px;
-    background: linear-gradient(to left, #fefae0 50%, #283618 50%) right;
+    background: linear-gradient(to left, #fefae0 50%, #DDa15e 50%) right;
     background-size: 200%;
     transition-duration: 0.5s;
     transition-timing-function: ease-out;

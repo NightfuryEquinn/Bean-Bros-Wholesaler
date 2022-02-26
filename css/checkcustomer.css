@@ -300,7 +300,6 @@ h6 {
     width: 25%;
     color: #fefae0;
     background-color: #283618;
-    
 }
 
 .customer-right form {
@@ -340,7 +339,7 @@ h6 {
 
 .customer-right form input[type=submit] {
     width: 150px;
-    background: linear-gradient(to left, #fefae0 50%, #283618 50%) right;
+    background: linear-gradient(to left, #fefae0 50%, #DDa15e 50%) right;
     background-size: 200%;
     transition-duration: 0.5s;
     transition-timing-function: ease-out;
