@@ -145,7 +145,7 @@ h6 {
 .row {
   margin: 0;
   padding: 0;
-  height: 200%;
+  height: auto;
   margin-top: 10%;
   z-index: 10;
 }
@@ -164,6 +164,7 @@ h6 {
 }
 .title-container {
   width: 100%;
+  margin-top: 5%;
 }
 .title-design {
   height: 15px;
@@ -181,10 +182,170 @@ h6 {
 }
 
 .add-product {
-  display: flex;
-  margin-top: 5%;
+  display: inline-block;
+  margin-top: 10%;
   margin-left: 17%;
-  height: 250%;
+  height: 450%;
   width: 70%;
   background-color: rgba(255, 255, 255, 0.5);
+}
+.add-product-content {
+  height: 95%;
+  width: 100%;
+}
+.button {
+  color: #000;
+  height: 5%;
+  width: 100%;
+}
+.add-btn {
+  float: left;
+  width: 50%;
+  height: 100%;
+  font-size: 30px;
+  text-align: center;
+}
+.reset-btn {
+  float: left;
+  width: 50%;
+  height: 100%;
+  font-size: 30px;
+  text-align: center;
+}
+/* Footer */
+.footer-container {
+  margin-top: 140%;
+  height: auto;
+  width: auto;
+  color: #181818;
+  background-color: #f3eec8;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+.footer-quote-container {
+  margin: 50px;
+  height: auto;
+  width: auto;
+}
+
+.footer-quote {
+  height: auto;
+  width: auto;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+.footer-sub-container {
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer-nav {
+  height: auto;
+  width: auto;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+.footer-nav p {
+  margin-top: 15px;
+}
+
+.footer-social-media {
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.fsm-title {
+  margin: 15px;
+  height: auto;
+  width: auto;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+.fsm-content {
+  height: auto;
+  width: auto;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+.fsm-content p {
+  margin-top: 15px;
+}
+
+.footer-contact-us {
+  margin: 15px;
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+.fcu-title {
+  margin: 15px;
+  height: auto;
+  width: auto;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+.fcu-content {
+  margin-top: 15px;
+  height: auto;
+  width: auto;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+.fcu-content p {
+  margin-top: 15px;
+}
+
+.footer-copyright {
+  margin: 25px;
+  height: auto;
+  width: auto;
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  text-align: right;
+  border-top: 2.5px solid #181818;
+}
+
+.footer-copyright p {
+  margin-top: 25px;
 }
