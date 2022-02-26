@@ -1,0 +1,190 @@
+/* 
+Color Palettes 
+
+-- Font Color --
+Thamar Black - 181818 
+Cornsilk - FEFAE0
+
+-- Design Color --
+Cape Palliser - 784830
+Liver Dogs - BC6C25
+Fawn - DDA15E
+Kombu Green - 283618
+Dark Oliver Green - 606C38
+*/
+
+/* Ong Lit Tsen */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+p {
+  font-family: "Old Standard TT", serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Oxygen", sans-serif;
+}
+
+/* Sticky Navigation Bar */
+.nav-bar {
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  width: auto;
+  color: #fefae0;
+  background-color: #181818;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.nav-bar-left {
+  height: 100px;
+  width: 700px;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-bar-left h3 {
+  margin: 5px;
+  padding: 10px;
+  font-size: 16px;
+  letter-spacing: 1.5px;
+}
+
+.nav-bar-logo {
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 100px;
+  width: 100px;
+}
+
+.nav-bar-logo img {
+  height: 100px;
+  width: 100px;
+}
+
+.nav-bar-right {
+  height: 100px;
+  width: 700px;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-bar-right h3 {
+  margin: 5px;
+  padding: 10px;
+  font-size: 16px;
+  letter-spacing: 1.5px;
+}
+
+/* Add product Page Parallax */
+.product-page {
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* Add product page Parallax Background */
+.product-parallax-group {
+  position: relative;
+  height: 100vh;
+  transform-style: preserve-3d;
+  z-index: 5;
+}
+
+.product-parallax-back {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: relative;
+  transform: translateX(-1050px) translateY(-1850px) translateZ(-1.25px);
+}
+.image-container img {
+  margin-top: 20%;
+}
+.image-container {
+  height: max-content;
+  width: max-content;
+  overflow: hidden;
+}
+
+/* add product page item */
+.product-parallax-base {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  transform: translateZ(0);
+}
+.row {
+  margin: 0;
+  padding: 0;
+  height: 200%;
+  margin-top: 10%;
+  z-index: 10;
+}
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  width: 100%;
+  padding: 10px;
+  height: 25%;
+  padding-left: 30%;
+  padding-right: 30%;
+}
+.title-container {
+  width: 100%;
+}
+.title-design {
+  height: 15px;
+  width: 600px;
+  background-color: #bc6c25;
+}
+
+.content-title {
+  font-family: "Old Standard TT";
+  font-size: 30px;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  color: #fff;
+  text-align: center;
+}
+
+.add-product {
+  display: flex;
+  margin-top: 5%;
+  margin-left: 17%;
+  height: 250%;
+  width: 70%;
+  background-color: rgba(255, 255, 255, 0.5);
+}
