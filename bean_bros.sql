@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Feb 26, 2022 at 11:35 AM
+-- Generation Time: Feb 26, 2022 at 11:40 AM
 -- Server version: 5.7.36
 -- PHP Version: 7.4.26
 
@@ -63,6 +63,7 @@ DROP TABLE IF EXISTS `coffee_bean`;
 CREATE TABLE IF NOT EXISTS `coffee_bean` (
   `Bean_ID` int(255) NOT NULL AUTO_INCREMENT,
   `Coffee_Bean` text NOT NULL,
+  `Coffee_Bean_Image` longblob NOT NULL,
   `Country` text NOT NULL,
   `Roast` text NOT NULL,
   `Price_Per_kg` int(255) NOT NULL,
