@@ -185,16 +185,35 @@ h6 {
   display: table;
   clear: both;
 }
-
+.container {
+  display: inline-block;
+  margin-left: 10%;
+  width: 40%;
+}
+.container-right {
+  display: inline-block;
+  width: 45%;
+}
 .product-container {
   display: inline-block;
   width: 350px;
-  margin-top: 50px;
-  margin-left: 100px;
+  margin-top: 60px;
   height: 350px;
   cursor: pointer;
 }
-
+.action-btn {
+  display: inline-block;
+  width: 50%;
+}
+.edit0 {
+  margin-left: 55%;
+}
+.edit {
+  margin-left: 50%;
+}
+.delete {
+  margin-left: 20%;
+}
 .product-container img {
   box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
     rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
@@ -408,12 +427,19 @@ h6 {
 .end-product-container {
   display: inline-block;
   margin-top: 170px;
-  margin-left: 158px;
+  margin-left: 170px;
   width: 300px;
   font-family: "Old Standard TT", "serif";
   font-size: 25px;
 }
-
+.add {
+  margin-top: 75px;
+}
+.add-icon {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
 /* Footer */
 .footer-container {
   height: auto;
