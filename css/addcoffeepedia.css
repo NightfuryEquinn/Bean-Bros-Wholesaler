@@ -1,5 +1,3 @@
-/*Coded by Marcus Ong*/
-
 * {
     margin: 0;
     padding: 0;
@@ -19,6 +17,11 @@
   h6 {
     font-family: "Oxygen", sans-serif;
   }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+}
   
   /* Sticky Navigation Bar */
   .nav-bar {

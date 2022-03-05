@@ -13,8 +13,6 @@ Kombu Green - 283618
 Dark Oliver Green - 606C38
 */
 
-/* Coded by Yip Zi Xian */
-
 * {
     margin: 0;
     padding: 0;
@@ -33,6 +31,11 @@ h4,
 h5,
 h6 {
     font-family: "Oxygen", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
   
 /* Sticky Navigation Bar */
@@ -339,10 +342,18 @@ form input {
     transition-timing-function: ease-out;
 }
 
-form input[type=submit] {
+form button {
+    right: 0;
+    margin: 10px;
+    padding: 10px;
     width: 125px;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    font-family: "Old Standard TT", serif;
     background: linear-gradient(to left, #fefae0 50%, #283618 50%) right;
     background-size: 200%;
+    border: none;
     transition-duration: 0.5s;
     transition-timing-function: ease-out;
 }
@@ -352,7 +363,7 @@ form input:focus {
     outline: none;
 }
 
-form input[type=submit]:hover {
+form button:hover {
     color: #fefae0;
     background-position: left;
 }
