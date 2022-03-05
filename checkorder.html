@@ -19,7 +19,7 @@
         <link rel = "stylesheet" href = "css/checkorder.css">
 
         <!--Link to JavaScript-->
-        <script src="js/checkorder.js" defer></script>
+        <script src="js/script.js" defer></script>
 
         <!--Link to Font Awesome v4 and v5-->
         <link rel = "stylesheet" href = "https://use.fontawesome.com/releases/v5.15.4/css/all.css">
@@ -145,7 +145,7 @@
 
                             <input type="number" placeholder="Total Amount In Kilogram" min="60" required>
                             
-                            <button id="adminroast">Continue Roasting</button>
+                            <button type="button" id="adminroast" onclick="adminInvoice()">Continue Roasting</button>
                         </form>
                     </div>
                 </div>
@@ -313,7 +313,7 @@
                             </div>
                         </div>
                         <div class="admin-order-list-right">
-                            <button id="adminopen-1">Create Order</button>
+                            <button id="adminopen-1" onclick="adminOrder()">Create Order</button>
                             <form>
                                 <label>Search Name</label>
                                 <input type="text" placeholder="Customer Name ...">
