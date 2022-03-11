@@ -178,7 +178,8 @@
                         <i class="fas fa-times fa-2x" id="close-3"></i>
                     </div>
                     <div class="order-notes">
-                        <p>**Only one brand of coffee beans is allowed per order.**<br><br>**Minimum 60kg of purchase = One full coffee sack**</p>
+                        <p>**Only one brand of coffee beans is allowed per order.**<br><br>**Minimum 60kg of purchase = One full coffee sack**</p><br><br>
+                        <p>**We will not charge customers yet as this is just a pending order**<br><br>**The status of the order will be changed to "Completed" once customers have paid face-to-face**</p>
                     </div>
                     <div class="order-container">
                         <form>
@@ -186,6 +187,7 @@
                                 <div class="coffee-bean-container">
                                     <div class="coffee-bean"></div>
                                     <h6>Bean 1</h6>
+                                    <h6>Price per kg</h6>
                                 </div>
                                 <input type="radio" name="coffee-bean" required>
                                 <span>
@@ -198,6 +200,7 @@
                                 <div class="coffee-bean-container">
                                     <div class="coffee-bean"></div>
                                     <h6>Bean 2</h6>
+                                    <h6>Price per kg</h6>
                                 </div>
                                 <input type="radio" name="coffee-bean" required>
                                 <span>
@@ -210,6 +213,7 @@
                                 <div class="coffee-bean-container">
                                     <div class="coffee-bean"></div>
                                     <h6>Bean 3</h6>
+                                    <h6>Price per kg</h6>
                                 </div>
                                 <input type="radio" name="coffee-bean" required>
                                 <span>
@@ -222,6 +226,7 @@
                                 <div class="coffee-bean-container">
                                     <div class="coffee-bean"></div>
                                     <h6>Bean 4</h6>
+                                    <h6>Price per kg</h6>
                                 </div>
                                 <input type="radio" name="coffee-bean" required>
                                 <span>
@@ -234,6 +239,7 @@
                                 <div class="coffee-bean-container">
                                     <div class="coffee-bean"></div>
                                     <h6>Bean 5</h6>
+                                    <h6>Price per kg</h6>
                                 </div>
                                 <input type="radio" name="coffee-bean" required>
                                 <span>
@@ -246,6 +252,7 @@
                                 <div class="coffee-bean-container">
                                     <div class="coffee-bean"></div>
                                     <h6>Bean 6</h6>
+                                    <h6>Price per kg</h6>
                                 </div>
                                 <input type="radio" name="coffee-bean" required>
                                 <span>
@@ -256,48 +263,9 @@
 
                             <input type="number" placeholder="Total Amount In Kilogram" min="60" value="60" required>
                             
-                            <button type="button" id="roast" onclick="invoice()">Continue Roasting</button>
+                            <input type="submit" value="Completed Roasting">
                         </form>
                     </div>
-                </div>
-            </div>
-        </div>
-
-        <!--Pending Invoice Popup-->
-        <div class="invoice-modal" id="modal-3b">
-            <div class="invoice-modal-container">
-                <div class="invoice">
-                    <div class="invoice-title">
-                        <h2>Confirm Order</h2>
-                        <i class="fas fa-times fa-2x" id="close-3b"></i>
-                    </div>
-                    <div class="invoice-notes">
-                        <p>**This is just a pending invoice to show your order. We will not charge you.**<br><br>**This invoice status will turn to “Completed” once payment is made face-to-face.**</p>
-                    </div>
-                    <div class="invoice-details-container">
-                        <p>Username:</p>
-                        <p>Email:</p>
-                        <p>Contact Number (Personal):</p>
-                        <p>Contact Number (Work):</p>
-                        <p>Status: Pending</p>
-                        <p>Order Date:</p>
-                    </div>
-                    <div class="invoice-coffee-bean-container">
-                        <div class="invoice-coffee-bean">
-
-                        </div>
-                        <div class="invoice-coffee-bean-details">
-                            <p>Coffee Bean:</p>
-                            <br>
-                            <p>Price per kg:</p>
-                            <p>Amount in kg:</p>
-                            <br>
-                            <p>Total price:</p>
-                        </div>
-                    </div>
-                    <form>
-                        <input type="submit" value="Completed Roasting">
-                    </form>
                 </div>
             </div>
         </div>
@@ -318,28 +286,19 @@
                             <tr>
                                 <th>Order ID</th>
                                 <th>Coffee Bean</th>
-                                <th>Amount (kg)</th>
-                                <th>Total (RM)</th>
-                                <th>Status</th>
-                                <th>Order Date</th>
+                                <th>Invoice</th>
                             </tr>
 
                             <tr>
                                 <td>OD001</td>
                                 <td>Guatamela Bean</td>
-                                <td>120</td>
-                                <td>8000</td>
-                                <td>Pending</td>
-                                <td>22/02/2022</td>
+                                <td><a href="invoice.html">View</a></td>
                             </tr>
                             
                             <tr>
                                 <td>OD002</td>
                                 <td>Argentina Bean</td>
-                                <td>240</td>
-                                <td>16500</td>
-                                <td>Completed</td>
-                                <td>19/02/2022</td>
+                                <td><a href="invoice.html">View</a></td>
                             </tr>
                         </table>
                     </div>
@@ -382,7 +341,7 @@
                             <div class="cfc-top">
                                 <h5 id="function-1" onclick="edit()">Edit Personal Details</h5>
                                 <h5 id="function-2" onclick="manage()">Manage Subscription</h5>
-                                <h5>Submit a Feedback</h5>
+                                <a href="feedback.html"><h5>Submit a Feedback</h5></a>
                             </div>
                             <div class="cfc-bottom">
                                 <h5 id="function-3" onclick="order()">Coffee Beans Needed</h5>

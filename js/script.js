@@ -51,11 +51,7 @@ var targetModal1 = document.getElementById("modal-1")
 var targetModal2 = document.getElementById("modal-2")
 var targetModal2b = document.getElementById("modal-2b")
 var targetModal3 = document.getElementById("modal-3")
-var targetModal3b = document.getElementById("modal-3b")
 var targetModal4 = document.getElementById("modal-4")
-
-var targetAdminModal1 = document.getElementById("admin-1") 
-var targetAdminModal1b = document.getElementById("admin-1b")
 
 // Edit Personal Details
 function edit() {
@@ -135,20 +131,6 @@ function order() {
     }
 }
 
-// Pending Invoice 
-var targetOpenButton3b = document.getElementById("roast")
-var targetCloseButton3b = document.getElementById("close-3b")
-
-function invoice() {
-    targetOpenButton3b.onclick = () => {
-        targetModal3b.style.display = "block"
-    }
-
-    targetCloseButton3b.onclick = () => {
-        targetModal3b.style.display = "none"
-    }
-}
-
 // Order History
 var targetOpenButton4 = document.getElementById("function-4")
 var targetCloseButton4 = document.getElementById("close-4")
@@ -163,36 +145,6 @@ function view() {
     }
 }
 
-/**
- * Popup Function (Admin Check Order Page) (Inefficient)
- */
-
-var targetAdminOpenButton1 = document.getElementById("adminopen-1")
-var targetAdminCloseButton1 = document.getElementById("adminclose-1")
-
-var targetAdminOpenButton1b = document.getElementById("adminroast")
-var targetAdminCloseButton1b = document.getElementById("adminclose-1b")
-
-function adminOrder() {
-    targetAdminOpenButton1.onclick = () => {
-        targetAdminModal1.style.display = "block"
-    }
-
-    targetAdminCloseButton1.onclick = () => {
-        targetAdminModal1.style.display = "none"
-    }
-}
-
-function adminInvoice() {
-    targetAdminOpenButton1b.onclick = () => {
-        targetAdminModal1b.style.display = "block"
-    }
-
-    targetAdminCloseButton1b.onclick = () => {
-        targetAdminModal1b.style.display = "none"
-    }
-}
-
 // Close Popup
 window.onclick = (event) => {
     if (event.target == targetModal1) {
@@ -203,15 +155,9 @@ window.onclick = (event) => {
         targetModal2b.style.display = "none"
     } else if (event.target == targetModal3) {
         targetModal3.style.display = "none"
-    } else if (event.target == targetModal3b) {
-        targetModal3b.style.display = "none"
     } else if (event.target == targetModal4) {
         targetModal4.style.display = "none"
-    } else if (event.target == targetAdminModal1) {
-        targetAdminModal1.style.display = "none"
-    } else if (event.target == targetAdminModal1b) {
-        targetAdminModal1b.style.display = "none"
-    }
+    } 
 }
 
 /**
