@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Feb 26, 2022 at 11:40 AM
+-- Generation Time: Mar 12, 2022 at 07:33 AM
 -- Server version: 5.7.36
 -- PHP Version: 7.4.26
 
@@ -83,11 +83,18 @@ CREATE TABLE IF NOT EXISTS `customer` (
   `Username` varchar(255) NOT NULL,
   `Email` varchar(255) NOT NULL,
   `Password` varchar(255) NOT NULL,
-  `Company_Contact` int(255) NOT NULL,
-  `Personal_Contact` int(255) NOT NULL,
+  `Company_Contact` varchar(255) NOT NULL,
+  `Personal_Contact` varchar(255) NOT NULL,
   `Subscription` text,
   PRIMARY KEY (`Customer_ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `customer`
+--
+
+INSERT INTO `customer` (`Customer_ID`, `Username`, `Email`, `Password`, `Company_Contact`, `Personal_Contact`, `Subscription`) VALUES
+(2, 'NF', 'xianzyip8@gmail.com', '1111', '053223511', '0128981055', NULL);
 
 -- --------------------------------------------------------
 
