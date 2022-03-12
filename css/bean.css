@@ -180,7 +180,7 @@ a {
 .row {
   margin: 0;
   background-color: #fff;
-  height: 2200px;
+  height: auto;
   z-index: 1;
 }
 .row::after {
