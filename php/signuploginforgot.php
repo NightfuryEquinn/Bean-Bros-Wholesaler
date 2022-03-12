@@ -14,10 +14,10 @@
         <meta name = "copyright" content = "Copyright 2022 @ Bean Bros Wholesaler">
 
         <!--Link to CSS-->
-        <link rel = "stylesheet" href = "css/signuploginforgot.css">
+        <link rel = "stylesheet" href = "../css/signuploginforgot.css">
 
         <!--Link to JavaScript-->
-        <script src="js/script.js" defer></script>
+        <script src="../js/script.js" defer></script>
 
         <!--Link to Font Awesome v4 and v5-->
         <link rel = "stylesheet" href = "https://use.fontawesome.com/releases/v5.15.4/css/all.css">
@@ -29,7 +29,7 @@
         <link href = "https://fonts.googleapis.com/css2?family=Old+Standard+TT&family=Oxygen:wght@700&display=swap" rel = "stylesheet">
         
         <!--Link to Pictures file-->
-        <link rel = "icon" type = image/png href = "img\BeanBrosLogo.png">
+        <link rel = "icon" type = image/png href = "../img/BeanBrosLogo.png">
 
         <!--Title-->
         <title>Bean Bros - Register / Log In</title>
@@ -44,7 +44,7 @@
                 <h3><a href="contactus.html">Contact Us</a></h3>
             </div>
             <div class="nav-bar-logo">
-                <a href="home.html"><img src="img\BeanBrosLogo1.png"></a>
+                <a href="home.html"><img src="../img/BeanBrosLogo1.png"></a>
             </div>
             <div class="nav-bar-right">
                 <h3><a href="signuploginforgot.html">Sign Up</a></h3>
@@ -60,7 +60,7 @@
                 <div class="register-login-parallax-back">
                     <!--Register / Login Parallax Background-->
                     <div class="rlb-image-container">
-                        <img src="img/coffee_beans_coffee_cup_198851_3648x4072.jpg">
+                        <img src="../img/coffee_beans_coffee_cup_198851_3648x4072.jpg">
                     </div>
                 </div>
                 <div class="register-login-parallax-base">
@@ -86,36 +86,36 @@
                         </div>
 
                         <div class="signup-input-area">
-                            <form>
+                            <form method="POST" action="signup.php">
                                 <label>Username:</label><br>
-                                <input type="text" placeholder="Your Username" required><br>
+                                <input type="text" name="username" placeholder="Your Username" required><br>
                                 
                                 <label>Email Address:</label><br>
-                                <input type="email" placeholder="Your Company Email" required><br>
+                                <input type="email" name="email" placeholder="Your Company Email" required><br>
                                 
                                 <label>Password:</label><br>
-                                <input type="password" placeholder="Password" required><br>
+                                <input type="password" name="password" placeholder="Password" required><br>
                                 
                                 <label>Confirm Password:</label><br>
-                                <input type="password" placeholder="Confirm Password" required><br>
+                                <input type="password" name="check_password" placeholder="Confirm Password" required><br>
                                 
                                 <label>Contact Number (Work)</label><br>
-                                <input type="tel" placeholder="Company Contact" pattern="[0-9]{9}" required><br>
+                                <input type="tel" name="contact_work" placeholder="Company Contact" pattern="[0-9]{9}" required><br>
                                 
                                 <label>Contact Number (Personal)</label><br>
-                                <input type="tel" placeholder="Personal Contact" pattern="[0-9]{10}" required><br>
+                                <input type="tel" name="contact_personal" placeholder="Personal Contact" pattern="[0-9]{10}" required><br>
                                 
                                 <input type="submit">
                             </form>
                         </div>
 
                         <div class="login-input-area">
-                            <form>
+                            <form method="POST" action="login.php">
                                 <label>Username:</label><br>
-                                <input type="text" placeholder="Your Username" required><br>
+                                <input type="text" name="username" placeholder="Your Username" required><br>
                                 
                                 <label>Password:</label><br>
-                                <input type="password" placeholder="Password" required><br>
+                                <input type="password" name="password" placeholder="Password" required><br>
                             
                                 <input type="submit">
                                 
@@ -123,33 +123,33 @@
                         </div>
 
                         <div class="forgot-password-input-area">
-                            <form>
+                            <form method="POST" action="forgotpassword.php">
                                 <label>Email Address:</label><br>
-                                <input type="email" placeholder="Your Company Email" required><br>
+                                <input type="email" name="email" placeholder="Your Company Email" required><br>
                                 
                                 <label>Username:</label><br>
-                                <input type="text" placeholder="Your Username" required><br>
+                                <input type="text" name="username" placeholder="Your Username" required><br>
                                 
                                 <label>New Password:</label><br>
-                                <input type="password" placeholder="New Password" required><br>
+                                <input type="password" name="new_password" placeholder="New Password" required><br>
                                 
                                 <label>Confirm Password:</label><br>
-                                <input type="password" placeholder="Confirm Password" required><br>
+                                <input type="password" name="confirm_password" placeholder="Confirm Password" required><br>
                             
                                 <input type="submit">
                             </form>
                         </div>
 
                         <div class="forgot-username-input-area">
-                            <form>
+                            <form method="POST" action="forgotusername.php">
                                 <label>Email Address:</label><br>
-                                <input type="email" placeholder="Your Company Email" required><br>
+                                <input type="email" name="email" placeholder="Your Company Email" required><br>
                                 
                                 <label>New Username:</label><br>
-                                <input type="text" placeholder="New Username" required><br>
+                                <input type="text" name="new_username" placeholder="New Username" required><br>
                                 
                                 <label>Password:</label><br>
-                                <input type="password" placeholder="Password" required><br>
+                                <input type="password" name="password" placeholder="Password" required><br>
                             
                                 <input type="submit">
                             </form>
