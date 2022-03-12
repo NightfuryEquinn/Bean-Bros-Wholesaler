@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Mar 12, 2022 at 07:33 AM
--- Server version: 5.7.36
--- PHP Version: 7.4.26
+-- Generation Time: Mar 12, 2022 at 07:59 AM
+-- Server version: 5.7.31
+-- PHP Version: 7.3.21
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -69,7 +69,19 @@ CREATE TABLE IF NOT EXISTS `coffee_bean` (
   `Price_Per_kg` int(255) NOT NULL,
   `Description` varchar(432) NOT NULL,
   PRIMARY KEY (`Bean_ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `coffee_bean`
+--
+
+INSERT INTO `coffee_bean` (`Bean_ID`, `Coffee_Bean`, `Coffee_Bean_Image`, `Country`, `Roast`, `Price_Per_kg`, `Description`) VALUES
+(1, 'Tanzanian Peaberry Coffee', 0x74616e7a616e69616e2d70656162657272792e6a7067, 'Tanzania', 'Dark Roast', 50, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus orci quam, gravida a lacus eu, ultricies iaculis ex. Nunc eu nisl sit amet justo eleifend rutrum.'),
+(2, 'Hawaii Kona Coffee', 0x686177616969616e2d6b6f6e612e6a7067, 'USA', 'Medium Roast', 40, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus orci quam, gravida a lacus eu, ultricies iaculis ex. Nunc eu nisl sit amet justo eleifend rutrum.'),
+(3, 'Mocha Java Coffee', 0x6d6f6368612d6a6176612d636f666665652e6a7067, 'Yemen & Indonesia', 'Medium Roast', 70, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus orci quam, gravida a lacus eu, ultricies iaculis ex. Nunc eu nisl sit amet justo eleifend rutrum.'),
+(4, 'Guatemala Antigua Coffee', 0x67756174656d616c612e6a7067, 'Antigua, Guatemala', 'Medium Roast', 55, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus orci quam, gravida a lacus eu, ultricies iaculis ex. Nunc eu nisl sit amet justo eleifend rutrum.'),
+(5, 'Kenya AA Coffee', 0x4b656e796141412e6a7067, 'Kenya', 'Medium Roast', 80, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus orci quam, gravida a lacus eu, ultricies iaculis ex. Nunc eu nisl sit amet justo eleifend rutrum.'),
+(6, 'Ethiopian Yirgacheffe Coffee', 0x657468696f7069612e6a7067, 'Southern Ethiopia', 'Light-Medium Roast', 75, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus orci quam, gravida a lacus eu, ultricies iaculis ex. Nunc eu nisl sit amet justo eleifend rutrum.');
 
 -- --------------------------------------------------------
 
