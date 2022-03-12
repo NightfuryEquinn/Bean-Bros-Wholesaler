@@ -96,10 +96,12 @@
             <div class="add-product">
               <div class="add-product-content">
                 <div class="add-product-area">
-                  <form>
+                  <!-- form area -->
+                  <form action="php/insert_product.php" method="post">
                     <label>Coffee Bean:</label><br />
                     <input
                       type="text"
+                      name="bean_name"
                       placeholder="Name of Coffee"
                       required
                     /><br />
@@ -107,19 +109,21 @@
                     <label>Coffee Bean Image:</label><br />
                     <input
                       type="text"
+                      name="bean_image"
                       placeholder="Bean's Image"
                       required
                     /><br />
 
                     <label>Country:</label><br />
-                    <input type="text" placeholder="Country" required /><br />
+                    <input type="text" name="country" placeholder="Country" required /><br />
 
                     <label>Roast:</label><br />
-                    <input type="text" placeholder="Roast" required /><br />
+                    <input type="text" name="roast" placeholder="Roast" required /><br />
 
                     <label>Price Per (KG):</label><br />
                     <input
                       type="text"
+                      name="price"
                       placeholder="Price Per (KG)"
                       required
                     /><br />
@@ -127,15 +131,14 @@
                     <label>Description:</label><br />
                     <input
                       type="text"
+                      name="desc"
                       placeholder="Description"
                       required
                     /><br />
+                    <input type="submit" name="submit" value="Submit">
+			              <input type="reset" value="Reset">
                   </form>
                 </div>
-              </div>
-              <div class="button">
-                <button class="add-btn">Beans Out!</button>
-                <button class="reset-btn">Reset</button>
               </div>
             </div>
           </div>

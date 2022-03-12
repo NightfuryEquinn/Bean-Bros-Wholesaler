@@ -1,10 +1,8 @@
 /* 
 Color Palettes 
-
 -- Font Color --
 Thamar Black - 181818 
 Cornsilk - FEFAE0
-
 -- Design Color --
 Cape Palliser - 784830
 Liver Dogs - BC6C25
@@ -194,12 +192,12 @@ a {
   background-color: #181818dd;
 }
 .add-product-content {
-  height: 95%;
+  height: 100%;
   width: 100%;
 }
 .add-product-area {
   height: 100%;
-  margin-top: 5%;
+  margin-top: 4%;
   margin-left: 32%;
   width: auto;
   display: flex;
@@ -234,12 +232,13 @@ form input {
 }
 
 form input[type="submit"] {
-  margin-left: 87.5px;
-  width: 150px;
+  margin-left: 45px;
+  width: 100px;
   background: linear-gradient(to left, #fefae0 50%, #283618 50%) right;
   background-size: 200%;
   transition-duration: 0.5s;
   transition-timing-function: ease-out;
+  cursor: pointer;
 }
 
 form input:focus {
@@ -251,30 +250,23 @@ form input[type="submit"]:hover {
   color: #fefae0;
   background-position: left;
 }
-.button {
-  color: #000;
-  height: 5%;
-  width: 100%;
-}
-.add-btn {
-  float: left;
-  width: 50%;
-  height: 100%;
-  font-size: 30px;
-  text-align: center;
+
+form input[type="reset"] {
+  width: 100px;
+  background: linear-gradient(to right, #fefae0 50%, #283618 50%) left;
+  background-size: 200%;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
   cursor: pointer;
 }
-.reset-btn {
-  float: left;
-  width: 50%;
-  height: 100%;
-  font-size: 30px;
-  text-align: center;
-  cursor: pointer;
+form input[type="reset"]:hover {
+  color: #fefae0;
+  background-position: right;
 }
+
 /* Footer */
 .footer-container {
-  margin-top: 800px;
+  margin-top: 850px;
   height: auto;
   width: auto;
   color: #181818;
