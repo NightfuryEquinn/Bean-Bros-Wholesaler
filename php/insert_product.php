@@ -18,7 +18,7 @@
             }
             else {
                 print '<script>alert("1 record added!");
-                window.location.href = "../addproduct.php";
+                window.location.href = "addproduct.php";
                 </script>';
             }
         my_sqli_close($con);
