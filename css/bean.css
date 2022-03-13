@@ -163,17 +163,17 @@ a {
 
 .column1 {
   float: left;
-  width: 75%;
+  width: 25%;
   padding: 10px;
-  background-color: #fff;
+  background-color: #dda15e;
   height: 1700px;
 }
 
 .column2 {
   float: left;
-  width: 25%;
+  width: 75%;
   padding: 10px;
-  background-color: #dda15e;
+  background-color: #fff;
   height: 1700px;
 }
 

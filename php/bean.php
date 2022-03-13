@@ -90,6 +90,30 @@
       <!-- split container -->
       <div class="row">
         <div class="column1">
+            <div class="search-text">Search...</div>
+            <div class="search-box">
+              <input
+                type="text"
+                name="search"
+                placeholder="Type something here..."
+                class="search-input"
+              />
+              <a href="#" class="search-btn">
+                <i class="fas fa-search"></i>
+              </a>
+            </div>
+            <div class="filter-text">Filter by</div>
+            <div class="design"></div>
+            <select name="filter-list" id="filter-list" required>
+              <option value="" selected="true" disabled="disabled">
+                ~ Please Select ~
+              </option>
+              <option value="new-arrivals">New Arrivals</option>
+              <option value="premium-selection">Premium Choices</option>
+              <option value="classic">Classic</option>
+            </select>
+        </div>
+        <div class="column2">
           <div
             class="product-container"
             onclick="popup('0','../img/tanzanian-peaberry.jpg')"
@@ -239,30 +263,7 @@
             <div class="end-product">End of Selection</div>
           </div>
         </div>
-        <div class="column2">
-          <div class="search-text">Search...</div>
-          <div class="search-box">
-            <input
-              type="text"
-              name="search"
-              placeholder="Type something here..."
-              class="search-input"
-            />
-            <a href="#" class="search-btn">
-              <i class="fas fa-search"></i>
-            </a>
-          </div>
-          <div class="filter-text">Filter by</div>
-          <div class="design"></div>
-          <select name="filter-list" id="filter-list" required>
-            <option value="" selected="true" disabled="disabled">
-              ~ Please Select ~
-            </option>
-            <option value="new-arrivals">New Arrivals</option>
-            <option value="premium-selection">Premium Choices</option>
-            <option value="classic">Classic</option>
-          </select>
-        </div>
+
 
         <!--Footer-->
         <div class="footer-container">

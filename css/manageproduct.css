@@ -163,24 +163,24 @@ a {
 
 .column1 {
   float: left;
-  width: 75%;
-  padding: 10px;
-  background-color: #fff;
-  height: 1700px;
-}
-
-.column2 {
-  float: left;
   width: 25%;
   padding: 10px;
   background-color: #dda15e;
   height: 1700px;
 }
 
+.column2 {
+  float: left;
+  width: 75%;
+  padding: 10px;
+  background-color: #fff;
+  height: 1700px;
+}
+
 .row {
   margin: 0;
   background-color: #fff;
-  height: 2200px;
+  height: auto;
   z-index: 1;
 }
 .row::after {
