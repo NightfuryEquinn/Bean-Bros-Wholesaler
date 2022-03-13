@@ -97,7 +97,7 @@
               <div class="add-product-content">
                 <div class="add-product-area">
                   <!-- form area -->
-                  <form action="insert_product.php" method="post">
+                  <form action="insertproduct.php" method="post">
                     <label>Coffee Bean:</label><br />
                     <input
                       type="text"
@@ -108,9 +108,9 @@
 
                     <label>Coffee Bean Image:</label><br />
                     <input
-                      type="text"
+                      type="file"
                       name="bean_image"
-                      placeholder="Bean's Image"
+                      accept="image/*"
                       required
                     /><br />
 
