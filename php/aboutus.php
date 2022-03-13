@@ -14,7 +14,7 @@
         <meta name = "copyright" content = "Copyright 2022 @ Bean Bros Wholesaler">
 
         <!--Link to CSS-->
-        <link rel = "stylesheet" href = "css/feedback.css">
+        <link rel = "stylesheet" href = "../css/aboutus.css">
 
         <!--Link to Font Awesome v4 and v5-->
         <link rel = "stylesheet" href = "https://use.fontawesome.com/releases/v5.15.4/css/all.css">
@@ -26,10 +26,10 @@
         <link href = "https://fonts.googleapis.com/css2?family=Old+Standard+TT&family=Oxygen:wght@700&display=swap" rel = "stylesheet">
         
         <!--Link to Pictures file-->
-        <link rel = "icon" type = image/png href = "img\BeanBrosLogo.png">
+        <link rel = "icon" type = image/png href = "../img/BeanBrosLogo.png">
 
         <!--Title-->
-        <title>Bean Bros - Feedback</title>
+        <title>Bean Bros - About Us</title>
     </head>
     <body>
         <!--Sticky Navigation Bar-->
@@ -41,44 +41,56 @@
                 <h3><a href="contactus.html">Contact Us</a></h3>
             </div>
             <div class="nav-bar-logo">
-                <a href="home.html"><img src="img\BeanBrosLogo1.png"></a>
+                <a href="home.html"><img src="../img/BeanBrosLogo1.png"></a>
             </div>
             <div class="nav-bar-right">
                 <h3><a href="customerprofile.html">Profile</a></h3>
                 <h3><a href="feedback.html">Feedback</a></h3>
                 <h3>Log Out</h3>
             </div>
-          </div>
+        </div>
 
-        <!--Customer Feedback Page Parallax-->
-        <div class="feedback-page">
+        <!--About Us Page Parallax-->
+        <div class="about-us-page">
 
-            <!--Customer Feedback Page First Parallax-->
-            <div class="feedback-page-parallax-group">
-                <div class="feedback-page-parallax-back">
-                    <!--Customer Feedback Page Parallax Background-->
-                    <div class="cfb-image-container">
-                        <img src="img/coffee_beans_coffee_jar_197791_1920-1080.jpg">
+            <!--About Us First Parallax-->
+            <div class="about-us-parallax-group">
+                <div class="about-us-parallax-back">
+                    <!--Abous Us Parallax Background-->
+                    <div class="aub-image-container">
+                        <img src="../img/coffeetree-2jvxey8_1920x1080.jpg">
                     </div>
                 </div>
-                <div class="feedback-page-parallax-base">
-                    <!--Customer Feedback Page Parallax Quote-->
+                <div class="about-us-parallax-base">
+                    <!--About Us Parallax Quote-->
                     <div class="quote-container">
-                        <p>Help Us to Improve Our Services</p>
+                        <p>Our Legacy Starts Here</p>
                     </div>
-                    <!--Customer Feedback Form Container-->
-                    <div class="feedback-form-container">
-                        <div class="feedback-form-title">
-                            <h1>Feedback Form</h1>
+                    <!--About Us Description-->
+                    <div class="description-container">
+                        <div class="research-to-perfection-text-container">
+                            <div class="rtp-title">
+                                <h1>Research to Perfection</h1>
+                            </div>
+                            <div class="rtp-content">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
                         </div>
-                        <div class="feedback-form">
-                            <form>
-                                <textarea placeholder="Tell us your opinion about us and give us some feedback about our services..." required rows="10" cols="100"></textarea>
-                                <input type="submit">
-                            </form>
+                        <div class="how-we-farm-text-container">
+                            <div class="hwf-title">
+                                <h1>How We Farm</h1>
+                            </div>
+                            <div class="hwf-content">
+                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+                            </div>
                         </div>
-                        <div class="feedback-form-ps">
-                            <p>** Feedback form will be submitted as anonymous source **</p>
+                        <div class="our-coffee-bean-text-container">
+                            <div class="ocb-title">
+                                <h1>Our Coffee Bean</h1>
+                            </div>
+                            <div class="ocb-content">
+                                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
+                            </div>
                         </div>
                     </div>
                     <!--Footer-->
@@ -123,6 +135,5 @@
                     </div>
                 </div>
             </div>
-        </div>
     </body>
 </html>
