@@ -14,7 +14,7 @@
         <meta name = "copyright" content = "Copyright 2022 @ Bean Bros Wholesaler">
 
         <!--Link to CSS-->
-        <link rel = "stylesheet" href = "css/adminprofile.css">
+        <link rel = "stylesheet" href = "../css/adminprofile.css">
 
         <!--Link to Font Awesome v4 and v5-->
         <link rel = "stylesheet" href = "https://use.fontawesome.com/releases/v5.15.4/css/all.css">
@@ -26,7 +26,7 @@
         <link href = "https://fonts.googleapis.com/css2?family=Old+Standard+TT&family=Oxygen:wght@700&display=swap" rel = "stylesheet">
         
         <!--Link to Pictures file-->
-        <link rel = "icon" type = image/png href = "img\BeanBrosLogo.png">
+        <link rel = "icon" type = image/png href = "../img/BeanBrosLogo.png">
 
         <!--Title-->
         <title>Bean Bros - Admin Profile</title>
@@ -36,12 +36,12 @@
         <div class="nav-bar">
             <div class="nav-bar-left">
                 <h3><a href="bean.html">Bean</a></h3>
-                <h3><a href="coffeepedia_c.html">Coffeepedia</a></h3>
+                <h3><a href="coffeepedia_a.html">Coffeepedia</a></h3>
                 <h3><a href="aboutus.html">About Us</a></h3>
                 <h3><a href="contactus.html">Contact Us</a></h3>
             </div>
             <div class="nav-bar-logo">
-                <a href="home.html"><img src="img\BeanBrosLogo1.png"></a>
+                <a href="home.html"><img src="../img/BeanBrosLogo1.png"></a>
             </div>
             <div class="nav-bar-right">
                 <h3><a href="adminprofile.html">Profile</a></h3>
@@ -61,7 +61,7 @@
                 <div class="admin-profile-parallax-back">
                     <!--Admin Profile Parallax Background-->
                     <div class="apb-image-container">
-                        <img src="img/couple_hands_love_tenderness_coffee_118921_1920x1080.jpg">
+                        <img src="../img/couple_hands_love_tenderness_coffee_118921_1920x1080.jpg">
                     </div>
                 </div>
                 <div class="admin-profile-parallax-base">
@@ -104,7 +104,7 @@
                             <div class="footer-nav">
                                 <p><a href="home.html">Home</a></p>
                                 <p><a href="bean.html">Bean</a></p>
-                                <p><a href="coffeepedia_c.html">Coffeepedia</a></p>
+                                <p><a href="coffeepedia_a.html">Coffeepedia</a></p>
                                 <p><a href="aboutus.html">About Us</a></p>
                                 <p><a href="contactus.html">Contact Us</a></p>
                             </div>

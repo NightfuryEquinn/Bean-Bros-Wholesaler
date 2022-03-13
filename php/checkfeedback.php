@@ -14,7 +14,7 @@
         <meta name = "copyright" content = "Copyright 2022 @ Bean Bros Wholesaler">
 
         <!--Link to CSS-->
-        <link rel = "stylesheet" href = "css/checkfeedback.css">
+        <link rel = "stylesheet" href = "../css/checkfeedback.css">
 
         <!--Link to Font Awesome v4 and v5-->
         <link rel = "stylesheet" href = "https://use.fontawesome.com/releases/v5.15.4/css/all.css">
@@ -26,7 +26,7 @@
         <link href = "https://fonts.googleapis.com/css2?family=Old+Standard+TT&family=Oxygen:wght@700&display=swap" rel = "stylesheet">
         
         <!--Link to Pictures file-->
-        <link rel = "icon" type = image/png href = "img\BeanBrosLogo.png">
+        <link rel = "icon" type = image/png href = "../img/BeanBrosLogo.png">
 
         <!--Title-->
         <title>Bean Bros - Feedback List</title>
@@ -36,12 +36,12 @@
         <div class="nav-bar">
             <div class="nav-bar-left">
                 <h3><a href="bean.html">Bean</a></h3>
-                <h3><a href="coffeepedia_c.html">Coffeepedia</a></h3>
+                <h3><a href="coffeepedia_a.html">Coffeepedia</a></h3>
                 <h3><a href="aboutus.html">About Us</a></h3>
                 <h3><a href="contactus.html">Contact Us</a></h3>
             </div>
             <div class="nav-bar-logo">
-                <a href="home.html"><img src="img\BeanBrosLogo1.png"></a>
+                <a href="home.html"><img src="../img/BeanBrosLogo1.png"></a>
             </div>
             <div class="nav-bar-right">
                 <h3><a href="adminprofile.html">Profile</a></h3>
@@ -61,7 +61,7 @@
                 <div class="feedback-list-parallax-back">
                     <!--Feedback List Parallax Background-->
                     <div class="flb-image-container">
-                        <img src="img/coffee_beans_coffee_jar_197791_1920-1080.jpg">
+                        <img src="../img/coffee_beans_coffee_jar_197791_1920-1080.jpg">
                     </div>
                 </div>
                 <div class="feedback-list-parallax-base">
@@ -71,31 +71,55 @@
                     </div>
                     <!--Feedback Container-->
                     <div class="feedback-container">
+                        <div class="feedback-right">
+                            <form method="POST">
+                                <label>Select Date</label>
+                                <input type="text" name="searchTime" placeholder="YYYY-MM-DD" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" required>
+                                <input type="submit" name="search">
+                            </form>
+
+                            <?php
+                                // Search 
+                                include("conn.php");
+
+                                $searchTime = "";
+
+                                if(isset($_POST["search"]))
+                                {
+                                    $searchTime = $_POST['searchTime'];
+                                }
+
+                                $searchResult = mysqli_query($con, "SELECT * FROM feedback WHERE Date LIKE '%$searchTime%';");
+                            ?>
+                        </div>
                         <div class="feedback-left">
                             <div class="feedback-title">
                                 <h2>Feedback List</h2>
                             </div>
                             <div class="all-feedback-container">
-                                <div class="feedback">
-                                    <p>Nunc lobortis ullamcorper pretium. Nulla blandit eros sit amet maximus dapibus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris consectetur arcu tortor, ut eleifend eros pellentesque in. Integer blandit, purus non convallis laoreet, urna neque elementum dolor, quis maximus quam arcu ut nulla. Quisque volutpat iaculis sagittis. Pellentesque lobortis congue augue. Curabitur varius risus mi, sed pulvinar lacus maximus id. Aenean vitae auctor lectus. Duis sit amet dolor lectus. Ut molestie, urna non consectetur pharetra, urna dui ultricies tortor, ut tincidunt metus enim ut neque.</p>
-                                </div>
-                                <div class="feedback">
-                                    <p>Duis suscipit auctor neque, eget imperdiet risus euismod vitae. Nunc tristique elit sit amet libero faucibus, a semper magna fringilla. Nulla blandit sem in ex hendrerit ullamcorper. Vestibulum a consectetur felis. Fusce diam enim, gravida a nisl eu, egestas volutpat nulla. Suspendisse a tellus accumsan, consectetur leo non, rutrum quam. Vestibulum lorem justo, accumsan vitae diam eget, semper malesuada mauris. Vivamus vel bibendum libero, at gravida lorem. Nulla pharetra dapibus feugiat. Nunc sollicitudin justo non metus ultricies, sed rutrum enim dignissim.</p>
-                                </div>
-                                <div class="feedback">
-                                    <p>Nunc lobortis ullamcorper pretium. Nulla blandit eros sit amet maximus dapibus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris consectetur arcu tortor, ut eleifend eros pellentesque in. Integer blandit, purus non convallis laoreet, urna neque elementum dolor, quis maximus quam arcu ut nulla. Quisque volutpat iaculis sagittis. Pellentesque lobortis congue augue. Curabitur varius risus mi, sed pulvinar lacus maximus id. Aenean vitae auctor lectus. Duis sit amet dolor lectus. Ut molestie, urna non consectetur pharetra, urna dui ultricies tortor, ut tincidunt metus enim ut neque.</p>
-                                </div>
-                                <div class="feedback">
-                                    <p>Duis suscipit auctor neque, eget imperdiet risus euismod vitae. Nunc tristique elit sit amet libero faucibus, a semper magna fringilla. Nulla blandit sem in ex hendrerit ullamcorper. Vestibulum a consectetur felis. Fusce diam enim, gravida a nisl eu, egestas volutpat nulla. Suspendisse a tellus accumsan, consectetur leo non, rutrum quam. Vestibulum lorem justo, accumsan vitae diam eget, semper malesuada mauris. Vivamus vel bibendum libero, at gravida lorem. Nulla pharetra dapibus feugiat. Nunc sollicitudin justo non metus ultricies, sed rutrum enim dignissim.</p>
-                                </div>
+                                <?php
+                                    // While Loop Search Data
+                                    while($row = mysqli_fetch_assoc($searchResult))
+                                    {
+                                        $displayFeedback = '
+                                        
+                                        <div class="feedback">
+
+                                        <p>'.$row['Feedback'].'</p>
+
+                                        <p>'.$row['Date'].'</p>
+                                        
+                                        </div>
+
+                                        ';
+
+                                        echo $displayFeedback;
+                                    }
+
+                                    // Close connection to database
+                                    mysqli_close($con);
+                                ?>
                             </div>
-                        </div>
-                        <div class="feedback-right">
-                            <form>
-                                <label>Select Date</label>
-                                <input type="date" placeholder="Select Time ..." required>
-                                <input type="submit">
-                            </form>
                         </div>
                     </div>
                     <!--Footer-->
@@ -109,7 +133,7 @@
                             <div class="footer-nav">
                                 <p><a href="home.html">Home</a></p>
                                 <p><a href="bean.html">Bean</a></p>
-                                <p><a href="coffeepedia_c.html">Coffeepedia</a></p>
+                                <p><a href="coffeepedia_a.html">Coffeepedia</a></p>
                                 <p><a href="aboutus.html">About Us</a></p>
                                 <p><a href="contactus.html">Contact Us</a></p>
                             </div>
