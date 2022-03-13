@@ -15,7 +15,7 @@
         <meta name="copyright" content="Copyright 2022 @ Bean Bros Wholesaler" />
 
         <!--Link to CSS-->
-        <link rel="stylesheet" href="css/addcoffeepedia.css" />
+        <link rel="stylesheet" href="../css/addcoffeepedia.css" />
 
         <!--Link to Font Awesome v4 and v5-->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
@@ -27,7 +27,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT&family=Oxygen:wght@700&display=swap" rel="stylesheet"/>
 
         <!--Link to Pictures file-->
-        <link rel = "icon" type = image/png href = "img\BeanBrosLogo.png">
+        <link rel = "icon" type = image/png href = "../img/BeanBrosLogo.png">
 
         <!--Title-->
         <title>Bean Bros - Add Coffeepedia</title>
@@ -37,20 +37,20 @@
         <!--Navigation Bar-->
         <div class="nav-bar">
             <div class="nav-bar-left">
-                <h3><a href="bean.html">Bean</a></h3>
-                <h3><a href="coffeepedia_c.html">Coffeepedia</a></h3>
-                <h3><a href="aboutus.html">About Us</a></h3>
-                <h3><a href="contactus.html">Contact Us</a></h3>
+                <h3><a href="../bean.html">Bean</a></h3>
+                <h3><a href="../coffeepedia_c.html">Coffeepedia</a></h3>
+                <h3><a href="../aboutus.html">About Us</a></h3>
+                <h3><a href="../contactus.html">Contact Us</a></h3>
             </div>
             <div class="nav-bar-logo">
-                <a href="home.html"><img src="img\BeanBrosLogo1.png"></a>
+                <a href="../home.html"><img src="../img\BeanBrosLogo1.png"></a>
             </div>
             <div class="nav-bar-right">
-                <h3><a href="adminprofile.html">Profile</a></h3>
-                <h3><a href="monthlyreport.html">Report</a></h3>
-                <h3><a href="checkfeedback.html">Feedback</a></h3>
-                <h3><a href="checkcustomer.html">Customers</a></h3>
-                <h3><a href="checkorder.html">Orders</a></h3>
+                <h3><a href="../adminprofile.html">Profile</a></h3>
+                <h3><a href="../monthlyreport.html">Report</a></h3>
+                <h3><a href="../checkfeedback.html">Feedback</a></h3>
+                <h3><a href="../checkcustomer.html">Customers</a></h3>
+                <h3><a href="../checkorder.html">Orders</a></h3>
                 <h3>Log Out</h3>
             </div>
         </div>
@@ -61,21 +61,17 @@
                 <div class="product-parallax-back">
                     <!--Homepage Parallax Background-->
                     <div class="image-container">
-                        <img src="img/coffee_beans_grains_coffee_172935_3648x3016.jpg" />
+                        <img src="../img/coffee_beans_grains_coffee_172935_3648x3016.jpg" />
                     </div>
                 </div>
                 <div class="product-parallax-base">
                     <div class="row">
                         <div class="column">
                             <div class="title-container">
-                                <div class="title-design"></div>
-                                &nbsp;
-                                &nbsp;
+                                <div class="title-design"></div>                                    
                                 <div class="content-title">
-                                Creating New Coffee Blog
-                                </div>
-                                &nbsp;
-                                &nbsp;
+                                    Creating New Coffee Blog
+                                </div>                                    
                                 <div class="title-design"></div>
                             </div>
                         </div>
@@ -132,6 +128,7 @@
                 </div>
             </div>
         </div>
+
     </body>
 
 </html>
