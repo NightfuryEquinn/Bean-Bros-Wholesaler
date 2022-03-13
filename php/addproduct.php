@@ -97,7 +97,7 @@
               <div class="add-product-content">
                 <div class="add-product-area">
                   <!-- form area -->
-                  <form action="insertproduct.php" method="post">
+                  <form action="insertproduct.php" enctype="multipart/form-data" method="post">
                     <label>Coffee Bean:</label><br />
                     <input
                       type="text"
