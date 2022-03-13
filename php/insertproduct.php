@@ -8,7 +8,7 @@ $img = file_get_contents($uploadImage);
 
 $sql="INSERT INTO coffee_bean(Coffee_Bean, Coffee_Bean_Image, Country, Roast, Price_Per_kg, Description) 
 VALUES 
-('$_POST[bean_name]', ? , '$_POST[price]', '$_POST[country]', '$_POST[roast]', '$_POST[desc]');";
+('$_POST[bean_name]', ? , '$_POST[country]', '$_POST[roast]', '$_POST[price]', '$_POST[desc]');";
 
 $stmt = mysqli_prepare($con,$sql);
 
