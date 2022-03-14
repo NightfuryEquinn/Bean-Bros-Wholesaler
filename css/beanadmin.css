@@ -166,7 +166,7 @@ a {
   width: 25%;
   padding: 10px;
   background-color: #dda15e;
-  height: 1700px;
+  height: 2000px;
 }
 
 .column2 {
@@ -174,7 +174,7 @@ a {
   width: 75%;
   padding: 10px;
   background-color: #fff;
-  height: 1700px;
+  height: auto;
 }
 
 .row {
@@ -189,13 +189,11 @@ a {
   clear: both;
 }
 .container {
-  display: inline-block;
+  display: flex;
   margin-left: 10%;
-  width: 40%;
-}
-.container-right {
-  display: inline-block;
-  width: 45%;
+  height: auto;
+  width: auto;
+  justify-content: space-evenly;
 }
 .product-container {
   display: inline-block;
@@ -206,13 +204,13 @@ a {
 }
 .action-btn {
   display: inline-block;
-  width: 50%;
-}
-.edit0 {
-  margin-left: 55%;
+  margin-top: 3%;
+  margin-left: 19%;
+  height: auto;
+  width: 20%;
 }
 .edit {
-  margin-left: 50%;
+  margin-left: 60%;
 }
 .delete {
   margin-left: 20%;
@@ -427,14 +425,16 @@ a {
 
 .end-product-container {
   display: inline-block;
-  margin-top: 170px;
-  margin-left: 170px;
-  width: 300px;
+  height: auto;
+  margin-top: 10%;
+  margin-left: 24%;
+  justify-content: space-evenly;
+  width: 20%;
   font-family: "Old Standard TT", "serif";
   font-size: 25px;
 }
 .add {
-  margin-top: 75px;
+  margin-top: 15%;
 }
 .add-icon {
   border: none;
