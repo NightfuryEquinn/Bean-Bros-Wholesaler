@@ -192,12 +192,12 @@
             </div>
           </div>
           <div class="action-btn">
-            <button class="edit"><i class="fas fa-edit"></i></button>
-            <button class="delete"><i class="fas fa-trash-alt"></i></button>
+            <a href="" class="edit"><i class="fas fa-edit"></i></a>
+            <a href="" class="delete"><i class="fas fa-trash-alt"></i></a>
           </div>
           <div class="action-btn">
-            <button class="edit"><i class="fas fa-edit"></i></button>
-            <button class="delete"><i class="fas fa-trash-alt"></i></button>
+            <a href="" class="edit"><i class="fas fa-edit"></i></a>
+            <a href="" class="delete"><i class="fas fa-trash-alt"></i></a>
           </div>
 
           <div class="container">
@@ -252,12 +252,12 @@
             </div>
           </div>
           <div class="action-btn">
-            <button class="edit"><i class="fas fa-edit"></i></button>
-            <button class="delete"><i class="fas fa-trash-alt"></i></button>
+            <a href="" class="edit"><i class="fas fa-edit"></i></a>
+            <a href="" class="delete"><i class="fas fa-trash-alt"></i></a>
           </div>
           <div class="action-btn">
-            <button class="edit"><i class="fas fa-edit"></i></button>
-            <button class="delete"><i class="fas fa-trash-alt"></i></button>
+            <a href="" class="edit"><i class="fas fa-edit"></i></a>
+            <a href="" class="delete"><i class="fas fa-trash-alt"></i></a>
           </div>
 
           <div class="container">
@@ -311,12 +311,12 @@
             </div>
           </div>
           <div class="action-btn">
-            <button class="edit"><i class="fas fa-edit"></i></button>
-            <button class="delete"><i class="fas fa-trash-alt"></i></button>
+            <a href="" class="edit"><i class="fas fa-edit"></i></a>
+            <a href="" class="delete"><i class="fas fa-trash-alt"></i></a>
           </div>
           <div class="action-btn">
-            <button class="edit"><i class="fas fa-edit"></i></button>
-            <button class="delete"><i class="fas fa-trash-alt"></i></button>
+            <a href="" class="edit"><i class="fas fa-edit"></i></a>
+            <a href="" class="delete"><i class="fas fa-trash-alt"></i></a>
           </div>
 
           <div class="end-product-container">
