@@ -85,6 +85,18 @@
                         <a href="#" class="search-btn">
                             <i class=""></i>
                         </a>
+                        <?php
+                            include("conn.php");
+
+                            $searchText = "";
+
+                            if(isset($_POST["search"])) 
+                            {
+                                $searchText = $_POST['searchText'];
+                            }
+
+                            $searchResult = mysqli_query($con, "SELECT * FROM coffeepedia WHERE Title LIKE '%$searchText%'");
+                        ?>
                     </div>
                     <div class="box2"></div>
 

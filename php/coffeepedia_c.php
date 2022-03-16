@@ -81,6 +81,18 @@
                         <a href="#" class="search-btn">
                             <i class=""></i>
                         </a>
+                        <?php
+                            include("conn.php");
+
+                            $searchText = "";
+
+                            if(isset($_POST["search"])) 
+                            {
+                                $searchText = $_POST['searchText'];
+                            }
+
+                            $searchResult = mysqli_query($con, "SELECT * FROM coffeepedia WHERE Title LIKE '%$searchText%'");
+                        ?>
 
                     </div>
                     <div class="box2"></div>
@@ -88,6 +100,20 @@
                     <div class="blog-content-container">
 
                         <div class="blog1"></div>
+                        <?php
+                            // Get and display data
+                            while ($row = mysqli_fetch_array($searchResult)){
+                                
+                                $display = '
+                                
+                                ';
+
+                                echo $display;
+                            }
+
+                            // Close connection to database
+                            mysqli_close($con); 
+                        ?>
                         <div class="rect1"></div>
 
                         <div class="blog2"></div>
