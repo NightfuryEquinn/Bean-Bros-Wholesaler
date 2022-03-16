@@ -1,10 +1,8 @@
 /* 
 Color Palettes 
-
 -- Font Color --
 Thamar Black - 181818 
 Cornsilk - FEFAE0
-
 -- Design Color --
 Cape Palliser - 784830
 Liver Dogs - BC6C25
@@ -123,7 +121,7 @@ a {
   bottom: 0;
   left: 0;
   position: relative;
-  transform: translateX(-1050px) translateY(-1750px) translateZ(-1.25px);
+  transform: translateX(-1050px) translateY(-1350px) translateZ(-1.25px);
 }
 .image-container img {
   margin-top: 20%;
@@ -184,42 +182,91 @@ a {
   text-align: center;
 }
 
-.add-product {
+.edit-product {
   display: inline-block;
-  margin-top: 10%;
+  margin-top: 4%;
   margin-left: 17%;
-  height: 450%;
+  height: 120%;
   width: 70%;
-  background-color: rgba(255, 255, 255, 0.5);
+  color: #fefae0;
+  background-color: #181818dd;
 }
-.add-product-content {
-  height: 95%;
+.edit-product-content {
+  height: 100%;
   width: 100%;
 }
-.button {
-  color: #000;
-  height: 5%;
-  width: 100%;
-}
-.edit-btn {
-  float: left;
-  width: 50%;
+.edit-product-area {
   height: 100%;
-  font-size: 30px;
-  text-align: center;
+  margin-top: 4%;
+  margin-left: 32%;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+  transform: translateY(-100px);
+  animation-name: slide;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+form label {
+  font-size: 20px;
+  letter-spacing: 1.5px;
+}
+
+form input {
+  right: 0;
+  margin: 10px 10px 25px 10px;
+  padding: 10px;
+  width: 300px;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  font-family: "Old Standard TT", serif;
+  background: linear-gradient(to left, #fefae0 50%, #dda15e 50%) right;
+  background-size: 200%;
+  border: none;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
+}
+
+form input[type="submit"] {
+  margin-left: 15px;
+  width: 130px;
+  background: linear-gradient(to left, #fefae0 50%, #283618 50%) right;
+  background-size: 200%;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
   cursor: pointer;
 }
-.reset-btn {
-  float: left;
-  width: 50%;
-  height: 100%;
-  font-size: 30px;
-  text-align: center;
+
+form input:focus {
+  background-position: left;
+  outline: none;
+}
+
+form input[type="submit"]:hover {
+  color: #fefae0;
+  background-position: left;
+}
+
+form input[type="reset"] {
+  width: 130px;
+  background: linear-gradient(to right, #fefae0 50%, #283618 50%) left;
+  background-size: 200%;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
   cursor: pointer;
 }
+form input[type="reset"]:hover {
+  color: #fefae0;
+  background-position: right;
+}
+
 /* Footer */
 .footer-container {
-  margin-top: 140%;
+  margin-top: 850px;
   height: auto;
   width: auto;
   color: #181818;

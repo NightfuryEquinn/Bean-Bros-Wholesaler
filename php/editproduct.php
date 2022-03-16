@@ -26,7 +26,7 @@
     <meta name="copyright" content="Copyright 2022 @ Bean Bros Wholesaler" />
 
     <!--Link to CSS-->
-    <link rel="stylesheet" href="css/editproduct.css" />
+    <link rel="stylesheet" href="../css/editproduct.css" />
 
     <!--Link to Font Awesome v4 and v5-->
     <link
@@ -47,7 +47,7 @@
     />
 
     <!--Link to Pictures file-->
-    <link rel = "icon" type = image/png href = "img\BeanBrosLogo.png">
+    <link rel = "icon" type = image/png href = "../img\BeanBrosLogo.png">
 
     <!--Title-->
     <title>Bean Bros - Edit Product</title>
@@ -62,7 +62,7 @@
         <h3><a href="contactus.html">Contact Us</a></h3>
       </div>
       <div class="nav-bar-logo">
-        <a href="home.html"><img src="img\BeanBrosLogo1.png" /></a>
+        <a href="home.html"><img src="../img\BeanBrosLogo1.png" /></a>
       </div>
       <div class="nav-bar-right">
         <h3><a href="adminprofile.html">Profile</a></h3>
@@ -79,7 +79,7 @@
         <div class="product-parallax-back">
           <!--Homepage Parallax Background-->
           <div class="image-container">
-            <img src="img/coffee_beans_grains_coffee_172935_3648x3016.jpg" />
+            <img src="../img/coffee_beans_grains_coffee_172935_3648x3016.jpg" />
           </div>
         </div>
         <div class="product-parallax-base">

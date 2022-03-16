@@ -139,6 +139,7 @@
           </select>
         </div>
         <div class="column2">
+          <?php ?>
           <div class="container">
             <div
               class="product-container"
