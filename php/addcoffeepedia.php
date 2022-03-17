@@ -76,10 +76,30 @@
                             </div>
                         </div>
                         <div class="add-product">
-                            <div class="add-product-content"></div>
+                            <div class="add-product-content">                            
+                                <div class='item-flex-container'>
+                                    <form action="add.php" method="post" enctype="multipart/form-data">
+                                        <h1>WHAT DO YOU WANT TO ADD?</h1>
+                                        <div class="addnew">
+                                            <label>Title: </label><input type='text' name='Title' required>
+                                            <hr>                                        
+                                            <label>Coffeepedia_ID: </label><input type="varchar" name="Coffeepedia_ID" min="0" required>
+                                            <hr>
+                                            <label>Admin_ID: </label><input type="varchar" name="Admin_ID" min="0" required>
+                                            <hr>
+                                            <label>Author: </label><input type="text" name="Author" min="0" required>
+                                            <hr>
+                                            <label>Content: </label><textarea name="Content" rows="10" cols="10" required></textarea>
+                                            <hr> 
+                                            <label>Date: </label><input type="number" name="Written_Date" min="0" required>
+                                            <hr>                                  
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
                             <div class="button">
-                                <button class="add-btn">New Blog!</button>
-                                <button class="reset-btn">Reset</button>
+                                <button id='submit' class="add-btn">New Blog!</button>
+                                <button id='reset' class="reset-btn">Reset</button>
                             </div>
                         </div>
                     </div>

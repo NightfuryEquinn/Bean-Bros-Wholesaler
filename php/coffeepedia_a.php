@@ -104,35 +104,74 @@
 
                         <div class="blog1"></div>
                         <div class="rect1"></div>
-                        <div class="edit1"><i class="fas fa-edit"></i></div>
-                        <div class="delete1"><i class="fas fa-trash-alt"></i></div>
+                        <div class="edit1">
+                            <button button onclick="document.location='editcoffeepedia.php'" class="fas fas fa-edit fa-1x" 
+                            style="color: transparent background-color: transparent; border-color: transparent; cursor: default;">
+                        </div>
+                        <div class="delete1">
+                            <button button onclick="document.location='delete.php'" class="fas fa-trash-alt fa-1x" 
+                            style="color: transparent background-color: transparent; border-color: transparent; cursor: default;">
+                        </div>                      
 
                         <div class="blog2"></div>
                         <div class="rect2"></div>
-                        <div class="edit2"><i class="fas fa-edit"></i></div>
-                        <div class="delete2"><i class="fas fa-trash-alt"></i></div>
+                        <div class="edit2">
+                            <button button onclick="document.location='editcoffeepedia.php'" class="fas fas fa-edit fa-1x" 
+                            style="color: transparent background-color: transparent; border-color: transparent; cursor: default;">
+                        </div>
+                        <div class="delete2">
+                            <button button onclick="document.location='delete.php'" class="fas fa-trash-alt fa-1x" 
+                            style="color: transparent background-color: transparent; border-color: transparent; cursor: default;">
+                        </div>
 
                         <div class="blog3"></div>
                         <div class="rect3"></div>
-                        <div class="edit3"><i class="fas fa-edit"></i></div>
-                        <div class="delete3"><i class="fas fa-trash-alt"></i></div>
+                        <div class="edit3">
+                            <button button onclick="document.location='editcoffeepedia.php'" class="fas fas fa-edit fa-1x" 
+                            style="color: transparent background-color: transparent; border-color: transparent; cursor: default;">
+                        </div>
+                        <div class="delete3">
+                            <button button onclick="document.location='delete.php'" class="fas fa-trash-alt fa-1x" 
+                            style="color: transparent background-color: transparent; border-color: transparent; cursor: default;">
+                        </div>
 
                         <div class="blog4"></div>
                         <div class="rect4"></div>
-                        <div class="edit4"><i class="fas fa-edit"></i></div>
-                        <div class="delete4"><i class="fas fa-trash-alt"></i></div>
+                        <div class="edit4">
+                            <button button onclick="document.location='editcoffeepedia.php'" class="fas fas fa-edit fa-1x" 
+                            style="color: transparent background-color: transparent; border-color: transparent; cursor: default;">
+                        </div>
+                        <div class="delete4">
+                            <button button onclick="document.location='delete.php'" class="fas fa-trash-alt fa-1x" 
+                            style="color: transparent background-color: transparent; border-color: transparent; cursor: default;">
+                        </div>
 
                         <div class="blog5"></div>
                         <div class="rect5"></div>
-                        <div class="edit5"><i class="fas fa-edit"></i></div>
-                        <div class="delete5"><i class="fas fa-trash-alt"></i></div>
+                        <div class="edit5">
+                            <button button onclick="document.location='editcoffeepedia.php'" class="fas fas fa-edit fa-1x" 
+                            style="color: transparent background-color: transparent; border-color: transparent; cursor: default;">
+                        </div>
+                        <div class="delete5">
+                            <button button onclick="document.location='delete.php'" class="fas fa-trash-alt fa-1x" 
+                            style="color: transparent background-color: transparent; border-color: transparent; cursor: default;">
+                        </div>
 
                         <div class="blog6"></div> 
                         <div class="rect6"></div>
-                        <div class="edit6"><i class="fas fa-edit"></i></div>
-                        <div class="delete6"><i class="fas fa-trash-alt"></i></div>
+                        <div class="edit6">
+                            <button button onclick="document.location='editcoffeepedia.php'" class="fas fas fa-edit fa-1x" 
+                            style="color: transparent background-color: transparent; border-color: transparent; cursor: default;">
+                        </div>
+                        <div class="delete6">
+                            <button button onclick="document.location='delete.php'" class="fas fa-trash-alt fa-1x" 
+                            style="color: transparent background-color: transparent; border-color: transparent; cursor: default;">
+                        </div>
 
-                        <div class="addicon"><i class="fas fa-plus-circle fa-5x"></i></div>
+                        <div class="addicon">
+                            <button button onclick="document.location='addcoffeepedia.php'" class="fas fa-plus-circle fa-5x" 
+                            style="color: transparent background-color: transparent; border-color: transparent; cursor: default;">
+                        </div>
 
                     </div>
                     
