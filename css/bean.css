@@ -1,0 +1,501 @@
+/* 
+Color Palettes 
+
+-- Font Color --
+Thamar Black - 181818 
+Cornsilk - FEFAE0
+
+-- Design Color --
+Cape Palliser - 784830
+Liver Dogs - BC6C25
+Fawn - DDA15E
+Kombu Green - 283618
+Dark Oliver Green - 606C38
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+p {
+    font-family: "Old Standard TT", serif;  
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Oxygen", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Sticky Navigation Bar */
+.nav-bar {
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    width: auto;
+    color: #fefae0;
+    background-color: #181818;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.nav-bar-left {
+    height: 100px;
+    width: 700px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-bar-left h3 {
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+}
+
+.nav-bar-logo {
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 100px;
+    width: 100px;
+}
+
+.nav-bar-logo img {
+    height: 100px;
+    width: 100px;
+}
+
+.nav-bar-right {
+    height: 100px;
+    width: 700px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-bar-right h3 {
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+}
+
+/* Beanpage Pop Out */
+.bean-modal {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #18181880;
+    position: fixed;
+    display: none;
+    z-index: 200;
+    overflow: auto;
+}
+
+.bean-modal-container {
+    margin: 20% auto;
+    height: auto;
+    width: 50%;
+    color: #fefae0;
+    background-color: #BC6C25;
+}
+
+.bean-information-container {
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.bean-information-title {
+    margin: 30px;
+    height: auto; 
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.bean-information-title h2 {
+    padding-bottom: 10px;
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border-bottom: 10px solid #DDA15E;
+}
+
+.bean-information-title i {
+    cursor: pointer;
+}
+
+.bean-information {
+    margin: 50px;
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justfiy-content: center;
+    align-items: center;
+}
+
+.bean-information img {
+    margin-bottom: 25px;
+    height: 400px;
+    width: 350px;
+}
+
+.bean-information p {
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    line-height: 1.5;
+}
+
+.bean-information h4 {
+    margin-top: 15px;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    
+}
+
+/* Beanpage Parallax */
+.beanpage {
+    perspective: 1px;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* Beanpage Parallax Background */
+.beanpage-parallax-group {
+    position: relative;
+    height: 100vh;
+    transform-style: preserve-3d;
+    z-index: 5;
+}
+
+.beanpage-parallax-group:nth-child(2) {
+    margin-top: 1500px;
+    position: relative;
+    height: 100vh;
+    transform-style: preserve-3d;
+    z-index: 4;
+}
+
+.beanpage-parallax-group:nth-child(3) {
+    margin-top: 1500px;
+    position: relative;
+    height: 100vh;
+    transform-style: preserve-3d;
+    z-index: 3;
+}
+
+.beanpage-parallax-back {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: relative;
+    transform: translateX(-450px) translateY(-200px) translateZ(-1.625px) scale(2.5);
+}
+
+.bp-image-container {
+    width: max-content;
+    height: max-content;
+    overflow: hidden;
+}
+
+/* Beanpage Parallax Quote */
+.beanpage-parallax-base {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    transform: translateZ(0);
+}
+
+.quote-container {
+    margin: 325px 300px 0 300px;
+    padding: 15px;
+    width: auto;
+    height: auto;
+    background-color: #181818DD;
+    border-radius: 5px;
+}
+
+.quote-container p {
+    color: #fefae0;
+    font-size: 28px;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+.beanpage-container {
+    margin-top: 450px;
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.beanpage-right {
+    height: auto;
+    width: 25%;
+    background-color: #DDA15E;
+    display: flex;
+    flex-direction: column;
+}
+
+.beanpage-right form {
+    margin: 150px 10px ;
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.beanpage-right form label {
+    margin: 10px;
+    height: auto;
+    width: auto;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+}
+
+.beanpage-right form input {
+    right: 0;
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    font-family: "Old Standard TT", serif;
+    background: linear-gradient(to left, #fefae0 50%, #BC6C25 50%) right;
+    background-size: 200%;
+    border: none;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+}
+
+.beanpage-right form input[type=submit] {
+    width: 150px;
+    background: linear-gradient(to left, #fefae0 50%, #BC6C25 50%) right;
+    background-size: 200%;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+}
+
+.beanpage-right form input:focus {
+    background-position: left;
+    outline: none;
+}
+
+.beanpage-right form input[type=submit]:hover {
+    color: #fefae0;
+    background-position: left;
+}
+
+.search-bar {
+    height: auto;
+    width: auto;
+}
+
+.beanpage-left {
+    height: auto;
+    width: 75%;
+    background-color: #fefae0;
+}
+
+.bean-container {
+    margin: 50px;
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.bean {
+    margin: 25px;
+    height: 400px;
+    width: 350px;
+    cursor: pointer;
+}
+
+.bean img {
+    height: 400px;
+    width: 350xp;
+    border-bottom: 10px solid #784830;
+}
+
+/* Footer */
+.footer-container {
+    height: auto;
+    width: auto;
+    color: #181818;
+    background-color: #F3EEC8;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.footer-quote-container {
+    margin: 50px;
+    height: auto;
+    width: auto;
+}
+
+.footer-quote {
+    height: auto;
+    width: auto;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.footer-sub-container {
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-nav {
+    height: auto;
+    width: auto;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.footer-nav p {
+    margin-top: 15px;
+}
+
+.footer-social-media {
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.fsm-title {
+    margin: 15px;
+    height: auto;
+    width: auto;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.fsm-content {
+    height: auto;
+    width: auto;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.fsm-content p {
+    margin-top: 15px;
+}
+
+.footer-contact-us {
+    margin: 15px;
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.fcu-title {
+    margin: 15px;
+    height: auto;
+    width: auto;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.fcu-content {
+    margin-top: 15px;
+    height: auto;
+    width: auto;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.fcu-content p {
+    margin-top: 15px;
+}
+
+.footer-copyright {
+    margin: 25px;
+    height: auto;
+    width: auto;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    text-align: right;
+    border-top: 2.5px solid #181818;
+}
+
+.footer-copyright p {
+    margin-top: 25px;
+}
