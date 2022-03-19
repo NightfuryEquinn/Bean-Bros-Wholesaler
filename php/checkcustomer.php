@@ -14,7 +14,7 @@
         <meta name = "copyright" content = "Copyright 2022 @ Bean Bros Wholesaler">
 
         <!--Link to CSS-->
-        <link rel = "stylesheet" href = "css/checkcustomer.css">
+        <link rel = "stylesheet" href = "../css/checkcustomer.css">
 
         <!--Link to Font Awesome v4 and v5-->
         <link rel = "stylesheet" href = "https://use.fontawesome.com/releases/v5.15.4/css/all.css">
@@ -26,7 +26,7 @@
         <link href = "https://fonts.googleapis.com/css2?family=Old+Standard+TT&family=Oxygen:wght@700&display=swap" rel = "stylesheet">
         
         <!--Link to Pictures file-->
-        <link rel = "icon" type = image/png href = "img\BeanBrosLogo.png">
+        <link rel = "icon" type = image/png href = "../img/BeanBrosLogo.png">
 
         <!--Title-->
         <title>Bean Bros - Customer List</title>
@@ -41,7 +41,7 @@
                 <h3><a href="contactus.html">Contact Us</a></h3>
             </div>
             <div class="nav-bar-logo">
-                <a href="home.html"><img src="img\BeanBrosLogo1.png"></a>
+                <a href="home.html"><img src="../img/BeanBrosLogo1.png"></a>
             </div>
             <div class="nav-bar-right">
                 <h3><a href="adminprofile.html">Profile</a></h3>
@@ -61,7 +61,7 @@
                 <div class="customer-list-parallax-back">
                     <!--Customer List Parallax Background-->
                     <div class="clb-image-container">
-                        <img src="img/coffee_beans_coffee_beans_181134_1920x1080.jpg">
+                        <img src="../img/coffee_beans_coffee_beans_181134_1920x1080.jpg">
                     </div>
                 </div>
                 <div class="customer-list-parallax-base">
@@ -71,110 +71,74 @@
                     </div>
                     <!--Customer Container-->
                     <div class="customer-container">
+                        <div class="customer-right">
+                            <form method="POST">
+                                <label>Search</label>
+                                <input type="text" placeholder="Name ..." name="searchCustomer" required>
+                                <input type="submit" name="search">
+                            </form>
+
+                            <?php
+                                include("conn.php");
+                                
+                                $searchCustomer = "";
+
+                                if(isset($_POST["search"]))
+                                {
+                                    $searchCustomer = $_POST['searchCustomer'];
+                                }
+
+                                $search = mysqli_query($con, "SELECT * FROM customer WHERE Username LIKE '%$searchCustomer%' ORDER BY Customer_ID;");
+                            ?>
+                        </div>
+                        
                         <div class="customer-left">
                             <div class="customer-title">
                                 <h2>Customer List</h2>
                             </div>
                             <div class="all-customer-container">
-                                <div class="customer">
-                                    <div class="customer-information">
-                                        <p>Username: Nightfury Equinn</p>
-                                        <p>Email: zzz@gmail.com</p>
-                                        <p>Contact Number (Personal): 012-2222222</p>
-                                        <p>Contact Number (Work): 05-2222222</p>
-                                        <p>Password: *************</p>
-                                        <p>Subscription Tier: Platinum</p>
-                                    </div>
-                                    <div class="delete-container">
-                                        <i class="fas fa-trash-alt fa-2x"></i>
-                                        <h4>Erase Data</h4>
-                                    </div>
-                                </div>
+                                <?php
+                                    while($row = mysqli_fetch_assoc($search))
+                                    {
+                                        $displayCustomer = '
 
-                                <div class="customer">
-                                    <div class="customer-information">
-                                        <p>Username: </p>
-                                        <p>Email: </p>
-                                        <p>Contact Number (Personal): </p>
-                                        <p>Contact Number (Work): </p>
-                                        <p>Password: </p>
-                                        <p>Subscription Tier: </p>
-                                    </div>
-                                    <div class="delete-container">
-                                        <i class="fas fa-trash-alt fa-2x"></i>
-                                        <h4>Erase Data</h4>
-                                    </div>
-                                </div>
-                                
-                                <div class="customer">
-                                    <div class="customer-information">
-                                        <p>Username: </p>
-                                        <p>Email: </p>
-                                        <p>Contact Number (Personal): </p>
-                                        <p>Contact Number (Work): </p>
-                                        <p>Password: </p>
-                                        <p>Subscription Tier: </p>
-                                    </div>
-                                    <div class="delete-container">
-                                        <i class="fas fa-trash-alt fa-2x"></i>
-                                        <h4>Erase Data</h4>
-                                    </div>
-                                </div>
+                                        <div class="customer">
 
-                                <div class="customer">
-                                    <div class="customer-information">
-                                        <p>Username: </p>
-                                        <p>Email: </p>
-                                        <p>Contact Number (Personal): </p>
-                                        <p>Contact Number (Work): </p>
-                                        <p>Password: </p>
-                                        <p>Subscription Tier: </p>
-                                    </div>
-                                    <div class="delete-container">
-                                        <i class="fas fa-trash-alt fa-2x"></i>
-                                        <h4>Erase Data</h4>
-                                    </div>
-                                </div>
+                                            <div class="customer-information">
 
-                                <div class="customer">
-                                    <div class="customer-information">
-                                        <p>Username: </p>
-                                        <p>Email: </p>
-                                        <p>Contact Number (Personal): </p>
-                                        <p>Contact Number (Work): </p>
-                                        <p>Password: </p>
-                                        <p>Subscription Tier: </p>
-                                    </div>
-                                    <div class="delete-container">
-                                        <i class="fas fa-trash-alt fa-2x"></i>
-                                        <h4>Erase Data</h4>
-                                    </div>
-                                </div>
+                                                <p>Username: '.$row["Username"].'</p>
 
-                                <div class="customer">
-                                    <div class="customer-information">
-                                        <p>Username: </p>
-                                        <p>Email: </p>
-                                        <p>Contact Number (Personal): </p>
-                                        <p>Contact Number (Work): </p>
-                                        <p>Password: </p>
-                                        <p>Subscription Tier: </p>
-                                    </div>
-                                    <div class="delete-container">
-                                        <i class="fas fa-trash-alt fa-2x"></i>
-                                        <h4>Erase Data</h4>
-                                    </div>
-                                </div>
+                                                <p>Email: '.$row["Email"].'</p>
+
+                                                <p>Contact Number (Personal): '.$row["Personal_Contact"].'</p>
+
+                                                <p>Contact Number (Work): '.$row["Company_Contact"].'</p>
+
+                                                <p>Password: *#*#*#*#</p>
+
+                                                <p>Subscription Tier: '.$row["Subscription"].'</p>
+
+                                            </div>
+
+                                            <div class="delete-container">
+
+                                                <i class="fas fa-trash-alt fa-2x"></i>
+
+                                                <a href=\'deletecustomer.php?Customer_ID='.$row['Customer_ID'].'\' onclick="return confirm(\'Delete '.$row['Username'].' details? This CANNOT be undone!\');"><h4>Erase Data</h4></a>
+                                            
+                                            </div>
+
+                                        </div>
+
+                                        ';
+
+                                        echo $displayCustomer;
+                                    }
+                                ?>
                             </div>
                         </div>
-                        <div class="customer-right">
-                            <form>
-                                <label>Search</label>
-                                <input type="text" placeholder="Name ..." required>
-                                <input type="submit">
-                            </form>
-                        </div>
                     </div>
+
                     <!--Footer-->
                     <div class="footer-container">
                         <div class="footer-quote-container">
