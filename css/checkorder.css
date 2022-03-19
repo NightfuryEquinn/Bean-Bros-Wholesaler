@@ -523,11 +523,6 @@ a {
     transition-timing-function: ease-out;
 }
 
-.admin-order-list-right form input[type=radio] {
-    height: auto;
-    width: auto;
-} 
-
 .admin-order-list-right form input:focus {
     background-position: left;
     outline: none;
@@ -536,21 +531,6 @@ a {
 .admin-order-list-right form input[type=submit]:hover {
     color: #fefae0;
     background-position: left;
-}
-
-.radio-container {
-    margin: 10px;
-    height: auto; 
-    width: auto;
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-}
-
-.radio-container p {
-    margin-top: 2.5px;
 }
 
 /* Footer */
