@@ -1,3 +1,7 @@
+<?php
+    $customerID = '2'
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -14,7 +18,7 @@
         <meta name = "copyright" content = "Copyright 2022 @ Bean Bros Wholesaler">
 
         <!--Link to CSS-->
-        <link rel = "stylesheet" href = "css/invoice.css">
+        <link rel = "stylesheet" href = "../css/invoice.css">
 
         <!--Link to JavaScript-->
         <script src="js/script.js" defer></script>
@@ -29,7 +33,7 @@
         <link href = "https://fonts.googleapis.com/css2?family=Old+Standard+TT&family=Oxygen:wght@700&display=swap" rel = "stylesheet">
         
         <!--Link to Pictures file-->
-        <link rel = "icon" type = image/png href = "img\BeanBrosLogo.png">
+        <link rel = "icon" type = image/png href = "../img/BeanBrosLogo.png">
 
         <!--Title-->
         <title>Bean Bros - Invoice</title>
@@ -44,7 +48,7 @@
                 <h3><a href="contactus.html">Contact Us</a></h3>
             </div>
             <div class="nav-bar-logo">
-                <a href="home.html"><img src="img\BeanBrosLogo1.png"></a>
+                <a href="home.html"><img src="../img/BeanBrosLogo1.png"></a>
             </div>
             <div class="nav-bar-right">
                 <h3><a href="customerprofile.html">Profile</a></h3>
@@ -61,7 +65,7 @@
                 <div class="invoice-parallax-back">
                     <!--Invoice Parallax Background-->
                     <div class="i-image-container">
-                        <img src="img/coffee_beans_coffee_cup_198851_3648x4072.jpg">
+                        <img src="../img/coffee_beans_coffee_cup_198851_3648x4072.jpg">
                     </div>
                 </div>
                 <div class="invoice-parallax-base">
@@ -71,16 +75,42 @@
                             <h1>Order Invoice</h1>
                         </div>
                         <div class="invoice-content">
-                            <p>Order ID:</p>
-                            <p>Order Date:</p>
-                            <p>Coffee Brand:</p>
-                            <p>Price per kg (RM):</p>
-                            <p>Total Amount (kg):</p>
-                            <p>Total Price (RM):</p>
-                            <p>Status:</p>
-                            <p>Customer Username:</p>
-                            <p>Customer Contact (Company):</p>
-                            <p>Customer Contact (Personal):</p>
+                            <?php
+                                include("conn.php");
+
+                                $invoice = mysqli_query($con, "SELECT * FROM customer c, coffee_bean b, customer_order co 
+                                WHERE c.Customer_ID = $customerID AND c.Customer_ID = co.Customer_ID AND b.Bean_ID = co.Bean_ID;");
+
+                                $row = mysqli_fetch_assoc($invoice);
+
+                                $displayInvoice = '
+                                <p>Order ID: '.$row["Order_ID"].'</p>
+
+                                <p>Order Date: '.$row["Order_Date"].'</p>
+
+                                <p>Coffee Brand: '.$row["Coffee_Bean"].'</p>
+
+                                <p>Price per kg (RM): '.$row["Price_Per_kg"].'</p>
+
+                                <p>Total Amount (kg): '.$row["Amount"].'</p>
+
+                                <p>Total Price (RM): '.$row["Total"].'</p>
+
+                                <p>Status: '.$row["Status"].'</p>
+
+                                <p>Customer Username: '.$row["Username"].'</p>
+
+                                <p>Customer Contact (Company): '.$row["Company_Contact"].'</p>
+
+                                <p>Customer Contact (Personal): '.$row["Personal_Contact"].'</p>
+
+                                ';
+
+                                echo $displayInvoice;
+
+                                mysqli_close($con);
+                            ?>
+                            
                         </div>
                     </div>
                     
