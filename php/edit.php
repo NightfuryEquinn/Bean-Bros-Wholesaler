@@ -1,13 +1,27 @@
 <?php
-    include("conn.php");
-    $editID = intval($_GET["Coffeepedia_ID"]);
-    $editData = mysqli_query($con, "SELECT * FROM coffeepedia WHERE Coffeepedia_ID=$editID");
-    while($displayEdit = mysqli_fetch_array($editData)) {
-?>
+include("conn.php");
 
-/* Insert code here */
+$UpdateQuery = "UPDATE coffeepedia SET Admin_ID='$_POST[a_id]', Title='$_POST[name]', Content='$_POST[content]', Author='$_POST[author]', Written_Date='$_POST[date]', WHERE Coffeepedia_ID='$_POST[c_id]';";
 
-<?php
-    }
-    mysqli_close($con);
+$stmt = mysqli_prepare($con,$UpdateQuery);
+
+mysqli_stmt_bind_param($stmt,"s");
+
+mysqli_stmt_execute($stmt);
+
+$check = mysqli_stmt_affected_rows($stmt);
+
+if ($check == 1) {
+    echo '<script>
+    alert ("Successfully updated record!");
+    window.location.href= "editcoffeepedia.php";
+    </script>';
+} else {
+    echo '<script>
+    alert ("Failed to update relevant files.");
+    window.location.href= "editcoffeepedia.php";
+    </script>';
+}
+
+mysqli_close($con);
 ?>

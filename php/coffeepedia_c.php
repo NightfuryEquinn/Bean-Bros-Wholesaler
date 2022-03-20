@@ -1,6 +1,3 @@
-<?php
-include("session.php");
-?>
 
 <!DOCTYPE html>
 <html>
@@ -109,7 +106,7 @@ include("session.php");
                             while ($row = mysqli_fetch_array($searchResult)){
                                 
                                 $display = '
-                                
+
                                 ';
 
                                 echo $display;

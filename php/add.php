@@ -1,26 +1,24 @@
 <?php
 include("conn.php");
 
-$sql="INSERT INTO coffeepedia (Title, Coffeepedia_ID, Admin_ID, Content, Author, Written_Date) 
+$sql="INSERT INTO coffeepedia (Admin_ID, Title, Content, Author, Written_Date) 
 VALUES 
-('$_POST[Name]', '$_POST[C_ID]', '$_POST[A_ID]', '$_POST[Content]', '$_POST[Author]', '$_POST[Date]');";
+('$_POST[a_id]', '$_POST[name]', '$_POST[content]', '$_POST[author]', '$_POST[date]');";
 
 $stmt = mysqli_prepare($con,$sql);
-
-mysqli_stmt_bind_param($stmt,"s",$img);
 
 mysqli_stmt_execute($stmt);
 
 $check = mysqli_stmt_affected_rows($stmt);
 
 if($check == 1) {
-    echo '<script> alert ("1 record added! Image sucessfully uploaded!");
-    window.location.href= "";
+    echo '<script> alert ("1 record added!");
+    window.location.href= "addcoffeepedia.php";
     </script>';
 
 } else {
     echo '<script> alert ("Upload failed.");
-    window.location.href= "";
+    window.location.href= "addcoffeepedia.php";
     </script>';
 }
 

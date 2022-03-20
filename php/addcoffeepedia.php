@@ -15,7 +15,7 @@
         <meta name="copyright" content="Copyright 2022 @ Bean Bros Wholesaler" />
 
         <!--Link to CSS-->
-        <link rel="stylesheet" href="../css/addcoffeepedia.css">
+        <link rel="stylesheet" href="../css/addcoffeepediaN.css">
 
         <!--Link to Font Awesome v4 and v5-->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
@@ -37,20 +37,20 @@
         <!--Navigation Bar-->
         <div class="nav-bar">
             <div class="nav-bar-left">
-                <h3><a href="../bean.html">Bean</a></h3>
-                <h3><a href="../coffeepedia_c.html">Coffeepedia</a></h3>
-                <h3><a href="../aboutus.html">About Us</a></h3>
-                <h3><a href="../contactus.html">Contact Us</a></h3>
+                <h3><a href="bean_a.php">Bean</a></h3>
+                <h3><a href="coffeepedia_a.php">Coffeepedia</a></h3>
+                <h3><a href="aboutus.php">About Us</a></h3>
+                <h3><a href="contactus.php">Contact Us</a></h3>
             </div>
             <div class="nav-bar-logo">
-                <a href="../home.html"><img src="../img\BeanBrosLogo1.png"></a>
+                <a href="home.php"><img src="../img\BeanBrosLogo1.png"></a>
             </div>
             <div class="nav-bar-right">
-                <h3><a href="../adminprofile.html">Profile</a></h3>
-                <h3><a href="../monthlyreport.html">Report</a></h3>
-                <h3><a href="../checkfeedback.html">Feedback</a></h3>
-                <h3><a href="../checkcustomer.html">Customers</a></h3>
-                <h3><a href="../checkorder.html">Orders</a></h3>
+                <h3><a href="adminprofile.php">Profile</a></h3>
+                <h3><a href="monthlyreport.php">Report</a></h3>
+                <h3><a href="checkfeedback.php">Feedback</a></h3>
+                <h3><a href="checkcustomer.php">Customers</a></h3>
+                <h3><a href="checkorder.php">Orders</a></h3>
                 <h3>Log Out</h3>
             </div>
         </div>
@@ -78,30 +78,26 @@
                         <div class="add-product">
                             <div class="add-product-content">                            
                                 <div class='item-flex-container'>
-                                    <form action="add.php" method="post" enctype="multipart/form-data">
-                                        &nbsp
-                                        <h1>What would you like to add?</h1>
+                                    <form method="POST" action="add.php" enctype="multipart/form-data">
                                         <div class="addnew">
-                                            <label>Title: </label><input type='text' name='Title' required>
+                                            <label>Admin_ID: </label><input type="text" name="a_id" min="0" required>
+                                            <hr>
+                                            <label>Title: </label><input type='text' name='name' required>
                                             <hr>                                        
-                                            <label>Coffeepedia_ID: </label><input type="text" name="Coffeepedia_ID" min="0" required>
+                                            <label>Content: </label><textarea name="content" rows="10" cols="10" required></textarea>
                                             <hr>
-                                            <label>Admin_ID: </label><input type="text" name="Admin_ID" min="0" required>
-                                            <hr>
-                                            <label>Content: </label><textarea name="Content" rows="10" cols="10" required></textarea>
-                                            <hr>
-                                            <label>Author: </label><input type="text" name="Author" min="0" required>
+                                            <label>Author: </label><input type="text" name="author" min="0" required>
                                             <hr> 
-                                            <label>Date: </label><input type="number" name="Written_Date" min="0" required>
+                                            <label>Date: </label><input type="date" name="date" min="0" required>
                                             <hr>                                  
                                         </div>
+                                        <div class="submit-reset-container">
+                                            <input type="submit" value="New Blog!">
+                                            <input type="reset">
+                                        </div>
                                     </form>
-                                </div>
-                            </div>
-                            <div class="button">
-                                <button id='submit' class="add-btn">New Blog!</button>
-                                <button id='reset' class="reset-btn">Reset</button>
-                            </div>
+                                </div>                                                               
+                            </div>                            
                         </div>
                     </div>
 

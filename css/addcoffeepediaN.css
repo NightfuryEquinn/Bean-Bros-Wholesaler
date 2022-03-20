@@ -169,35 +169,114 @@
     position: absolute;
     top: 450px;
     left: 260px;
-    height: 1300px;
+    height: auto;
     width: 1050px;
     background-color: rgba(255, 255, 255, 0.5);
   }
   .add-product-content {
-    height: 100%;
+    height: auto;
     width: 100%;
   }
-  .button {
-    color: #000;
-    height: 5%;
+
+  .edit-product {
+    display: inline-block;
+    position: absolute;
+    top: 450px;
+    left: 260px;
+    height: auto;
+    width: 1050px;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+
+  .edit-product-content {
+    height: auto;
     width: 100%;
   }
-  .add-btn {
-    float: left;
-    width: 50%;
-    height: 100%;
-    font-size: 30px;
-    text-align: center;
-    cursor: pointer;
+
+  .submit-reset-container {
+    margin: 25px;
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
   }
-  .reset-btn {
-    float: left;
-    width: 50%;
-    height: 100%;
-    font-size: 30px;
-    text-align: center;
-    cursor: pointer;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
   }
+
+  form label {
+    color: #fefae0;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    text-align: center;
+    font-family: "Old Standard TT", serif;
+  }
+
+  form input {
+    right: 0;
+    margin: 10px 10px 25px 10px;
+    padding: 10px;
+    width: 300px;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    font-family: "Old Standard TT", serif;
+    background: linear-gradient(to left, #fefae0 50%, #DDa15e 50%) right;
+    background-size: 200%;
+    border: none;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+  }
+  
+  form input[type=submit], form input[type=reset] {
+    margin: 0 25px;
+    width: 150px;
+    background: linear-gradient(to left, #fefae0 50%, #283618 50%) right;
+    background-size: 200%;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+    font-size: larger;
+  }
+  
+  form input:focus {
+    background-position: left;
+    outline: none;
+  }
+  
+  form input[type=submit]:hover, form input[type=reset]:hover {
+    color: #fefae0;
+    background-position: left;
+  }
+
+  form textarea {
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    line-height: 1.5;
+    font-family: "Old Standard TT", serif;
+    background: linear-gradient(to left, #fefae0 50%, #DDa15e 50%) right;
+    background-size: 200%;
+    resize: none;
+    border: none;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+  }
+
+  form textarea:focus {
+    background-position: left;  
+    outline: none;
+  }
+
   /* Footer */
   .footer-container {
     margin-top: 1850px;

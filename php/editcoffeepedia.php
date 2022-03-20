@@ -37,20 +37,20 @@
         <!--Navigation Bar-->
         <div class="nav-bar">
             <div class="nav-bar-left">
-                <h3><a href="../bean.html">Bean</a></h3>
-                <h3><a href="../coffeepedia_c.html">Coffeepedia</a></h3>
-                <h3><a href="../aboutus.html">About Us</a></h3>
-                <h3><a href="../contactus.html">Contact Us</a></h3>
+                <h3><a href="bean_a.php">Bean</a></h3>
+                <h3><a href="coffeepedia_a.php">Coffeepedia</a></h3>
+                <h3><a href="aboutus.php">About Us</a></h3>
+                <h3><a href="contactus.php">Contact Us</a></h3>
             </div>
             <div class="nav-bar-logo">
-                <a href="../home.html"><img src="../img\BeanBrosLogo1.png"></a>
+                <a href="home.php"><img src="../img\BeanBrosLogo1.png"></a>
             </div>
             <div class="nav-bar-right">
-                <h3><a href="../adminprofile.html">Profile</a></h3>
-                <h3><a href="../monthlyreport.html">Report</a></h3>
-                <h3><a href="../checkfeedback.html">Feedback</a></h3>
-                <h3><a href="../checkcustomer.html">Customers</a></h3>
-                <h3><a href="../checkorder.html">Orders</a></h3>
+                <h3><a href="adminprofile.php">Profile</a></h3>
+                <h3><a href="monthlyreport.php">Report</a></h3>
+                <h3><a href="checkfeedback.php">Feedback</a></h3>
+                <h3><a href="checkcustomer.php">Customers</a></h3>
+                <h3><a href="checkorder.php">Orders</a></h3>
                 <h3>Log Out</h3>
             </div>
         </div>
@@ -75,32 +75,36 @@
                                 <div class="title-design"></div>
                             </div>
                         </div>
-                        <div class="add-product">
-                            <div class="add-product-content">
+                        <div class="edit-product">
+                            <div class="edit-product-content">
                                 <div class='item-flex-container'>
+                                    <?php
+                                        include("conn.php");
+                                        $editID = $_GET["Coffeepedia_ID"];
+                                        $editData = mysqli_query($con, "SELECT * FROM coffeepedia WHERE Coffeepedia_ID=$editID");
+                                        $row = mysqli_fetch_assoc($editData);
+                                    ?>
                                     <form action="edit.php" method="post" enctype="multipart/form-data">
-                                        &nbsp
-                                        <h1>What would you like to edit?</h1>
                                         <div class="addnew">
-                                            <label>Title: </label><input type='text' name='Title' required>
-                                            <hr>                                        
-                                            <label>Coffeepedia_ID: </label><input type="text" name="Coffeepedia_ID" min="0" required>
+                                            <label>Coffeepedia_ID: </label><input type="text" name="c_id" value="<?php echo $row["Coffeepedia_ID"]?>" required>
                                             <hr>
-                                            <label>Admin_ID: </label><input type="text" name="Admin_ID" min="0" required>
+                                            <label>Admin_ID: </label><input type="text" name="a_id" value="<?php echo $row["Admin_ID"]?>" required> 
                                             <hr>
-                                            <label>Content: </label><textarea name="Content" rows="10" cols="10" required></textarea>
+                                            <label>Title: </label><input type='text' value="<?php echo $row["Title"]?>" required>
+                                            <hr>                                                                                  
+                                            <label>Content: </label><textarea name="content" required rows="10" cols="10"><?php echo $row["Content"]?></textarea>
                                             <hr>
-                                            <label>Author: </label><input type="text" name="Author" min="0" required>
+                                            <label>Author: </label><input type="text" name="author" value="<?php echo $row["Author"]?>" required>
                                             <hr> 
-                                            <label>Date: </label><input type="number" name="Written_Date" min="0" required>
+                                            <label>Date: </label><input type="date" name="date" value="<?php echo $row["Written_Date"]?>" required>
                                             <hr>                                  
+                                        </div>
+                                        <div class="submit-reset-container">
+                                            <input type="submit" value="Blod Edited!">
+                                            <input type="reset">
                                         </div>
                                     </form>
                                 </div>                              
-                            </div>   
-                            <div class="button">
-                                <button class="add-btn">Blog Edited!</button>
-                                <button class="reset-btn">Reset</button>
                             </div>                        
                         </div>
                     </div>
