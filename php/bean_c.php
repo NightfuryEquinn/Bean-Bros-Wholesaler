@@ -14,7 +14,10 @@
         <meta name = "copyright" content = "Copyright 2022 @ Bean Bros Wholesaler">
 
         <!--Link to CSS-->
-        <link rel = "stylesheet" href = "css/beanadmin.css">
+        <link rel = "stylesheet" href = "../css/bean_c.css">
+
+        <!--Link to JavaScript-->
+        <script src="../js/script.js"></script>
 
         <!--Link to Font Awesome v4 and v5-->
         <link rel = "stylesheet" href = "https://use.fontawesome.com/releases/v5.15.4/css/all.css">
@@ -26,10 +29,10 @@
         <link href = "https://fonts.googleapis.com/css2?family=Old+Standard+TT&family=Oxygen:wght@700&display=swap" rel = "stylesheet">
         
         <!--Link to Pictures file-->
-        <link rel = "icon" type = image/png href = "img/BeanBrosLogo.png">
+        <link rel = "icon" type = image/png href = "../img/BeanBrosLogo.png">
 
         <!--Title-->
-        <title>Bean Bros - Bean Admin</title>
+        <title>Bean Bros - Bean</title>
     </head>
     <body>
         <!--Sticky Navigation Bar-->
@@ -41,17 +44,12 @@
                 <h3><a href="contactus.html">Contact Us</a></h3>
             </div>
             <div class="nav-bar-logo">
-                <a href="home.html"><img src="img/BeanBrosLogo1.png"></a>
+                <a href="home.html"><img src="../img/BeanBrosLogo1.png"></a>
             </div>
             <div class="nav-bar-right">
                 <h3><a href="signuploginforgot.html">Sign Up</a></h3>
                 <h3><a href="signuploginforgot.html">Log In</a></h3>
             </div>
-        </div>
-
-        <!--Add Beans Button-->
-        <div class="add-button">
-            <i class="fas fa-plus-circle fa-5x"></i>
         </div>
         
         <!--Beanpage Parallax-->
@@ -62,7 +60,7 @@
                 <div class="beanpage-parallax-back">
                     <!--Beanpage Parallax Background-->
                     <div class="bp-image-container">
-                        <img src="img/cup_coffee_coffee_beans_86886_1920x1080.jpg">
+                        <img src="../img/cup_coffee_coffee_beans_86886_1920x1080.jpg">
                     </div>
                 </div>
                 <div class="beanpage-parallax-base">
@@ -74,61 +72,56 @@
                     <div class="beanpage-container">
                         <div class="beanpage-right">
                             <div class="search-bar">
-                                <form>
-                                    <input type="text" placeholder="Search..." required>
-                                    <input type="submit" value="Find It">
+                                <form method="POST">
+                                    <input type="text" placeholder="Search..." name="searchBean" required>
+                                    <input type="submit" name="search" value="Find It">
                                 </form>
+
+                                <?php
+                                    include("conn.php");
+                                    
+                                    $searchBean = "";
+
+                                    if(isset($_POST["search"]))
+                                    {
+                                        $searchBean = $_POST['searchBean'];
+                                    }
+                                    
+                                    $searchResult = mysqli_query($con, "SELECT * FROM coffee_bean WHERE Coffee_Bean LIKE '%$searchBean%' ORDER BY Coffee_Bean;");
+                                ?>
                             </div>
                         </div>
                         <div class="beanpage-left">
                             <div class="bean-container">
-                                <div class="bean">
-                                    <img src="img/ethiopia.jpg">
-                                    <div class="admin-function">
-                                        <i class="fas fa-edit fa-1x"></i>
-                                        <i class="fas fa-trash-alt fa-1x"></i>
-                                    </div>
-                                </div>
-                                
-                                <div class="bean">
-                                    <img src="img/guatemala.jpg">
-                                    <div class="admin-function">
-                                        <i class="fas fa-edit fa-1x"></i>
-                                        <i class="fas fa-trash-alt fa-1x"></i>
-                                    </div>
-                                </div>
-                                
-                                <div class="bean">
-                                    <img src="img/hawaiian-kona.jpg">
-                                    <div class="admin-function">
-                                        <i class="fas fa-edit fa-1x"></i>
-                                        <i class="fas fa-trash-alt fa-1x"></i>
-                                    </div>
-                                </div>
-                                
-                                <div class="bean">
-                                    <img src="img/KenyaAA.jpg">
-                                    <div class="admin-function">
-                                        <i class="fas fa-edit fa-1x"></i>
-                                        <i class="fas fa-trash-alt fa-1x"></i>
-                                    </div>
-                                </div>
-                                
-                                <div class="bean">
-                                    <img src="img/mocha-java-coffee.jpg">
-                                    <div class="admin-function">
-                                        <i class="fas fa-edit fa-1x"></i>
-                                        <i class="fas fa-trash-alt fa-1x"></i>
-                                    </div>
-                                </div>
-                                
-                                <div class="bean">
-                                    <img src="img/tanzanian-peaberry.jpg">
-                                    <div class="admin-function">
-                                        <i class="fas fa-edit fa-1x"></i>
-                                        <i class="fas fa-trash-alt fa-1x"></i>
-                                    </div>
-                                </div>
+                                <?php
+                                    while($row = mysqli_fetch_assoc($searchResult))
+                                    {
+                                        $displayBean = '
+
+                                        <div class="bean">
+
+                                            <img src="data:image/jpg;base64, '.base64_encode($row["Coffee_Bean_Image"]).'">
+                                        
+                                            <div class="bean-information">
+
+                                                <h2>'.$row["Coffee_Bean"].'</h2>
+                                                
+                                                <p>'.$row["Description"].'</p>
+                                                
+                                                <p>Country: '.$row["Country"].'</p>
+                                                
+                                                <p>Roast: '.$row["Roast"].'</p>
+                                                
+                                                <p>Price per KG: '.$row["Price_Per_kg"].'</p>
+
+                                            </div>
+                                        </div>
+
+                                        ';
+
+                                        echo $displayBean;                            
+                                    };
+                                ?>
                             </div>
                         </div>
                     </div>

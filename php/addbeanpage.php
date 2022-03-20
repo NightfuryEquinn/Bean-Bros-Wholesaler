@@ -14,10 +14,10 @@
         <meta name = "copyright" content = "Copyright 2022 @ Bean Bros Wholesaler">
 
         <!--Link to CSS-->
-        <link rel = "stylesheet" href = "css/bean.css">
+        <link rel = "stylesheet" href = "../css/addbeanpage.css">
 
         <!--Link to JavaScript-->
-        <script src="js/script.js"></script>
+        <script src="../js/script.js" defer></script>
 
         <!--Link to Font Awesome v4 and v5-->
         <link rel = "stylesheet" href = "https://use.fontawesome.com/releases/v5.15.4/css/all.css">
@@ -29,10 +29,10 @@
         <link href = "https://fonts.googleapis.com/css2?family=Old+Standard+TT&family=Oxygen:wght@700&display=swap" rel = "stylesheet">
         
         <!--Link to Pictures file-->
-        <link rel = "icon" type = image/png href = "img/BeanBrosLogo.png">
+        <link rel = "icon" type = image/png href = "../img/BeanBrosLogo.png">
 
         <!--Title-->
-        <title>Bean Bros - Bean</title>
+        <title>Bean Bros - Add Bean</title>
     </head>
     <body>
         <!--Sticky Navigation Bar-->
@@ -44,7 +44,7 @@
                 <h3><a href="contactus.html">Contact Us</a></h3>
             </div>
             <div class="nav-bar-logo">
-                <a href="home.html"><img src="img/BeanBrosLogo1.png"></a>
+                <a href="home.html"><img src="../img/BeanBrosLogo1.png"></a>
             </div>
             <div class="nav-bar-right">
                 <h3><a href="signuploginforgot.html">Sign Up</a></h3>
@@ -52,80 +52,38 @@
             </div>
         </div>
 
-        <!--Beanpage Pop Out-->
-        <div class="bean-modal">
-            <div class="bean-modal-container">
-                <div class="bean-information-container">
-                    <div class="bean-information-title">
-                        <h2>Ethiopia Coffee Bean</h2>
-                        <i class="fas fa-times fa-2x"></i>
-                    </div>
-                    <div class="bean-information">
-                        <img src="img/ethiopia.jpg">
-                        <p>Description</p>
-                        <h4>Country: </h4>
-                        <h4>Roast: </h4>
-                        <h4>Price per kg (RM):</h4>
+        <!--Add Bean Page Parallax-->
+        <div class="add-bean">
+
+            <!--Add Bean Page Parallax-->
+            <div class="add-bean-parallax-group">
+                <div class="add-bean-parallax-back">
+                    <!--Add Bean Page Parallax Background-->
+                    <div class="ab-image-container">
+                        <img src="../img/coffee_beans_coffee_cup_198851_3648x4072.jpg">
                     </div>
                 </div>
-            </div>
-        </div>
-        
-        <!--Beanpage Parallax-->
-        <div class="beanpage">
-
-            <!--Beanpage First Parallax-->
-            <div class="beanpage-parallax-group">
-                <div class="beanpage-parallax-back">
-                    <!--Beanpage Parallax Background-->
-                    <div class="bp-image-container">
-                        <img src="img/cup_coffee_coffee_beans_86886_1920x1080.jpg">
-                    </div>
-                </div>
-                <div class="beanpage-parallax-base">
-                    <!--Beanpage Parallax Quote-->
-                    <div class="quote-container">
-                        <p>Find your one true coffee bean</p>
-                    </div>
-
-                    <div class="beanpage-container">
-                        <div class="beanpage-right">
-                            <div class="search-bar">
-                                <form>
-                                    <input type="text" placeholder="Search..." required>
-                                    <input type="submit" value="Find It">
-                                </form>
-                            </div>
+                <div class="add-bean-parallax-base">
+                    <!--Add Bean Container-->
+                    <div class="add-bean-container">
+                        <div class="add-bean-title">
+                            <h2>Introducing New Coffee Bean to Our Racks</h2>
                         </div>
-                        <div class="beanpage-left">
-                            <div class="bean-container">
-                                <div class="bean">
-                                    <img src="img/ethiopia.jpg">
+                        <div class="add-bean-form">
+                            <form method="POST" action="addbean.php">
+                                <input type="text" required>
+                                <input type="file" required>
+                                <input type="text" required>
+                                <input type="text" required>
+                                <input type="number" required>
+                                <input type="text" required>
+                                <div class="submit-reset-container">
+                                    <input type="submit" value="Beans Out!">
+                                    <input type="reset">
                                 </div>
-                                
-                                <div class="bean">
-                                    <img src="img/guatemala.jpg">
-                                </div>
-                                
-                                <div class="bean">
-                                    <img src="img/hawaiian-kona.jpg">
-                                </div>
-                                
-                                <div class="bean">
-                                    <img src="img/KenyaAA.jpg">
-                                </div>
-                                
-                                <div class="bean">
-                                    <img src="img/mocha-java-coffee.jpg">
-                                </div>
-                                
-                                <div class="bean">
-                                    <img src="img/tanzanian-peaberry.jpg">
-                                </div>
-                            </div>
+                            </form>
                         </div>
                     </div>
-
                     <!--Footer-->
                     <div class="footer-container">
                         <div class="footer-quote-container">
@@ -169,5 +127,5 @@
                 </div>
             </div>
         </div>
-    </body>
+    </body> 
 </html>
