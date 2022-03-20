@@ -14,410 +14,502 @@ Dark Oliver Green - 606C38
 */
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
+  
 body,
 p {
-  font-family: "Old Standard TT", serif;
+    font-family: "Old Standard TT", serif;
 }
-
+  
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: "Oxygen", sans-serif;
+    font-family: "Oxygen", sans-serif;
 }
-
+  
 a {
-  text-decoration: none;
-  color: inherit;
+    text-decoration: none;
+    color: inherit;
 }
-
+  
 /* Sticky Navigation Bar */
 .nav-bar {
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 100px;
-  width: auto;
-  color: #fefae0;
-  background-color: #181818;
-  position: fixed;
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-  justify-content: center;
-  z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    width: auto;
+    color: #fefae0;
+    background-color: #181818;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    z-index: 100;
 }
-
+  
 .nav-bar-left {
-  height: 100px;
-  width: 700px;
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
+    height: 100px;
+    width: 700px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
 }
-
+  
 .nav-bar-left h3 {
-  margin: 5px;
-  padding: 10px;
-  font-size: 16px;
-  letter-spacing: 1.5px;
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+    letter-spacing: 1.5px;
 }
-
+  
 .nav-bar-logo {
-  margin-left: 10px;
-  margin-right: 10px;
-  height: 100px;
-  width: 100px;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 100px;
+    width: 100px;
 }
-
+  
 .nav-bar-logo img {
-  height: 100px;
-  width: 100px;
+    height: 100px;
+    width: 100px;
 }
-
+  
 .nav-bar-right {
-  height: 100px;
-  width: 700px;
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
+    height: 100px;
+    width: 700px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
 }
-
+  
 .nav-bar-right h3 {
-  margin: 5px;
-  padding: 10px;
-  font-size: 16px;
-  letter-spacing: 1.5px;
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+    letter-spacing: 1.5px;
 }
-
+  
 /* Report Page Parallax */
-.report-homepage {
-  perspective: 1px;
-  height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
+.report-page {
+    perspective: 1px;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
-
-/* Report page Parallax Background */
+  
+/* Report Parallax Background */
 .report-parallax-group {
-  position: relative;
-  height: 100vh;
-  transform-style: preserve-3d;
-  z-index: -1;
+    position: relative;
+    height: 100vh;
+    transform-style: preserve-3d;
+    z-index: 5;
 }
-
+  
 .report-parallax-back {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  transform: translateX(-450px) translateY(-200px) translateZ(-1.625px)
-    scale(2.5);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: relative;
+    transform: translateX(-450px) translateY(-200px) translateZ(-1.625px) scale(2.5);
 }
-
-.image-container {
-  height: max-content;
-  width: max-content;
-  overflow: hidden;
+  
+.rp-image-container {
+    width: max-content;
+    height: max-content;
+    overflow: hidden;
 }
-
-/* Report page Parallax Quote */
+  
+/* Report Parallax Quote */
 .report-parallax-base {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  transform: translateZ(0);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    transform: translateZ(0);
 }
-
+  
 .quote-container {
-  margin: 325px 300px 0 300px;
-  padding: 15px;
-  width: auto;
-  height: auto;
-  background-color: #181818dd;
-  border-radius: 5px;
+    margin: 325px 300px 0 300px;
+    padding: 15px;
+    width: auto;
+    height: auto;
+    background-color: #181818DD;
+    border-radius: 5px;
 }
-
+  
 .quote-container p {
-  color: #fefae0;
-  font-size: 28px;
-  letter-spacing: 0.5px;
-  text-align: center;
+    color: #fefae0;
+    font-size: 28px;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+  
+/* Report */
+.whole-report-container {
+    margin-top: 450px;
+    height: auto;
+    width: auto;
+    background-color: #fefae0;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
 }
 
-.row {
-  margin: 0;
-  background-color: #fff;
-  height: 3200px;
-  z-index: 1;
-}
-.row::after {
-  content: "";
-  display: table;
-  clear: both;
+.title-container {
+    margin: 50px;
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
 }
 
-.report-column {
-  width: 100%;
-  padding: 10px;
-  padding-left: 200px;
-  padding-right: 200px;
-  height: 2200px;
+.title {
+    margin: 10px;
+    height: auto;
+    width: auto;
+    border-bottom: 10px double #283618;
+}
+
+.title h2 {
+    font-size: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.month-input-container {
+    margin: 25px;
+    height: auto;
+    width: auto;
+}
+
+.month-input-container form {
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.month-input-container form label {
+    margin: 25px;
+    padding-right: 25px;
+    height: auto;
+    width: auto;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    border-right: 5px solid #283618;
+}
+
+.month-input-container form select {
+    margin: 50px;
+    padding: 10px;
+    background-color: #DDA15E;
+    font-family: "Old Standard TT", serif;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    line-height: 1.5;
+    border: none;
+}
+
+.month-input-container form select option {
+    font-family: "Old Standard TT", serif;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    line-height: 1.5;
+}
+
+.month-input-container form input {
+    margin: 50px;
+    padding: 10px;
+    width: 200px;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    font-family: "Old Standard TT", serif;
+    background: linear-gradient(to left, #DDa15e 50%, #784830 50%) right;
+    background-size: 200%;
+    border: none;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+}
+
+.month-input-container form input[type=submit] {
+    margin: 50px;
+    width: 150px;
+    background: linear-gradient(to left, #DDa15e 50%, #784830 50%) right;
+    background-size: 200%;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+}
+
+.month-input-container form input:focus {
+    background-position: left;
+    outline: none;
+}
+
+.month-input-container form input[type=submit]:hover {
+    color: #fefae0;
+    background-position: left;
+}
+
+.report {
+    margin: 0 250px 150px 250px;
+    height: auto;
+    width: auto;
+    display: flex;
+    color: #fefae0;
+    background-color: #181818;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.report-header {
+    margin: 50px 25px;
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.report-logo {
+    margin: 0 20px;
+    height: auto;
+    width: auto;
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+.report-logo img {
+    height: 100px;
+    width: 100px;
 }
 
 .report-title {
-  display: flex;
-  margin-top: 80px;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-size: 30px;
-  font-family: "Old Standard TT";
+    margin: 0 20px;
+    height: auto;
+    width: auto;
 }
 
-.design {
-  display: flex;
-  height: 13px;
-  width: 580px;
-  background-color: #784830;
-  margin-left: 24%;
+.report-title h2 {
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
 }
 
-.select-column {
-  display: flex;
-  margin-top: 65px;
-  margin-bottom: 65px;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-size: 25px;
-  font-family: "Old Standard TT";
+hr {
+    margin: 25px;
+    height: 5px;
+    width: 500px;
+    background-color: #BC6C25;
+    border: none;
 }
 
-.report-container {
-  background-color: #dda15e;
-  height: fit-content;
-  width: 100%;
-  height: 120%;
-}
-.top-container {
-  display: inline-block;
-  height: 10%;
-  width: 100%;
-  padding: 50px;
-}
-.logo-container {
-  display: inline-block;
-  margin-left: 80px;
-  width: 20%;
-}
-.title-container {
-  display: inline-block;
-  width: 70%;
-}
-.title-design {
-  display: inline-block;
-  height: 15px;
-  width: 580px;
-  background-color: #bc6c25;
+.profitable, .popular, .most-spent, .most-order, .finalize {
+    margin: 25px;
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
 }
 
-.content-title {
-  font-family: "Old Standard TT";
-  font-size: 30px;
-  margin-top: 2%;
-  margin-bottom: 2%;
-  margin-left: 12%;
-}
-.bottom-container {
-  display: inline-block;
-  width: 100%;
-  height: 20%;
-  padding: 20px;
-}
-.line-design {
-  height: 1.5px;
-  width: 80%;
-  background-color: #000;
-  margin-left: 11%;
-  margin-top: 5%;
-  margin-bottom: 4%;
-}
-.content {
-  margin-left: 35%;
-  font-family: "Old Standard TT";
-  font-size: 30px;
+.image {
+    margin: 0 50px;
+    height: 250px;
+    width: 200px;
+    background-color: #181000;
 }
 
-.description {
-  height: 50%;
-  width: 70%;
-  background-color: #c0c0c0;
-  margin-top: 5%;
-  margin-left: 17%;
-}
-.total-profit {
-  margin-left: 7%;
-  font-family: "Old Standard TT";
-  font-size: 25px;
-  margin-bottom: 3%;
-}
-.total-coffee {
-  margin-left: 7%;
-  font-family: "Old Standard TT";
-  font-size: 25px;
+.details {
+    margin: 0 50px;
+    height: auto;
+    width: auto;
 }
 
+.details h2 {
+    margin-bottom: 10px;
+    font-size: 30px;
+    letter-spacing: 1.5px;
+}
+
+.details p {
+    margin-bottom: 10px;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+}
+
+.details h6 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+}
+  
 /* Footer */
 .footer-container {
-  height: auto;
-  width: 100%;
-  color: #181818;
-  background-color: #f3eec8;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
-  margin-top: 60%;
+    height: auto;
+    width: auto;
+    color: #181818;
+    background-color: #F3EEC8;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
 }
-
+  
 .footer-quote-container {
-  margin: 50px;
-  height: auto;
-  width: auto;
+    margin: 50px;
+    height: auto;
+    width: auto;
 }
-
+  
 .footer-quote {
-  height: auto;
-  width: auto;
-  font-size: 30px;
-  font-weight: bold;
-  letter-spacing: 1.5px;
+    height: auto;
+    width: auto;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
 }
-
+  
 .footer-sub-container {
-  height: auto;
-  width: auto;
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-  justify-content: space-around;
-  align-items: center;
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .footer-nav {
-  height: auto;
-  width: auto;
-  font-size: 20px;
-  font-weight: bold;
-  letter-spacing: 1.5px;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
+    height: auto;
+    width: auto;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
 }
-
+  
 .footer-nav p {
-  margin-top: 15px;
+    margin-top: 15px;
 }
-
+  
 .footer-social-media {
-  height: auto;
-  width: auto;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
 }
-
+  
 .fsm-title {
-  margin: 15px;
-  height: auto;
-  width: auto;
-  font-size: 30px;
-  font-weight: bold;
-  letter-spacing: 1.5px;
+    margin: 15px;
+    height: auto;
+    width: auto;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
 }
-
+  
 .fsm-content {
-  height: auto;
-  width: auto;
-  font-size: 20px;
-  font-weight: bold;
-  letter-spacing: 1.5px;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
+    height: auto;
+    width: auto;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
 }
-
+  
 .fsm-content p {
-  margin-top: 15px;
+    margin-top: 15px;
 }
-
+  
 .footer-contact-us {
-  margin: 15px;
-  height: auto;
-  width: auto;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
+    margin: 15px;
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
 }
-
+  
 .fcu-title {
-  margin: 15px;
-  height: auto;
-  width: auto;
-  font-size: 30px;
-  font-weight: bold;
-  letter-spacing: 1.5px;
+    margin: 15px;
+    height: auto;
+    width: auto;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
 }
-
+  
 .fcu-content {
-  margin-top: 15px;
-  height: auto;
-  width: auto;
-  font-size: 20px;
-  font-weight: bold;
-  letter-spacing: 1.5px;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
+    margin-top: 15px;
+    height: auto;
+    width: auto;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
 }
-
+  
 .fcu-content p {
-  margin-top: 15px;
+    margin-top: 15px;
 }
-
+  
 .footer-copyright {
-  margin: 25px;
-  height: auto;
-  width: auto;
-  font-size: 18px;
-  letter-spacing: 1.5px;
-  text-align: right;
-  border-top: 2.5px solid #181818;
+    margin: 25px;
+    height: auto;
+    width: auto;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    text-align: right;
+    border-top: 2.5px solid #181818;
 }
-
+  
 .footer-copyright p {
-  margin-top: 25px;
+    margin-top: 25px;
 }
