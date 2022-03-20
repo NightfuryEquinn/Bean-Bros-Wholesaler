@@ -15,7 +15,7 @@
         <meta name="copyright" content="Copyright 2022 @ Bean Bros Wholesaler" />
 
         <!--Link to CSS-->
-        <link rel="stylesheet" href="../css/addcoffeepedia.css" />
+        <link rel="stylesheet" href="../css/addcoffeepediaN.css">
 
         <!--Link to Font Awesome v4 and v5-->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
@@ -79,17 +79,18 @@
                             <div class="add-product-content">                            
                                 <div class='item-flex-container'>
                                     <form action="add.php" method="post" enctype="multipart/form-data">
-                                        <h1>WHAT DO YOU WANT TO ADD?</h1>
+                                        &nbsp
+                                        <h1>What would you like to add?</h1>
                                         <div class="addnew">
                                             <label>Title: </label><input type='text' name='Title' required>
                                             <hr>                                        
-                                            <label>Coffeepedia_ID: </label><input type="varchar" name="Coffeepedia_ID" min="0" required>
+                                            <label>Coffeepedia_ID: </label><input type="text" name="Coffeepedia_ID" min="0" required>
                                             <hr>
-                                            <label>Admin_ID: </label><input type="varchar" name="Admin_ID" min="0" required>
-                                            <hr>
-                                            <label>Author: </label><input type="text" name="Author" min="0" required>
+                                            <label>Admin_ID: </label><input type="text" name="Admin_ID" min="0" required>
                                             <hr>
                                             <label>Content: </label><textarea name="Content" rows="10" cols="10" required></textarea>
+                                            <hr>
+                                            <label>Author: </label><input type="text" name="Author" min="0" required>
                                             <hr> 
                                             <label>Date: </label><input type="number" name="Written_Date" min="0" required>
                                             <hr>                                  
