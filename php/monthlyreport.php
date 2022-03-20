@@ -96,7 +96,7 @@
                         <div class="report">
                             <div class="report-header">
                                 <div class="report-logo">
-                                    <img src="img/BeanBrosLogo1.png">
+                                    <img src="../img/BeanBrosLogo1.png">
                                 </div>
                                 <div class="report-title">
                                     <h2>Bean Bros Monthly Report</h2>
