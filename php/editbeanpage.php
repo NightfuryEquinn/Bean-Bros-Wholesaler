@@ -14,7 +14,7 @@
         <meta name = "copyright" content = "Copyright 2022 @ Bean Bros Wholesaler">
 
         <!--Link to CSS-->
-        <link rel = "stylesheet" href = "../css/addbeanpage.css">
+        <link rel = "stylesheet" href = "../css/editbeanpage.css">
 
         <!--Link to JavaScript-->
         <script src="../js/script.js" defer></script>
@@ -32,7 +32,7 @@
         <link rel = "icon" type = image/png href = "../img/BeanBrosLogo.png">
 
         <!--Title-->
-        <title>Bean Bros - Add Bean</title>
+        <title>Bean Bros - Edit Bean</title>
     </head>
     <body>
         <!--Sticky Navigation Bar-->
@@ -52,42 +52,52 @@
             </div>
         </div>
 
-        <!--Add Bean Page Parallax-->
-        <div class="add-bean">
+        <!--Edit Bean Page Parallax-->
+        <div class="edit-bean">
 
-            <!--Add Bean Page Parallax-->
-            <div class="add-bean-parallax-group">
-                <div class="add-bean-parallax-back">
-                    <!--Add Bean Page Parallax Background-->
-                    <div class="ab-image-container">
+            <!--Edit Bean Page Parallax-->
+            <div class="edit-bean-parallax-group">
+                <div class="edit-bean-parallax-back">
+                    <!--Edit Bean Page Parallax Background-->
+                    <div class="eb-image-container">
                         <img src="../img/coffee_beans_coffee_cup_198851_3648x4072.jpg">
                     </div>
                 </div>
-                <div class="add-bean-parallax-base">
-                    <!--Add Bean Container-->
-                    <div class="add-bean-container">
-                        <div class="add-bean-title">
-                            <h2>Introducing New Coffee Bean to Our Racks</h2>
+                <div class="edit-bean-parallax-base">
+                    <!--Edit Bean Container-->
+                    <div class="edit-bean-container">
+                        <div class="edit-bean-title">
+                            <h2>Reroasting Old Coffee Bean from Our Racks</h2>
                         </div>
-                        <div class="add-bean-form">
-                            <form method="POST" action="addbean.php" enctype="multipart/form-data">
+                        <div class="edit-bean-form">
+
+                            <?php
+                                include("conn.php");
+                                $editID = $_GET["Bean_ID"];
+                                $editData = mysqli_query($con, "SELECT * FROM coffee_bean WHERE Bean_ID=$editID");
+                                $row = mysqli_fetch_assoc($editData);
+                            ?>
+
+                            <form method="POST" action="editbean.php" enctype="multipart/form-data">
+                                <input type="hidden" name="id" value="<?php echo $row["Bean_ID"]?>">
+
                                 <label>Coffee Bean Name</label>
-                                <input type="text" name="name" required>
+                                <input type="text" name="name" value="<?php echo $row["Coffee_Bean"]?>" required>
 
                                 <label>Coffee Bean Image</label>
                                 <input type="file" name="image" accept="image/*" required>
                                 
                                 <label>Country Produced</label>
-                                <input type="text" name="country" required>
+                                <input type="text" name="country" value="<?php echo $row["Country"]?>" required>
                                 
                                 <label>Roast Type</label>
-                                <input type="text" name="roast" required>
+                                <input type="text" name="roast" value="<?php echo $row["Roast"]?>" required>
                                 
                                 <label>Price per kg</label>
-                                <input type="number" name="price" required>
+                                <input type="number" name="price" value="<?php echo $row["Price_Per_kg"]?>" required>
                                 
                                 <label>Description</label>
-                                <textarea name="description" placeholder="Max: 432 words" required rows="10" cols="100"></textarea>
+                                <textarea name="description" placeholder="Max: 432 words" required rows="10" cols="100"><?php echo $row["Description"]?></textarea>
                                 
                                 <div class="submit-reset-container">
                                     <input type="submit" value="Beans Out!">

@@ -102,22 +102,22 @@ a {
 }
 
 /* Add Bean Page Parallax */
-.add-bean {
+.edit-bean {
     perspective: 1px;
     height: 100vh;
     overflow-x: hidden;
     overflow-y: auto;
 }
   
-/* Add Bean Page Parallax Background */
-.add-bean-parallax-group {
+/* Edit Bean Page Parallax Background */
+.edit-bean-parallax-group {
     position: relative;
     height: 100vh;
     transform-style: preserve-3d;
     z-index: 5;
 }
   
-.add-bean-parallax-back {
+.edit-bean-parallax-back {
     top: 0;
     right: 0;
     bottom: 0;
@@ -126,14 +126,14 @@ a {
     transform: translateX(-1050px) translateY(-1850px) translateZ(-1.25px);
 }
   
-.ab-image-container {
+.eb-image-container {
     width: max-content;
     height: max-content;
     overflow: hidden;
 }
 
-/* Add Bean Container */
-.add-bean-parallax-base {
+/* Edit Bean Container */
+.edit-bean-parallax-base {
     top: 0;
     right: 0;
     bottom: 0;
@@ -144,7 +144,7 @@ a {
     transform: translateZ(0);
 }
 
-.add-bean-container {
+.edit-bean-container {
     margin: 325px 200px 50px 200px;
     height: auto;
     width: auto;
@@ -156,7 +156,7 @@ a {
     align-items: center;
 }
 
-.add-bean-title {
+.edit-bean-title {
     margin: 50px;
     padding: 25px;
     height: auto;
@@ -164,7 +164,7 @@ a {
     border: 10px double #BC6C25;
 }
 
-.add-bean-title h2 {
+.edit-bean-title h2 {
     color: #fefae0;
     font-size: 40px;
     text-transform: uppercase;
@@ -172,7 +172,7 @@ a {
     letter-spacing: 1.5px;
 }
 
-.add-bean-form {
+.edit-bean-form {
     margin: 0 100px;
     height: auto;
     width: auto;

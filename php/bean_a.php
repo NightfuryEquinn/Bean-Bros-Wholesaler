@@ -51,7 +51,7 @@
 
         <!--Add Beans Button-->
         <div class="add-button">
-            <i class="fas fa-plus-circle fa-5x"></i>
+            <a href="addbeanpage.php"><i class="fas fa-plus-circle fa-5x"></i></a>
         </div>
         
         <!--Beanpage Parallax-->
@@ -119,7 +119,7 @@
 
                                             <div class="admin-function">
                                             
-                                                <a href=\'editbean.php?Bean_ID='.$row['Bean_ID'].'\' onclick="return confirm(\'Edit '.$row['Coffee_Bean'].' details?\');"><i class="fas fa-edit fa-1x"></i></a>
+                                                <a href=\'editbeanpage.php?Bean_ID='.$row['Bean_ID'].'\' onclick="return confirm(\'Edit '.$row['Coffee_Bean'].' details?\');"><i class="fas fa-edit fa-1x"></i></a>
 
                                                 <a href=\'deletebean.php?Bean_ID='.$row['Bean_ID'].'\' onclick="return confirm(\'Delete '.$row['Coffee_Bean'].' order? This CANNOT be undone!\');"><i class="fas fa-trash-alt fa-1x"></i></a>
 
