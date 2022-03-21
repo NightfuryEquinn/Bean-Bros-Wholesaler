@@ -80,7 +80,7 @@
                                 <div class='item-flex-container'>
                                     <form method="POST" action="add.php" enctype="multipart/form-data">
                                         <div class="addnew">
-                                            <label>Admin_ID: </label><input type="text" name="a_id" min="0" required>
+                                            <input type="hidden" name="a_id" value ="1" required>
                                             <hr>
                                             <label>Title: </label><input type='text' name='name' required>
                                             <hr>                                        
@@ -88,7 +88,7 @@
                                             <hr>
                                             <label>Author: </label><input type="text" name="author" min="0" required>
                                             <hr> 
-                                            <label>Date: </label><input type="date" name="date" min="0" required>
+                                            <label>Date: </label><input type="text" name="date" min="0" required>
                                             <hr>                                  
                                         </div>
                                         <div class="submit-reset-container">

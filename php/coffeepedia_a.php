@@ -14,7 +14,10 @@
         <meta name = "copyright" content = "Copyright 2022 @ Bean Bros Wholesaler">
 
         <!--Link to CSS-->
-        <link rel = "stylesheet" href = "../css/coffeepedia_a.css">
+        <link rel = "stylesheet" href = "../css/coffeepedia_adm.css">
+
+        <!--Link to JavaScript-->
+        <script src="../js/script.js" defer></script>
 
         <!--Link to Font Awesome v4 and v5-->
         <link rel = "stylesheet" href = "https://use.fontawesome.com/releases/v5.15.4/css/all.css">
@@ -36,23 +39,29 @@
         <!--Sticky Navigation Bar-->
         <div class="nav-bar">
             <div class="nav-bar-left">
-                <h3><a href="../bean.html">Bean</a></h3>
-                <h3><a href="../coffeepedia_c.html">Coffeepedia</a></h3>
-                <h3><a href="../aboutus.html">About Us</a></h3>
-                <h3><a href="../contactus.html">Contact Us</a></h3>
+                <h3><a href="../bean_a.php">Bean</a></h3>
+                <h3><a href="../coffeepedia_a.php">Coffeepedia</a></h3>
+                <h3><a href="../aboutus.php">About Us</a></h3>
+                <h3><a href="../contactus.php">Contact Us</a></h3>
             </div>
             <div class="nav-bar-logo">
-                <a href="../home.html"><img src="../img\BeanBrosLogo1.png"></a>
+                <a href="../home.php"><img src="../img\BeanBrosLogo1.png"></a>
             </div>
             <div class="nav-bar-right">
-                <h3><a href="../adminprofile.html">Profile</a></h3>
-                <h3><a href="../monthlyreport.html">Report</a></h3>
-                <h3><a href="../checkfeedback.html">Feedback</a></h3>
-                <h3><a href="../checkcustomer.html">Customers</a></h3>
-                <h3><a href="../checkorder.html">Orders</a></h3>
+                <h3><a href="../adminprofile.php">Profile</a></h3>
+                <h3><a href="../monthlyreport.php">Report</a></h3>
+                <h3><a href="../checkfeedback.php">Feedback</a></h3>
+                <h3><a href="../checkcustomer.php">Customers</a></h3>
+                <h3><a href="../checkorder.php">Orders</a></h3>
                 <h3>Log Out</h3>
             </div>
         </div>
+
+        <!--Add Beans Button-->
+        <div class="addicon">
+            <a href="addcoffeepedia.php"><i class="fas fa-plus-circle fa-5x"></i></a>
+        </div>
+
         <!--Homepage Parallax-->
         <div class="homepage">
             <div class="homepage-parallax-group">
@@ -74,110 +83,54 @@
             <div class="row2">
                 <div class="blog-container">
 
-                    <div class="search-text">Search...</div>
+                    <div class="search-text"></div>
                     <div class="search-box">
-                        <input
-                            type="text"
-                            name="search"
-                            placeholder=""
-                            class="search-input"
-                        />
-                        <a href="#" class="search-btn">
-                            <i class=""></i>
-                        </a>
-                        <?php
+                        <form method="POST">
+                            <input type="text" name="searchC" placeholder="Search..." required>  
+                            <input type="submit" name="searchI" class="fas fa-search fa-1x" value="GO">                    
+                        </form>                                                 
+                        
+                        <?php 
                             include("conn.php");
 
                             $searchText = "";
 
-                            if(isset($_POST["search"])) 
+                            if(isset($_POST["searchI"])) 
                             {
-                                $searchText = $_POST['searchText'];
+                                $searchText = $_POST['searchC'];
                             }
 
                             $searchResult = mysqli_query($con, "SELECT * FROM coffeepedia WHERE Title LIKE '%$searchText%'");
-                        ?>
+                        ?>                       
                     </div>
                     <div class="box2"></div>
+                    <div class="blog-content-container">                        
+                        <?php
+                            while($row = mysqli_fetch_assoc($searchResult))
+                            {
+                                $displayCpd = '
+                                <div class="coffeepda">
 
-                    <div class="blog-content-container">
+                                    <img src="../img/Coffee1.jpg" width="400" height="350" id="randomimage" alt="Random image" />
 
-                        <div class="blog1"></div>
-                        <div class="rect1"></div>
-                        <div class="edit1">
-                            <button button onclick="document.location='editcoffeepedia.php'" class="fas fas fa-edit fa-1x" 
-                            style="color: transparent background-color: transparent; border-color: transparent; cursor: default;">
-                        </div>
-                        <div class="delete1">
-                            <button button onclick="document.location='delete.php'" class="fas fa-trash-alt fa-1x" 
-                            style="color: transparent background-color: transparent; border-color: transparent; cursor: default;">
-                        </div>                      
+                                    <div class="admin-function">                               
+                                    
+                                        <a href=\'editcoffeepedia.php?Bean_ID='.$row["Coffeepedia_ID"].'\' onclick="return confirm(\'Edit '.$row['Title'].' details?\');"><i class="fas fa-edit fa-2x"></i></a>
+                                        <a href=\'delete.php?Bean_ID='.$row["Coffeepedia_ID"].'\' onclick="return confirm(\'Delete '.$row['Title'].' order? This CANNOT be undone!\');"><i class="fas fa-trash-alt fa-2x"></i></a>
 
-                        <div class="blog2"></div>
-                        <div class="rect2"></div>
-                        <div class="edit2">
-                            <button button onclick="document.location='editcoffeepedia.php'" class="fas fas fa-edit fa-1x" 
-                            style="color: transparent background-color: transparent; border-color: transparent; cursor: default;">
-                        </div>
-                        <div class="delete2">
-                            <button button onclick="document.location='delete.php'" class="fas fa-trash-alt fa-1x" 
-                            style="color: transparent background-color: transparent; border-color: transparent; cursor: default;">
-                        </div>
+                                    </div>
 
-                        <div class="blog3"></div>
-                        <div class="rect3"></div>
-                        <div class="edit3">
-                            <button button onclick="document.location='editcoffeepedia.php'" class="fas fas fa-edit fa-1x" 
-                            style="color: transparent background-color: transparent; border-color: transparent; cursor: default;">
-                        </div>
-                        <div class="delete3">
-                            <button button onclick="document.location='delete.php'" class="fas fa-trash-alt fa-1x" 
-                            style="color: transparent background-color: transparent; border-color: transparent; cursor: default;">
-                        </div>
+                                </div>
 
-                        <div class="blog4"></div>
-                        <div class="rect4"></div>
-                        <div class="edit4">
-                            <button button onclick="document.location='editcoffeepedia.php'" class="fas fas fa-edit fa-1x" 
-                            style="color: transparent background-color: transparent; border-color: transparent; cursor: default;">
-                        </div>
-                        <div class="delete4">
-                            <button button onclick="document.location='delete.php'" class="fas fa-trash-alt fa-1x" 
-                            style="color: transparent background-color: transparent; border-color: transparent; cursor: default;">
-                        </div>
+                                ';
 
-                        <div class="blog5"></div>
-                        <div class="rect5"></div>
-                        <div class="edit5">
-                            <button button onclick="document.location='editcoffeepedia.php'" class="fas fas fa-edit fa-1x" 
-                            style="color: transparent background-color: transparent; border-color: transparent; cursor: default;">
-                        </div>
-                        <div class="delete5">
-                            <button button onclick="document.location='delete.php'" class="fas fa-trash-alt fa-1x" 
-                            style="color: transparent background-color: transparent; border-color: transparent; cursor: default;">
-                        </div>
+                                echo $displayCpd;
+                            }
 
-                        <div class="blog6"></div> 
-                        <div class="rect6"></div>
-                        <div class="edit6">
-                            <button button onclick="document.location='editcoffeepedia.php'" class="fas fas fa-edit fa-1x" 
-                            style="color: transparent background-color: transparent; border-color: transparent; cursor: default;">
-                        </div>
-                        <div class="delete6">
-                            <button button onclick="document.location='delete.php'" class="fas fa-trash-alt fa-1x" 
-                            style="color: transparent background-color: transparent; border-color: transparent; cursor: default;">
-                        </div>
-
-                        <div class="addicon">
-                            <button button onclick="document.location='addcoffeepedia.php'" class="fas fa-plus-circle fa-5x" 
-                            style="color: transparent background-color: transparent; border-color: transparent; cursor: default;">
-                        </div>
-
-                    </div>
-                    
-
-                </div>                         
-                
+                            mysqli_close($con);
+                        ?>
+                    </div>                  
+                </div>                                        
             </div>
 
             <!--Footer-->
@@ -220,7 +173,6 @@
                     <p>Est. 2022 @ Bean Bros Wholesaler</p>
                 </div>
             </div>
-
         </div>     
     </body>
 </html>

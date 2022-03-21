@@ -219,8 +219,8 @@ a {
   position: absolute;
   width: 346px;
   height: 40px;
-  left: 600px;
-  top: 760px;
+  left: 593px;
+  top: 740px;
   font-family: Old Standard TT;
   font-style: normal;
   font-weight: normal;
@@ -278,7 +278,6 @@ a {
 
 form {
   display: flex;
-  flex-direction: column;
   align-content: center;
   justify-content: center;
   align-items: center;
@@ -286,28 +285,27 @@ form {
 
 form input {
   right: 0;
-  margin: 10px 10px 25px 10px;
-  padding: 10px;
+  margin: 10px 0px 25px 0px;
+  padding: 10.5px;
   width: 300px;
-  font-size: 16px;
+  font-size: 36px;
   font-weight: bold;
   letter-spacing: 1.5px;
   font-family: "Old Standard TT", serif;
-  background: linear-gradient(to left, #fefae0 50%, #DDa15e 50%) right;
+  background: linear-gradient(to left, #ffffff 50%, #DDa15e 50%) right;
   background-size: 200%;
   border: none;
   transition-duration: 0.5s;
-  transition-timing-function: ease-out;
+  transition-timing-function: ease;
 }
 
 form input[type=submit] {
-  margin: 0 25px;
+  height: 65px;
   width: 150px;
-  background: linear-gradient(to left, #fefae0 50%, #283618 50%) right;
-  background-size: 200%;
+  background: linear-gradient(to left, #ffffff 50%, #283618 50%) right;
+  background-size: 250%;
   transition-duration: 0.5s;
   transition-timing-function: ease-out;
-  font-size: larger;
 }
 
 form input:focus {
@@ -532,10 +530,20 @@ form input[type=submit]:hover {
   height: auto;
   width: auto;
   position: fixed;
-  transform: translate(75px, 380px);
+  transform: translate(75px, 30px);
 }
 
 .admin-function i {
   margin: 10px 45px;
+  cursor: pointer;
+}
+
+.src-btn {
+  left: 0;
+  bottom: 0;
+  margin: 25px;
+  background-color: #fefae0;
+  position: fixed;
+  border-radius: 10%;
   cursor: pointer;
 }

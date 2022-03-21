@@ -80,23 +80,23 @@
                                 <div class='item-flex-container'>
                                     <?php
                                         include("conn.php");
-                                        $editID = $_GET["Coffeepedia_ID"];
-                                        $editData = mysqli_query($con, "SELECT * FROM coffeepedia WHERE Coffeepedia_ID=$editID");
+                                        $editID = "45";
+                                        $editData = mysqli_query($con, "SELECT * FROM coffeepedia WHERE Coffeepedia_ID='$editID'");
                                         $row = mysqli_fetch_assoc($editData);
                                     ?>
                                     <form action="edit.php" method="post" enctype="multipart/form-data">
                                         <div class="addnew">
-                                            <label>Coffeepedia_ID: </label><input type="text" name="c_id" value="<?php echo $row["Coffeepedia_ID"]?>" required>
+                                            <label>Coffeepedia_ID: </label><input type="hidden" name="c_id" value="<?php echo $row["Coffeepedia_ID"]?>">
                                             <hr>
                                             <label>Admin_ID: </label><input type="text" name="a_id" value="<?php echo $row["Admin_ID"]?>" required> 
                                             <hr>
-                                            <label>Title: </label><input type='text' value="<?php echo $row["Title"]?>" required>
+                                            <label>Title: </label><input type='text' name="name" value="<?php echo $row["Title"]?>" required>
                                             <hr>                                                                                  
                                             <label>Content: </label><textarea name="content" required rows="10" cols="10"><?php echo $row["Content"]?></textarea>
                                             <hr>
                                             <label>Author: </label><input type="text" name="author" value="<?php echo $row["Author"]?>" required>
                                             <hr> 
-                                            <label>Date: </label><input type="date" name="date" value="<?php echo $row["Written_Date"]?>" required>
+                                            <label>Date: </label><input type="text" name="date" value="<?php echo $row["Written_Date"]?>" required>
                                             <hr>                                  
                                         </div>
                                         <div class="submit-reset-container">
