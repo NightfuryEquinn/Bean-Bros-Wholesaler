@@ -194,11 +194,9 @@ function select4() {
     aim4.style.display = "flex"
 }
 
-window.onload = rndm;
-
-var img_name = new Array("../img/Coffee1.jpg", "../img/Coffee2.jpg","../img/Coffee3.jpg");
+var imgArr = ["../img/Coffee1.jpg", "../img/Coffee2.jpg","../img/Coffee3.jpg"];
 
 function rndm(){
-    var rnd_no = Math.floor(Math.random() * myPix.length);
-    document.getElementById("randomimage").src = img_name[rnd_no];
-}    
+    var num = Math.floor(Math.random() * (imgArr.length));
+    document.canvas.src="img/"+imgArr[num];
+}

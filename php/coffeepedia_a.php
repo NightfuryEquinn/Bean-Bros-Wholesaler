@@ -14,7 +14,7 @@
         <meta name = "copyright" content = "Copyright 2022 @ Bean Bros Wholesaler">
 
         <!--Link to CSS-->
-        <link rel = "stylesheet" href = "../css/coffeepedia_adm.css">
+        <link rel = "stylesheet" href = "../css/coffeepedia_ad.css">
 
         <!--Link to JavaScript-->
         <script src="../js/script.js" defer></script>
@@ -87,7 +87,7 @@
                     <div class="search-box">
                         <form method="POST">
                             <input type="text" name="searchC" placeholder="Search..." required>  
-                            <input type="submit" name="searchI" class="fas fa-search fa-1x" value="GO">                    
+                            <input type="submit" name="searchI" class="fas fa-search fa-1x" value="GO" onclick="rndm()">                    
                         </form>                                                 
                         
                         <?php 
@@ -111,7 +111,7 @@
                                 $displayCpd = '
                                 <div class="coffeepda">
 
-                                    <img src="../img/Coffee1.jpg" width="400" height="350" id="randomimage" alt="Random image" />
+                                    <img src="../img/Coffee1.jpg" name="canvas" width="400" height="350" />
 
                                     <div class="admin-function">                               
                                     
