@@ -41,8 +41,13 @@ var targetOpenButtonSilver = document.getElementById("change-1")
 var targetOpenButtonGold = document.getElementById("change-2")
 var targetOpenButtonPlatinum = document.getElementById("change-3")
 var targetCloseButton2b = document.getElementById("close-2b")
+var targetTitle = document.getElementsByClassName("confirm-subscription-notes")[0].getElementsByTagName("p")[0]
+var targetSub = document.getElementById("sub")
 
 function silver() {
+    targetTitle.innerHTML = "You are changing your subscription to Silver."
+    targetSub.value = "Silver"
+
     targetOpenButtonSilver.onclick = () => {
         targetModal2b.style.display = "block"
     }
@@ -53,6 +58,9 @@ function silver() {
 }
 
 function gold() {
+    targetTitle.innerHTML = "You are changing your subscription to Gold."
+    targetSub.value = "Gold"
+
     targetOpenButtonGold.onclick = () => {
         targetModal2b.style.display = "block"
     }
@@ -63,6 +71,9 @@ function gold() {
 }
 
 function platinum() {
+    targetTitle.innerHTML = "You are changing your subscription to Platinum."
+    targetSub.value = "Platinum"
+
     targetOpenButtonPlatinum.onclick = () => {
         targetModal2b.style.display = "block"
     }
