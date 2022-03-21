@@ -1,5 +1,6 @@
 <?php
-    $customerID = '2'
+    $customerID = '2';
+    $orderID = $_GET["Order_ID"];
 ?>
 
 <!DOCTYPE html>
@@ -79,7 +80,7 @@
                                 include("conn.php");
 
                                 $invoice = mysqli_query($con, "SELECT * FROM customer c, coffee_bean b, customer_order co 
-                                WHERE c.Customer_ID = $customerID AND c.Customer_ID = co.Customer_ID AND b.Bean_ID = co.Bean_ID;");
+                                WHERE c.Customer_ID = $customerID AND co.Order_ID = $orderID AND c.Customer_ID = co.Customer_ID AND b.Bean_ID = co.Bean_ID;");
 
                                 $row = mysqli_fetch_assoc($invoice);
 

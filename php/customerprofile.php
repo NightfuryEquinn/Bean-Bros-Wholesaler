@@ -1,3 +1,8 @@
+<?php
+    include("conn.php");
+    $customerID = '2';
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -14,10 +19,10 @@
         <meta name = "copyright" content = "Copyright 2022 @ Bean Bros Wholesaler">
 
         <!--Link to CSS-->
-        <link rel = "stylesheet" href = "css/customerprofile.css">
+        <link rel = "stylesheet" href = "../css/customerprofile.css">
 
         <!--Link to JavaScript-->
-        <script src="js/script.js" defer></script>
+        <script src="../js/script.js" defer></script>
 
         <!--Link to Font Awesome v4 and v5-->
         <link rel = "stylesheet" href = "https://use.fontawesome.com/releases/v5.15.4/css/all.css">
@@ -29,7 +34,7 @@
         <link href = "https://fonts.googleapis.com/css2?family=Old+Standard+TT&family=Oxygen:wght@700&display=swap" rel = "stylesheet">
         
         <!--Link to Pictures file-->
-        <link rel = "icon" type = image/png href = "img\BeanBrosLogo.png">
+        <link rel = "icon" type = image/png href = "../img/BeanBrosLogo.png">
 
         <!--Title-->
         <title>Bean Bros - Profile</title>
@@ -44,7 +49,7 @@
                 <h3><a href="contactus.html">Contact Us</a></h3>
             </div>
             <div class="nav-bar-logo">
-                <a href="home.html"><img src="img\BeanBrosLogo1.png"></a>
+                <a href="home.html"><img src="../img/BeanBrosLogo1.png"></a>
             </div>
             <div class="nav-bar-right">
                 <h3><a href="customerprofile.html">Profile</a></h3>
@@ -59,22 +64,23 @@
             <div class="edit-modal-container">
                 <div class="edit-personal-information-container">
                     <div class="edit-personal-information-title">
-                        <h2>Edit Personal Details</h2>
+                        <h2>Edit Contact Details</h2>
                         <i class="fas fa-times fa-2x" id="close-1"></i>
                     </div>
                     <div class="editable-personal-information">
-                        <form>
-                            <label>Username:</label><br>
-                            <input type="text" placeholder="Your Username" required><br>
-                            
-                            <label>Email Address:</label><br>
-                            <input type="email" placeholder="Your Company Email" required><br>
-                            
+
+                        <?php
+                            $getCustomerInfo = mysqli_query($con, "SELECT * FROM customer WHERE Customer_ID = $customerID;");
+
+                            $row = mysqli_fetch_assoc($getCustomerInfo);
+                        ?>
+
+                        <form method="POST" action="editcontactdetails.php">
                             <label>Contact Number (Work)</label><br>
-                            <input type="tel" placeholder="Company Contact" pattern="[0-9]{2}-[0-9]{7}" required><br>
+                            <input type="tel" placeholder="Company Contact" name="company_contact" pattern="[0-9]{9}" value=<?php echo $row["Company_Contact"]?> required><br>
                             
                             <label>Contact Number (Personal)</label><br>
-                            <input type="tel" placeholder="Personal Contact" pattern="[0-9]{3}-[0-9]{7}" required><br>
+                            <input type="tel" placeholder="Personal Contact" name="personal_contact" pattern="[0-9]{10}" value=<?php echo $row["Personal_Contact"]?> required><br>
                             
                             <input type="submit" value="Confirm Changes">
                         </form>
@@ -88,7 +94,9 @@
             <div class="subscription-modal-container">
                 <div class="subscription-container">
                     <div class="subscription-title">
-                        <h2>Current Tier: Silver</h2>
+                        <?php
+                            echo '<h2>Current Tier: '.$row["Subscription"].'</h2>';
+                        ?>
                         <i class="fas fa-times fa-2x" id="close-2"></i>
                     </div>
                     <div class="subscription-notes-container">
@@ -144,14 +152,18 @@
             <div class="confirm-subscription-modal-container">
                 <div class="confirm-subscription">
                     <div class="confirm-subscription-title">
-                        <h2>Current Tier: Silver</h2>
+                        <?php
+                            echo '<h2>Current Tier: '.$row["Subscription"].'</h2>';
+                        ?>
                         <i class="fas fa-times fa-2x" id="close-2b"></i>
                     </div>
                     <div class="confirm-subscription-notes">
-                        <p>You are changing your subscription to Gold.</p>
+                        <p></p>
                     </div>
                     <div class="confirm-payment-container">
-                        <form>
+                        <form method="POST" action="updatesub.php">
+                            <input type="hidden" id="sub" name="sub" value="">
+
                             <label>Credit Card Number: </label><br>
                             <input type="tel" placeholder="xxxx-xxxx-xxxx-xxxx" maxlength="19" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}"  required><br>
                             
@@ -289,17 +301,22 @@
                                 <th>Invoice</th>
                             </tr>
 
-                            <tr>
-                                <td>OD001</td>
-                                <td>Guatamela Bean</td>
-                                <td><a href="invoice.html">View</a></td>
-                            </tr>
-                            
-                            <tr>
-                                <td>OD002</td>
-                                <td>Argentina Bean</td>
-                                <td><a href="invoice.html">View</a></td>
-                            </tr>
+                            <?php
+                                $history = mysqli_query($con, "SELECT * FROM customer_order WHERE Customer_ID = '$customerID';");
+
+                                while($table = mysqli_fetch_assoc($history))
+                                {
+                                    $displayHistory = '
+                                    <tr>
+                                        <td>'.$table["Order_ID"].'</td>
+                                        <td>'.$table["Coffee_Bean"].'</td>
+                                        <td><a href=\'invoice.php?Order_ID='.$table['Order_ID'].'\' onclick="return confirm(\'View invoice of Order '.$table['Order_ID'].'?\');">View</a></td>
+                                    </tr>
+                                    ';
+
+                                    echo $displayHistory;
+                                }
+                            ?>
                         </table>
                     </div>
                 </div>
@@ -314,7 +331,7 @@
                 <div class="customer-profile-parallax-back">
                     <!--Customer Profile Parallax Background-->
                     <div class="cpb-image-container">
-                        <img src="img/couple_hands_love_tenderness_coffee_118921_1920x1080.jpg">
+                        <img src="../img/couple_hands_love_tenderness_coffee_118921_1920x1080.jpg">
                     </div>
                 </div>
                 <div class="customer-profile-parallax-base">
@@ -328,14 +345,24 @@
                             <div class="personal-information-title">
                                 <h3>Personal Details</h3>
                             </div>
-                            <div class="personal-information">
-                                <p>Username: </p>
-                                <p>Email: </p>
-                                <p>Contact Number (Personal): </p>
-                                <p>Contact Number (Work): </p>
-                                <p>Password: </p>
-                                <p>Subscription Tier: </p>
-                            </div>
+                            <?php
+                                $displayCustomerInfo = '
+                                
+                                <div class="personal-information">
+                                    <p>Username: '.$row["Username"].'</p>
+                                    <p>Email: '.$row["Email"].'</p>
+                                    <p>Contact Number (Personal): '.$row["Personal_Contact"].'</p>
+                                    <p>Contact Number (Work): '.$row["Company_Contact"].'</p>
+                                    <p>Password: *#*#*#*#</p>
+                                    <p>Subscription Tier: '.$row["Subscription"].'</p>
+                                </div>
+                                
+                                ';
+
+                                echo $displayCustomerInfo;
+
+                                mysqli_close($con);
+                            ?>
                         </div>
                         <div class="customer-function-container">
                             <div class="cfc-top">
