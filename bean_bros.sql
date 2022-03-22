@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Mar 20, 2022 at 01:09 PM
+-- Generation Time: Mar 22, 2022 at 09:59 AM
 -- Server version: 5.7.36
 -- PHP Version: 7.4.26
 
@@ -56,7 +56,7 @@ CREATE TABLE IF NOT EXISTS `coffeepedia` (
   `Title` varchar(255) NOT NULL,
   `Content` varchar(432) NOT NULL,
   `Author` varchar(255) NOT NULL,
-  `Written_Date` date NOT NULL,
+  `Written_Date` varchar(255) NOT NULL,
   PRIMARY KEY (`Coffeepedia_ID`),
   KEY `Admin_ID` (`Admin_ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -119,7 +119,7 @@ CREATE TABLE IF NOT EXISTS `customer` (
 --
 
 INSERT INTO `customer` (`Customer_ID`, `Username`, `Email`, `Password`, `Company_Contact`, `Personal_Contact`, `Subscription`) VALUES
-(2, 'Night', 'xianzyip8@gmail.com', '1111', '053223511', '0128981055', NULL);
+(2, 'Night', 'xianzyip8@gmail.com', '1111', '053223511', '0128981055', 'Platinum');
 
 -- --------------------------------------------------------
 
@@ -137,18 +137,20 @@ CREATE TABLE IF NOT EXISTS `customer_order` (
   `Price_Per_kg` int(255) NOT NULL,
   `Total` int(255) NOT NULL,
   `Status` text NOT NULL,
-  `Order_Date` date NOT NULL,
+  `Order_Date` varchar(255) NOT NULL,
   PRIMARY KEY (`Order_ID`),
   KEY `Customer_ID` (`Customer_ID`),
   KEY `Bean_ID` (`Bean_ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `customer_order`
 --
 
 INSERT INTO `customer_order` (`Order_ID`, `Customer_ID`, `Bean_ID`, `Coffee_Bean`, `Amount`, `Price_Per_kg`, `Total`, `Status`, `Order_Date`) VALUES
-(1, 2, 1, 'Tanzanian Peaberry Coffee', 120, 50, 6000, 'Completed', '2022-03-19');
+(1, 2, 1, 'Tanzanian Peaberry Coffee', 120, 50, 6000, 'Completed', '2022-03-19'),
+(2, 2, 2, 'Hawaii Kona Coffee', 160, 40, 6400, 'Pending', '2022-03-19'),
+(3, 2, 5, 'Kenya AA Coffee', 80, 80, 6400, 'Pending', '2022-03-22');
 
 -- --------------------------------------------------------
 
@@ -161,7 +163,7 @@ CREATE TABLE IF NOT EXISTS `feedback` (
   `Feedback_ID` int(255) NOT NULL AUTO_INCREMENT,
   `Customer_ID` int(255) NOT NULL,
   `Feedback` varchar(432) NOT NULL,
-  `Date` date NOT NULL,
+  `Date` varchar(255) NOT NULL,
   PRIMARY KEY (`Feedback_ID`),
   KEY `Customer_ID` (`Customer_ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
