@@ -15,7 +15,7 @@
         <meta name = "copyright" content = "Copyright 2022 @ Bean Bros Wholesaler">
 
         <!--Link to CSS-->
-        <link rel = "stylesheet" href = "../css/coffeepedia_c.css">
+        <link rel = "stylesheet" href = "../css/coffeepedia_adm.css">
 
         <!--Link to Font Awesome v4 and v5-->
         <link rel = "stylesheet" href = "https://use.fontawesome.com/releases/v5.15.4/css/all.css">
@@ -37,17 +37,17 @@
         <!--Sticky Navigation Bar-->
         <div class="nav-bar">
             <div class="nav-bar-left">
-                <h3><a href="../bean.html">Bean</a></h3>
-                <h3><a href="../coffeepedia_c.html">Coffeepedia</a></h3>
-                <h3><a href="../aboutus.html">About Us</a></h3>
-                <h3><a href="../contactus.html">Contact Us</a></h3>
+                <h3><a href="../bean_c.php">Bean</a></h3>
+                <h3><a href="../coffeepedia_c.php">Coffeepedia</a></h3>
+                <h3><a href="../aboutus.php">About Us</a></h3>
+                <h3><a href="../contactus.php">Contact Us</a></h3>
             </div>
             <div class="nav-bar-logo">
-                <a href="../home.html"><img src="../img\BeanBrosLogo1.png"></a>
+                <a href="../home.php"><img src="../img\BeanBrosLogo1.png"></a>
             </div>
             <div class="nav-bar-right">
-                <h3><a href="../signuploginforgot.html">Sign Up</a></h3>
-                <h3><a href="../signuploginforgot.html">Log In</a></h3>
+                <h3><a href="../signuploginforgot.php">Sign Up</a></h3>
+                <h3><a href="../signuploginforgot.php">Log In</a></h3>
             </div>
         </div>
         <!--Homepage Parallax-->
@@ -70,73 +70,56 @@
             <!--Blog Container-->
             <div class="row2">
                 <div class="blog-container">
-
-                    <div class="search-text">Search...</div>
+                    <div class="search-text"></div>
                     <div class="search-box">
-                        <input
-                            type="text"
-                            name="search"
-                            placeholder=""
-                            class="search-input"
-                        />
-                        <a href="#" class="search-btn">
-                            <i class=""></i>
-                        </a>
-                        <?php
+                        <form method="POST">
+                            <input type="text" name="searchC" placeholder="Search..." required>  
+                            <input type="submit" name="searchI" class="fas fa-search fa-1x" value="GO" onclick="rndm()">                    
+                        </form> 
+                        <?php 
                             include("conn.php");
 
                             $searchText = "";
 
-                            if(isset($_POST["search"])) 
+                            if(isset($_POST["searchI"])) 
                             {
-                                $searchText = $_POST['searchText'];
+                                $searchText = $_POST['searchC'];
                             }
 
                             $searchResult = mysqli_query($con, "SELECT * FROM coffeepedia WHERE Title LIKE '%$searchText%'");
-                        ?>
+                        ?> 
 
                     </div>
                     <div class="box2"></div>
 
                     <div class="blog-content-container">
 
-                        <div class="blog1"></div>
                         <?php
-                            // Get and display data
-                            while ($row = mysqli_fetch_array($searchResult)){
-                                
-                                $display = '
+                            while($row = mysqli_fetch_assoc($searchResult))
+                            {
+                                $displayCpd = '
+                                <div class="coffeepda">
+
+                                    <img src="../img/Coffee1.jpg" name="canvas" width="400" height="350" />
+
+                                    <div class="admin-function">
+                                            
+                                        <h2>'.$row["Title"].'</h2> 
+
+                                    </div>                                                                                                   
+
+                                </div>                               
 
                                 ';
 
-                                echo $display;
+                                echo $displayCpd;
                             }
 
-                            // Close connection to database
-                            mysqli_close($con); 
+                            mysqli_close($con);
                         ?>
-                        <div class="rect1"></div>
 
-                        <div class="blog2"></div>
-                        <div class="rect2"></div>
-
-                        <div class="blog3"></div>
-                        <div class="rect3"></div>
-
-                        <div class="blog4"></div>
-                        <div class="rect4"></div>
-
-                        <div class="blog5"></div>
-                        <div class="rect5"></div>
-
-                        <div class="blog6"></div> 
-                        <div class="rect6"></div>
-
-                    </div>
-                    
-
-                </div>                         
-                
+                    </div>                    
+                </div>                                        
             </div>
 
             <!--Footer-->

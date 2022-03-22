@@ -14,7 +14,7 @@
         <meta name = "copyright" content = "Copyright 2022 @ Bean Bros Wholesaler">
 
         <!--Link to CSS-->
-        <link rel = "stylesheet" href = "../css/coffeepedia_ad.css">
+        <link rel = "stylesheet" href = "../css/coffeepedia_adm.css">
 
         <!--Link to JavaScript-->
         <script src="../js/script.js" defer></script>

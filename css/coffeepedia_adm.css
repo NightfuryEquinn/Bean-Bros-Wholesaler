@@ -530,7 +530,7 @@ form input[type=submit]:hover {
   height: auto;
   width: auto;
   position: fixed;
-  transform: translate(75px, 30px);
+  transform: translate(170px, 30px);
 }
 
 .admin-function i {
