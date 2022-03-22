@@ -72,7 +72,7 @@
                                 <h2>Bean Bros Monthly Report Generator</h2>
                             </div>
                             <div class="month-input-container">
-                                <form>
+                                <form method="POST" action="generate.php">
                                     <label>Select Month</label>
                                     <select required>
                                         <option>January</option>
