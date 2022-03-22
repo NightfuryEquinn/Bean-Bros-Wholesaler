@@ -72,24 +72,35 @@
                                 <h2>Bean Bros Monthly Report Generator</h2>
                             </div>
                             <div class="month-input-container">
-                                <form method="POST" action="generate.php">
+                                <form method="POST">
                                     <label>Select Month</label>
-                                    <select required>
-                                        <option>January</option>
-                                        <option>Febraury</option>
-                                        <option>March</option>
-                                        <option>April</option>
-                                        <option>May</option>
-                                        <option>June</option>
-                                        <option>July</option>
-                                        <option>August</option>
-                                        <option>September</option>
-                                        <option>October</option>
-                                        <option>November</option>
-                                        <option>December</option>
+                                    <select name="month" required>
+                                        <option value="-01-">January</option>
+                                        <option value="-02-">Febraury</option>
+                                        <option value="-03-">March</option>
+                                        <option value="-04-">April</option>
+                                        <option value="-05-">May</option>
+                                        <option value="-06-">June</option>
+                                        <option value="-07-">July</option>
+                                        <option value="-08-">August</option>
+                                        <option value="-09-">September</option>
+                                        <option value="-10-">October</option>
+                                        <option value="-11-">November</option>
+                                        <option value="-12-">December</option>
                                     </select>
-                                    <input type="submit" value="Generate">
+                                    <input type="submit" name="report" value="Generate" onclick="return confirm('Generate report for selected month?');">
                                 </form>
+
+                                <?php
+                                    include("conn.php");
+
+                                    $selectMonth = "-01-";
+
+                                    if(isset($_POST["report"]))
+                                    {
+                                        $selectMonth = $_POST['month'];
+                                    }
+                                ?>
                             </div>
                         </div>
 
@@ -106,58 +117,147 @@
                             <hr>
 
                             <div class="profitable">
-                                <div class="image">
+                                
+                                <?php
+                                    $mostProfit = mysqli_query($con, "SELECT co.Coffee_Bean, SUM(co.Total) AS Profit, b.Coffee_Bean_Image FROM coffee_bean b, customer_order co WHERE co.Order_Date LIKE '%$selectMonth%' GROUP BY co.Coffee_Bean, b.Coffee_Bean_Image ORDER BY Profit DESC LIMIT 1;");
 
-                                </div>
-                                <div class="details">
-                                    <h2>Most Profitable Coffee Bean</h2>
-                                    <p>Coffee Bean: </p>
-                                    <p>Total Profit Earned: </p>
-                                </div>
+                                    $rowProfit = mysqli_fetch_assoc($mostProfit);
+
+                                    $displayProfitable = '
+
+                                        <div class="image">
+                                            
+                                            <img src="data:image/jpg;base64, '.base64_encode($rowProfit["Coffee_Bean_Image"]).'">
+                                            
+                                        </div>
+
+                                        <div class="details">
+
+                                            <h2>Most Profitable Coffee Bean</h2>
+
+                                            <p>Coffee Bean: '.$rowProfit["Coffee_Bean"].'</p>
+
+                                            <p>Total Profit Earned: '.$rowProfit["Profit"].'</p>
+
+                                        </div>
+
+                                    ';
+                                    
+                                    echo $displayProfitable;
+                                ?>
+                                
                             </div>
 
                             <hr>
 
                             <div class="popular">
-                                <div class="image">
+                                <?php
+                                    $mostPopular = mysqli_query($con, "SELECT co.Coffee_Bean, COUNT(co.Coffee_Bean) AS Popular, b.Coffee_Bean_Image FROM coffee_bean b, customer_order co WHERE co.Order_Date LIKE '%$selectMonth%' GROUP BY co.Coffee_Bean, b.Coffee_Bean_Image ORDER BY Popular DESC LIMIT 1;");
 
-                                </div>
-                                <div class="details">
-                                    <h2>Most Popular Coffee Bean</h2>
-                                    <p>Coffee Bean: </p>
-                                    <p>Number of Orders: </p>
-                                </div>
+                                    $rowPopular = mysqli_fetch_assoc($mostPopular);
+                                
+                                    $displayPopular = '
+
+                                        <div class="image">
+
+                                            <img src="data:image/jpg;base64, '.base64_encode($rowProfit["Coffee_Bean_Image"]).'">
+
+                                        </div>
+
+                                        <div class="details">
+
+                                            <h2>Most Popular Coffee Bean</h2>
+
+                                            <p>Coffee Bean: '.$rowPopular["Coffee_Bean"].'</p>
+
+                                            <p>Number of Orders: '.$rowPopular["Popular"].'</p>
+
+                                        </div>
+
+                                    ';
+
+                                    echo $displayPopular;
+                                ?>
                             </div>
 
                             <hr>
 
                             <div class="most-spent">
-                                <div class="details">
-                                    <h2>Most Spent Customer</h2>
-                                    <p>Username: </p>
-                                    <p>Email: </p>
-                                    <p>Total Spent: </p>
-                                </div>
+                                <?php
+                                    $mostSpent = mysqli_query($con, "SELECT c.Username, c.Email, SUM(co.Total) AS Spent FROM customer c, customer_order co WHERE co.Order_Date LIKE '%$selectMonth%' GROUP BY c.Customer_ID ORDER BY Spent DESC LIMIT 1;");
+
+                                    $rowSpent = mysqli_fetch_assoc($mostSpent);
+                                
+                                    $displaySpent = '
+
+                                        <div class="details">
+
+                                            <h2>Most Spent Customer</h2>
+
+                                            <p>Username: '.$rowSpent["Username"].'</p>
+
+                                            <p>Email: '.$rowSpent["Email"].'</p>
+
+                                            <p>Total Spent: '.$rowSpent["Spent"].'</p>
+
+                                        </div>
+
+                                    ';
+
+                                    echo $displaySpent;
+                                ?>
                             </div>
 
                             <hr>
 
                             <div class="most-order">
-                                <div class="details">
-                                    <h2>Most Order Customer</h2>
-                                    <p>Username: </p>
-                                    <p>Email: </p>
-                                    <p>Total Order: </p>
-                                </div>
+                                <?php
+                                    $mostOrder = mysqli_query($con, "SELECT c.Username, c.Email, COUNT(co.Customer_ID) AS MostOrder FROM customer c, customer_order co WHERE co.Order_Date LIKE '%$selectMonth%' GROUP BY c.Customer_ID ORDER BY MostOrder DESC LIMIT 1;");
+
+                                    $rowOrder = mysqli_fetch_assoc($mostOrder);
+                                
+                                    $displayOrder = '
+
+                                        <div class="details">
+
+                                            <h2>Most Order Customer</h2>
+
+                                            <p>Username: '.$rowOrder["Username"].'</p>
+
+                                            <p>Email: '.$rowOrder["Email"].'</p>
+                                            
+                                            <p>Total Order: '.$rowOrder["MostOrder"].'</p>
+
+                                        </div>
+
+                                    ';
+
+                                    echo $displayOrder;
+                                ?>
                             </div>
 
                             <hr>
 
                             <div class="finalize">
-                                <div class="details">
-                                    <h6>Total Profit this month (RM): </h6>
-                                    <h6>Total Amount of coffee bean sold this month (kg): </h6>
-                                </div>
+                                <?php
+                                    $final = mysqli_query($con, "SELECT SUM(Total) AS Total_Profit, SUM(Amount) AS Total_Amount FROM customer_order WHERE Order_Date LIKE '%$selectMonth%';");
+
+                                    $rowFinal = mysqli_fetch_assoc($final);
+                                
+                                    $displayFinal = '
+
+                                        <div class="details">
+
+                                            <h6>Total Profit this month (RM): '.$rowFinal["Total_Profit"].'</h6>
+
+                                            <h6>Total Amount of coffee bean sold this month (kg): '.$rowFinal["Total_Amount"].'</h6>
+
+                                        </div>
+
+                                    ';
+
+                                    echo $displayFinal;
+                                ?>
                             </div>
                         </div>
                     </div>

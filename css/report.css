@@ -353,6 +353,11 @@ hr {
     background-color: #181000;
 }
 
+.image img {
+    height: 250px;
+    width: 200px;
+}
+
 .details {
     margin: 0 50px;
     height: auto;
