@@ -194,88 +194,50 @@
                         <p>**We will not charge customers yet as this is just a pending order**<br><br>**The status of the order will be changed to "Completed" once customers have paid face-to-face**</p>
                     </div>
                     <div class="order-container">
-                        <form>
-                            <label>
-                                <div class="coffee-bean-container">
-                                    <div class="coffee-bean"></div>
-                                    <h6>Bean 1</h6>
-                                    <h6>Price per kg</h6>
-                                </div>
-                                <input type="radio" name="coffee-bean" required>
-                                <span>
-                                    <i class="fas fa-check"></i>
-                                    <p>Selected</p>
-                                </span>
-                            </label>
+                        <form method="POST" action="order.php">
+                            <?php
+                                $getSelection = mysqli_query($con, "SELECT * FROM coffee_bean;");
 
-                            <label>
-                                <div class="coffee-bean-container">
-                                    <div class="coffee-bean"></div>
-                                    <h6>Bean 2</h6>
-                                    <h6>Price per kg</h6>
-                                </div>
-                                <input type="radio" name="coffee-bean" required>
-                                <span>
-                                    <i class="fas fa-check"></i>
-                                    <p>Selected</p>
-                                </span>
-                            </label>
+                                while($order = mysqli_fetch_assoc($getSelection))
+                                {
+                                    $displaySelection = '
+                                    <label>
 
-                            <label>
-                                <div class="coffee-bean-container">
-                                    <div class="coffee-bean"></div>
-                                    <h6>Bean 3</h6>
-                                    <h6>Price per kg</h6>
-                                </div>
-                                <input type="radio" name="coffee-bean" required>
-                                <span>
-                                    <i class="fas fa-check"></i>
-                                    <p>Selected</p>
-                                </span>
-                            </label>
+                                        <div class="coffee-bean-container">
 
-                            <label>
-                                <div class="coffee-bean-container">
-                                    <div class="coffee-bean"></div>
-                                    <h6>Bean 4</h6>
-                                    <h6>Price per kg</h6>
-                                </div>
-                                <input type="radio" name="coffee-bean" required>
-                                <span>
-                                    <i class="fas fa-check"></i>
-                                    <p>Selected</p>
-                                </span>
-                            </label>
+                                            <div class="coffee-bean">
 
-                            <label>
-                                <div class="coffee-bean-container">
-                                    <div class="coffee-bean"></div>
-                                    <h6>Bean 5</h6>
-                                    <h6>Price per kg</h6>
-                                </div>
-                                <input type="radio" name="coffee-bean" required>
-                                <span>
-                                    <i class="fas fa-check"></i>
-                                    <p>Selected</p>
-                                </span>
-                            </label>
+                                                <img src="data:image/jpg;base64, '.base64_encode($order["Coffee_Bean_Image"]).'">
 
-                            <label>
-                                <div class="coffee-bean-container">
-                                    <div class="coffee-bean"></div>
-                                    <h6>Bean 6</h6>
-                                    <h6>Price per kg</h6>
-                                </div>
-                                <input type="radio" name="coffee-bean" required>
-                                <span>
-                                    <i class="fas fa-check"></i>
-                                    <p>Selected</p>
-                                </span>
-                            </label>
+                                            </div>
 
-                            <input type="number" placeholder="Total Amount In Kilogram" min="60" value="60" required>
+                                            <h6>'.$order["Coffee_Bean"].'</h6>
+                                            
+                                            <h6>RM'.$order["Price_Per_kg"].'/kg</h6>
+
+                                        </div>
+
+                                        <input type="radio" name="coffee-bean" value="'.$order["Bean_ID"].'" required>
+
+                                        <span>
+
+                                            <i class="fas fa-check"></i>
+
+                                            <p>Selected</p>
+
+                                        </span>
+                                        
+                                    </label>
+
+                                    ';
+
+                                    echo $displaySelection;
+                                }
+                            ?>
+
+                            <input type="number" placeholder="Total Amount In Kilogram" name="amount" min="60" required>
                             
-                            <input type="submit" value="Completed Roasting">
+                            <input type="submit" value="Completed Roasting" onclick="return confirm('Confirm and place order?\nCustomer may contact us for accidental orders.');">
                         </form>
                     </div>
                 </div>
@@ -366,7 +328,7 @@
                         </div>
                         <div class="customer-function-container">
                             <div class="cfc-top">
-                                <h5 id="function-1" onclick="edit()">Edit Personal Details</h5>
+                                <h5 id="function-1" onclick="edit()">Edit Contact Details</h5>
                                 <h5 id="function-2" onclick="manage()">Manage Subscription</h5>
                                 <a href="feedback.html"><h5>Submit a Feedback</h5></a>
                             </div>

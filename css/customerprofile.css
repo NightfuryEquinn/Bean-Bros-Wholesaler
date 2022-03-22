@@ -390,7 +390,7 @@ a {
 .order-modal-container {
     margin: 20% auto;
     height: auto;
-    width: 50%;
+    width: 60%;
     color: #fefae0;
     background-color: #BC6C25;
 }
@@ -502,13 +502,19 @@ a {
 
 .coffee-bean-container h6 {
     font-size: 20px;
+    width: auto;
+    text-align: center;
 }
 
 .coffee-bean {
-    margin: 10px;
+    margin: 30px;
     height: 250px;
     width: 200px;
-    background-color: #784830;
+}
+
+.coffee-bean img {
+    height: 250px;
+    width: 200px;
 }
 
 /* Order History Popup */
