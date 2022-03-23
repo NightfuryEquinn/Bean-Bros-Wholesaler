@@ -14,8 +14,11 @@
         <meta name = "keywords" content = "Bean Bros, Coffee Beans Wholesaler, Wholesaler, Coffee Beans">
         <meta name = "copyright" content = "Copyright 2022 @ Bean Bros Wholesaler">
 
-        <!--Link to CSS-->
-        <link rel = "stylesheet" href = "../css/coffeepedia_adm.css">
+        <!--Link to JavaScript-->
+        <script src="../js/script.js" defer></script>
+
+        <!--Link to JScript-->
+        <link rel = "stylesheet" href = "../css/coffeepedia_ad.css">
 
         <!--Link to Font Awesome v4 and v5-->
         <link rel = "stylesheet" href = "https://use.fontawesome.com/releases/v5.15.4/css/all.css">
@@ -37,17 +40,17 @@
         <!--Sticky Navigation Bar-->
         <div class="nav-bar">
             <div class="nav-bar-left">
-                <h3><a href="../bean_c.php">Bean</a></h3>
-                <h3><a href="../coffeepedia_c.php">Coffeepedia</a></h3>
-                <h3><a href="../aboutus.php">About Us</a></h3>
-                <h3><a href="../contactus.php">Contact Us</a></h3>
+                <h3><a href="../php/bean_c.php">Bean</a></h3>
+                <h3><a href="../php/coffeepedia_c.php">Coffeepedia</a></h3>
+                <h3><a href="../php/aboutus.php">About Us</a></h3>
+                <h3><a href="../php/contactus.php">Contact Us</a></h3>
             </div>
             <div class="nav-bar-logo">
-                <a href="../home.php"><img src="../img\BeanBrosLogo1.png"></a>
+                <a href="../php/home.php"><img src="../img\BeanBrosLogo1.png"></a>
             </div>
             <div class="nav-bar-right">
-                <h3><a href="../signuploginforgot.php">Sign Up</a></h3>
-                <h3><a href="../signuploginforgot.php">Log In</a></h3>
+                <h3><a href="../php/signuploginforgot.php">Sign Up</a></h3>
+                <h3><a href="../php/signuploginforgot.php">Log In</a></h3>
             </div>
         </div>
         <!--Homepage Parallax-->
@@ -98,11 +101,13 @@
                             while($row = mysqli_fetch_assoc($searchResult))
                             {
                                 $displayCpd = '
-                                <div class="coffeepda">
+                                <div class="coffeepda"> 
 
-                                    <img src="../img/Coffee1.jpg" name="canvas" width="400" height="350" />
+                                    <a href="../php/article.php" onpageshow="OnDragStart(e)">
+                                        <img src="../img/Coffee1.jpg" id="canvas" width="400" height="350">
+                                    </a>
 
-                                    <div class="admin-function">
+                                    <div class="admin-function2">
                                             
                                         <h2>'.$row["Title"].'</h2> 
 

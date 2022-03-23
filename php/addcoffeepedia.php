@@ -88,7 +88,7 @@
                                             <hr>
                                             <label>Author: </label><input type="text" name="author" min="0" required>
                                             <hr> 
-                                            <label>Date: </label><input type="text" name="date" min="0" required>
+                                            <label>Date: </label><input type="varchar" name="date" min="0" required>
                                             <hr>                                  
                                         </div>
                                         <div class="submit-reset-container">

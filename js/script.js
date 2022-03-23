@@ -196,7 +196,13 @@ function select4() {
 
 var imgArr = ["../img/Coffee1.jpg", "../img/Coffee2.jpg","../img/Coffee3.jpg"];
 
-function rndm(){
-    var num = Math.floor(Math.random() * (imgArr.length));
-    document.canvas.src="img/"+imgArr[num];
+function OnDragStart(e){
+    var img = newimage();
+    img.src = "images/Coffee2.jpg"
+
+    if(edit.dataTransfer.setDragImage){
+        edit.dataTransfer.setDragImage(img,0,0);
+    }
 }
+
+    

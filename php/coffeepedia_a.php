@@ -14,7 +14,7 @@
         <meta name = "copyright" content = "Copyright 2022 @ Bean Bros Wholesaler">
 
         <!--Link to CSS-->
-        <link rel = "stylesheet" href = "../css/coffeepedia_adm.css">
+        <link rel = "stylesheet" href = "../css/coffeepedia_ad.css">
 
         <!--Link to JavaScript-->
         <script src="../js/script.js" defer></script>
@@ -39,20 +39,20 @@
         <!--Sticky Navigation Bar-->
         <div class="nav-bar">
             <div class="nav-bar-left">
-                <h3><a href="../bean_a.php">Bean</a></h3>
-                <h3><a href="../coffeepedia_a.php">Coffeepedia</a></h3>
-                <h3><a href="../aboutus.php">About Us</a></h3>
-                <h3><a href="../contactus.php">Contact Us</a></h3>
+                <h3><a href="../php/bean_a.php">Bean</a></h3>
+                <h3><a href="../php/coffeepedia_a.php">Coffeepedia</a></h3>
+                <h3><a href="../php/aboutus.php">About Us</a></h3>
+                <h3><a href="../php/contactus.php">Contact Us</a></h3>
             </div>
             <div class="nav-bar-logo">
                 <a href="../home.php"><img src="../img\BeanBrosLogo1.png"></a>
             </div>
             <div class="nav-bar-right">
-                <h3><a href="../adminprofile.php">Profile</a></h3>
-                <h3><a href="../monthlyreport.php">Report</a></h3>
-                <h3><a href="../checkfeedback.php">Feedback</a></h3>
-                <h3><a href="../checkcustomer.php">Customers</a></h3>
-                <h3><a href="../checkorder.php">Orders</a></h3>
+                <h3><a href="../php/adminprofile.php">Profile</a></h3>
+                <h3><a href="../php/monthlyreport.php">Report</a></h3>
+                <h3><a href="../php/checkfeedback.php">Feedback</a></h3>
+                <h3><a href="../php/checkcustomer.php">Customers</a></h3>
+                <h3><a href="../php/checkorder.php">Orders</a></h3>
                 <h3>Log Out</h3>
             </div>
         </div>
@@ -111,16 +111,19 @@
                                 $displayCpd = '
                                 <div class="coffeepda">
 
-                                    <img src="../img/Coffee1.jpg" name="canvas" width="400" height="350" />
+                                    <img src="../img/Coffee1.jpg" name="canvas" width="400" height="350" />                                   
 
-                                    <div class="admin-function">                               
-                                    
-                                        <a href=\'editcoffeepedia.php?Bean_ID='.$row["Coffeepedia_ID"].'\' onclick="return confirm(\'Edit '.$row['Title'].' details?\');"><i class="fas fa-edit fa-2x"></i></a>
+                                    <div class="admin-function">
+
+                                        <div class="title1">
+                                            <h2>'.$row["Title"].'</h2>                               
+                                        </div>  
+
+                                        <a href=\'editcoffeepedia.php?Bean_ID='.$row["Coffeepedia_ID"].'\' onclick="return confirm(\'Edit '.$row['Title'].' details?\');"><i class="fas fa-edit fa-2x"></i></a>                                      
                                         <a href=\'delete.php?Bean_ID='.$row["Coffeepedia_ID"].'\' onclick="return confirm(\'Delete '.$row['Title'].' order? This CANNOT be undone!\');"><i class="fas fa-trash-alt fa-2x"></i></a>
 
                                     </div>
-
-                                </div>
+                                </div>                             
 
                                 ';
 

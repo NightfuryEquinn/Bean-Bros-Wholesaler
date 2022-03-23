@@ -8,12 +8,12 @@ $insert = mysqli_query($con, $sql);
 
 if ($insert) {
     echo '<script> alert ("1 record added!");
-    window.location.href= "addcoffeepedia.php";
+    window.location.href= "coffeepedia_a.php";
     </script>';
 
 } else {
     echo '<script> alert ("Upload failed.");
-    window.location.href= "addcoffeepedia.php";
+    window.location.href= "coffeepedia_a.php";
     </script>';
 }
 

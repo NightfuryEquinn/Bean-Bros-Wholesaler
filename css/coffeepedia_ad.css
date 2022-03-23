@@ -339,6 +339,7 @@ form input[type=submit]:hover {
   align-content: center;
   justify-content: space-around;
   align-items: center;
+  transform: translateY(160px);
 }
 
 /* Footer */
@@ -479,7 +480,7 @@ form input[type=submit]:hover {
 }
 
 .coffeepda {
-  margin: 190px;
+  margin: 39px;
   height: 350px;
   width: 400px;
   cursor: pointer;
@@ -530,12 +531,31 @@ form input[type=submit]:hover {
   height: auto;
   width: auto;
   position: fixed;
-  transform: translate(170px, 30px);
+  transform: translate(70px, 10px);
 }
 
 .admin-function i {
   margin: 10px 45px;
   cursor: pointer;
+}
+
+.admin-function2 {
+  height: auto;
+  width: auto;
+  position: fixed;
+  transform: translate(160px, 5px);
+}
+
+.admin-function2 i {
+  margin: 10px 45px;
+  cursor: pointer;
+}
+
+.title1 {
+  height: auto;
+  width: auto;
+  position: fixed;
+  transform: translate(95px, -15px);
 }
 
 .src-btn {
