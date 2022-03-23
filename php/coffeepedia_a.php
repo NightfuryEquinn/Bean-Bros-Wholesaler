@@ -109,9 +109,7 @@
                             while($row = mysqli_fetch_assoc($searchResult))
                             {
                                 $displayCpd = '
-                                <div class="coffeepda">
-
-                                    <img src="../img/Coffee1.jpg" name="canvas" width="400" height="350" />                                   
+                                <div class="coffeepda">                          
 
                                     <div class="admin-function">
 

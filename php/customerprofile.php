@@ -253,7 +253,7 @@
                         <i class="fas fa-times fa-2x" id="close-4"></i>
                     </div>
                     <div class="history-notes">
-                        <p>**Only 60 days of order history will be displayed but data will not be deleted.**</p>
+                        <p>**Only 60 orders will be displayed but data will not be deleted.**</p>
                     </div>
                     <div class="history-container">
                         <table>
@@ -264,7 +264,7 @@
                             </tr>
 
                             <?php
-                                $history = mysqli_query($con, "SELECT * FROM customer_order WHERE Customer_ID = '$customerID';");
+                                $history = mysqli_query($con, "SELECT * FROM customer_order WHERE Customer_ID = '$customerID' LIMIT 60;");
 
                                 while($table = mysqli_fetch_assoc($history))
                                 {

@@ -103,9 +103,7 @@
                                 $displayCpd = '
                                 <div class="coffeepda"> 
 
-                                    <a href="../php/article.php" onpageshow="OnDragStart(e)">
-                                        <img src="../img/Coffee1.jpg" id="canvas" width="400" height="350">
-                                    </a>
+                                
 
                                     <div class="admin-function2">
                                             

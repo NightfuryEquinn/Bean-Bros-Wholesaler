@@ -85,6 +85,7 @@
                                 $row = mysqli_fetch_assoc($invoice);
 
                                 $displayInvoice = '
+
                                 <p>Order ID: '.$row["Order_ID"].'</p>
 
                                 <p>Order Date: '.$row["Order_Date"].'</p>
@@ -104,6 +105,8 @@
                                 <p>Customer Contact (Company): '.$row["Company_Contact"].'</p>
 
                                 <p>Customer Contact (Personal): '.$row["Personal_Contact"].'</p>
+
+                                <p>Subscription When Order: '.$row["Subscription_When_Order"].'</p>
 
                                 ';
 

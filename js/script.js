@@ -194,15 +194,5 @@ function select4() {
     aim4.style.display = "flex"
 }
 
-var imgArr = ["../img/Coffee1.jpg", "../img/Coffee2.jpg","../img/Coffee3.jpg"];
-
-function OnDragStart(e){
-    var img = newimage();
-    img.src = "images/Coffee2.jpg"
-
-    if(edit.dataTransfer.setDragImage){
-        edit.dataTransfer.setDragImage(img,0,0);
-    }
-}
 
     

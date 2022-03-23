@@ -9,14 +9,41 @@
     // MySQL Queries
     $getDate = date('Y-m-d');
 
+    $getCustomerSub = mysqli_query($con, "SELECT * FROM customer WHERE Customer_ID = '$customerID';");
+
+    $sub = mysqli_fetch_assoc($getCustomerSub);
+
     $getBeanData = mysqli_query($con, "SELECT * FROM coffee_bean WHERE Bean_ID = '$beanID';");
 
     $row = mysqli_fetch_assoc($getBeanData);
 
-    $insertData = "INSERT INTO customer_order (Customer_ID, Bean_ID, Coffee_Bean, Amount, Price_Per_kg, Total, Status, Order_Date) 
-    VALUES 
-    ('$customerID', '$beanID', '$row[Coffee_Bean]', '$beanAmount', '$row[Price_Per_kg]', ('$beanAmount' * '$row[Price_Per_kg]'), 'Pending', '$getDate');";
+    $insertData = "";
 
+    if($sub['Subscription'] == "Silver")
+    {
+        $insertData = "INSERT INTO customer_order (Customer_ID, Bean_ID, Coffee_Bean, Amount, Price_Per_kg, Total, Status, Order_Date, Subscription_When_Order) 
+        VALUES 
+        ('$customerID', '$beanID', '$row[Coffee_Bean]', '$beanAmount', '$row[Price_Per_kg]', (('$beanAmount' * '$row[Price_Per_kg]') * 0.85), 'Pending', '$getDate', '$sub[Subscription]');";    
+    }
+    elseif($sub['Subscription'] == "Gold")
+    {
+        $insertData = "INSERT INTO customer_order (Customer_ID, Bean_ID, Coffee_Bean, Amount, Price_Per_kg, Total, Status, Order_Date, Subscription_When_Order) 
+        VALUES 
+        ('$customerID', '$beanID', '$row[Coffee_Bean]', '$beanAmount', '$row[Price_Per_kg]', (('$beanAmount' * '$row[Price_Per_kg]') * 0.75), 'Pending', '$getDate', '$sub[Subscription]');";    
+    }
+    elseif($sub['Subscription'] == "Platinum")
+    {
+        $insertData = "INSERT INTO customer_order (Customer_ID, Bean_ID, Coffee_Bean, Amount, Price_Per_kg, Total, Status, Order_Date, Subscription_When_Order) 
+        VALUES 
+        ('$customerID', '$beanID', '$row[Coffee_Bean]', '$beanAmount', '$row[Price_Per_kg]', (('$beanAmount' * '$row[Price_Per_kg]') * 0.6), 'Pending', '$getDate', '$sub[Subscription]');";    
+    }
+    else
+    {
+        $insertData = "INSERT INTO customer_order (Customer_ID, Bean_ID, Coffee_Bean, Amount, Price_Per_kg, Total, Status, Order_Date) 
+        VALUES 
+        ('$customerID', '$beanID', '$row[Coffee_Bean]', '$beanAmount', '$row[Price_Per_kg]', ('$beanAmount' * '$row[Price_Per_kg]'), 'Pending', '$getDate');";    
+    }
+   
     $insertQuery = mysqli_query($con, $insertData);
 
     if($insertQuery)
