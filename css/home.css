@@ -181,7 +181,7 @@ a {
     margin-top: 400px;
     height: auto;
     width: auto;
-    background-color: #ffffff;
+    background-color: #fefae0;
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -244,24 +244,9 @@ a {
     transition-timing-function: ease-in;
 }
 
-.ps-beans p, .fa-beans p {
+.ps-beans img, .fa-beans img {
     height: 400px;
     width: 350px;
-    color: #fefae0;
-    font-size: 30px;
-    text-align: center;
-    letter-spacing: 1px;
-    display: none;
-    justify-content: center;
-    align-items: center;
-}
-
-.ps-beans:hover, .fa-beans:hover {
-    background-color: #18181880;
-}
-
-.ps-beans:hover p, .fa-beans:hover p {
-    display: flex;
 }
 
 /* Membership Container */
@@ -269,7 +254,7 @@ a {
     margin-top: 400px;
     height: auto;
     width: auto;
-    background-color: #ffffff;
+    background-color: #fefae0;
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -322,7 +307,7 @@ a {
     height: 100px;
     width: 100px;
     color: #bc6c25;
-    background-color: #fefae0;
+    background-color: #ffffff;
     display: flex;
     align-content: center;
     justify-content: center;
@@ -381,7 +366,7 @@ a {
     padding-bottom: 100px;
     height: auto;
     width: auto;
-    background-color: #ffffff;
+    background-color: #fefae0;
     display: flex;
     flex-direction: column;
     align-content: center;
