@@ -3,6 +3,6 @@
     session_start();
     if(!isset($_SESSION['Customer_ID']))
     {
-        header("location: ../signuploginforgot.html");
+        header("location: signuploginforgot.php");
     }
 ?>

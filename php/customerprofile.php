@@ -1,6 +1,7 @@
 <?php
     include("conn.php");
-    $customerID = '2';
+    include("session.php");
+    $customerID = $_SESSION['Customer_ID'];
 ?>
 
 <!DOCTYPE html>

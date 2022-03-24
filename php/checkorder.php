@@ -1,4 +1,6 @@
-<!--Coded by Yip Zi Xian-->
+<?php
+    include("adminsession.php");
+?>
 
 <!DOCTYPE html>
 <html>

@@ -1,3 +1,8 @@
+<?php
+    include("session.php");
+    $customerID = $_SESSION['Customer_ID'];
+?>
+
 <!DOCTYPE html>
 <html>
     <head>

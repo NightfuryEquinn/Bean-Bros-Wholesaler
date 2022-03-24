@@ -1,3 +1,7 @@
+<?php
+    include("adminsession.php");
+?>
+
 <!DOCTYPE html>
 <html>
     <head>

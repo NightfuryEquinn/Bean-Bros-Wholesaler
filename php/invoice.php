@@ -1,5 +1,6 @@
 <?php
-    $customerID = '2';
+    include("session.php");
+    $customerID = $_SESSION['Customer_ID'];
     $orderID = $_GET["Order_ID"];
 ?>
 
