@@ -9,45 +9,56 @@ session_start();
 if($_SERVER["REQUEST_METHOD"] == "POST")
 {
     // Customer Info
-    $input_username = $_POST['username'];
-    $input_password = $_POST['password'];
+    $pending_username = mysqli_real_escape_string($con, $_POST['username']);
+    $pending_password = mysqli_real_escape_string($con, $_POST['password']);
 
-    $pending_username = mysqli_real_escape_string($con, $input_username);
-    $pending_password = mysqli_real_escape_string($con, $input_password);
-
-    // MySQL Queries
-    $login = "SELECT * FROM customer WHERE Username = '$pending_username' AND Password = '$pending_password';";
-    $getID = "SELECT Customer_ID FROM customer WHERE Username = '$pending_username';";
-
-    // Get customer ID
-    $findID = mysqli_query($con, $getID);
-
-    if($findID)
+    // If Admin
+    if($pending_username == 'Admin' && $pending_password == 'admin')
     {
-        $fetchID = mysqli_fetch_assoc($findID);
-     
-        if($result = mysqli_query($con, $getID))
-        {
-            $rowCount = mysqli_num_rows($result);
-        
-            if($rowCount == 1)
-            {
-                session_start();
-                $_SESSION['Customer_ID'] = $fetchID['Customer_ID'];
+        session_start();
+        $_SESSION['Admin_ID'] = '1';
 
-                echo
-                '<script>
-                alert("Login successful. Welcome to Bean Bros!");
-                window.location.href = "home.php";
-                </script>';
-            }
-            else
+        echo
+        '<script>
+        alert("Login successful. Welcome to Bean Bros Admin!");
+        window.location.href = "adminhome.php";
+        </script>';
+    }
+    else
+    {
+        // MySQL Queries
+        $getID = "SELECT Customer_ID FROM customer WHERE Username = '$pending_username' AND Password = '$pending_password';";
+            
+        // Get customer ID
+        $findID = mysqli_query($con, $getID);
+
+        if($findID)
+        {
+            $fetchID = mysqli_fetch_assoc($findID);
+        
+            if($result = mysqli_query($con, $getID))
             {
-                echo
-                '<script>
-                alert("Either username or password is incorrect. Please try again.");
-                window.location.href = "signuploginforgot.php";
-                </script>';
+                $rowCount = mysqli_num_rows($result);
+            
+                if($rowCount == 1)
+                {
+                    session_start();
+                    $_SESSION['Customer_ID'] = $fetchID['Customer_ID'];
+
+                    echo
+                    '<script>
+                    alert("Login successful. Welcome to Bean Bros!");
+                    window.location.href = "home.php";
+                    </script>';
+                }
+                else
+                {
+                    echo
+                    '<script>
+                    alert("Either username or password is incorrect. Please try again.");
+                    window.location.href = "signuploginforgot.php";
+                    </script>';
+                };
             };
         };
     };

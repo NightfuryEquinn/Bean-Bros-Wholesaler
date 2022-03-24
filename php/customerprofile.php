@@ -43,17 +43,17 @@
         <!--Sticky Navigation Bar-->
         <div class="nav-bar">
             <div class="nav-bar-left">
-                <h3><a href="bean.html">Bean</a></h3>
-                <h3><a href="coffeepedia_c.html">Coffeepedia</a></h3>
-                <h3><a href="aboutus.html">About Us</a></h3>
-                <h3><a href="contactus.html">Contact Us</a></h3>
+                <h3><a href="bean_c.php">Bean</a></h3>
+                <h3><a href="coffeepedia_c.php">Coffeepedia</a></h3>
+                <h3><a href="aboutus.php">About Us</a></h3>
+                <h3><a href="contactus.php">Contact Us</a></h3>
             </div>
             <div class="nav-bar-logo">
-                <a href="home.html"><img src="../img/BeanBrosLogo1.png"></a>
+                <a href="home.php"><img src="../img/BeanBrosLogo1.png"></a>
             </div>
             <div class="nav-bar-right">
-                <h3><a href="customerprofile.html">Profile</a></h3>
-                <h3><a href="feedback.html">Feedback</a></h3>
+                <h3><a href="customerprofile.php">Profile</a></h3>
+                <h3><a href="feedback.php">Feedback</a></h3>
                 <h3>Log Out</h3>
             </div>
           </div>
@@ -330,7 +330,7 @@
                             <div class="cfc-top">
                                 <h5 id="function-1" onclick="edit()">Edit Contact Details</h5>
                                 <h5 id="function-2" onclick="manage()">Manage Subscription</h5>
-                                <a href="feedback.html"><h5>Submit a Feedback</h5></a>
+                                <a href="feedback.php"><h5>Submit a Feedback</h5></a>
                             </div>
                             <div class="cfc-bottom">
                                 <h5 id="function-3" onclick="order()">Coffee Beans Needed</h5>
@@ -347,11 +347,11 @@
                         </div>
                         <div class="footer-sub-container">
                             <div class="footer-nav">
-                                <p><a href="home.html">Home</a></p>
-                                <p><a href="bean.html">Bean</a></p>
-                                <p><a href="coffeepedia_c.html">Coffeepedia</a></p>
-                                <p><a href="aboutus.html">About Us</a></p>
-                                <p><a href="contactus.html">Contact Us</a></p>
+                                <p><a href="home.php">Home</a></p>
+                                <p><a href="bean_c.php">Bean</a></p>
+                                <p><a href="coffeepedia_c.php">Coffeepedia</a></p>
+                                <p><a href="aboutus.php">About Us</a></p>
+                                <p><a href="contactus.php">Contact Us</a></p>
                             </div>
                             <div class="footer-social-media">
                                 <div class="fsm-title">
@@ -361,7 +361,7 @@
                                     <p>Facebook</p>
                                     <p>Instagram</p>
                                     <p>Twitter</p>
-                                    <p><a href="faq.html">FAQ</a></p>
+                                    <p><a href="faq.php">FAQ</a></p>
                                 </div>
                             </div>
                             <div class="footer-contact-us">

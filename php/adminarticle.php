@@ -14,7 +14,10 @@
         <meta name = "copyright" content = "Copyright 2022 @ Bean Bros Wholesaler">
 
         <!--Link to CSS-->
-        <link rel = "stylesheet" href = "../css/adminprofile.css">
+        <link rel = "stylesheet" href = "../css/article.css">
+
+        <!--Link to JavaScript-->
+        <script src="../js/script.js" defer></script>
 
         <!--Link to Font Awesome v4 and v5-->
         <link rel = "stylesheet" href = "https://use.fontawesome.com/releases/v5.15.4/css/all.css">
@@ -29,7 +32,7 @@
         <link rel = "icon" type = image/png href = "../img/BeanBrosLogo.png">
 
         <!--Title-->
-        <title>Bean Bros - Admin Profile</title>
+        <title>Bean Bros - Article</title>
     </head>
     <body>
         <!--Sticky Navigation Bar-->
@@ -53,46 +56,66 @@
             </div>
         </div>
 
-        <!--Admin Profile Page Parallax-->
-        <div class="admin-profile-page">
+        <!--Article Parallax-->
+        <div class="article">
 
-            <!--Admin Profile First Parallax-->
-            <div class="admin-profile-parallax-group">
-                <div class="admin-profile-parallax-back">
-                    <!--Admin Profile Parallax Background-->
-                    <div class="apb-image-container">
-                        <img src="../img/couple_hands_love_tenderness_coffee_118921_1920x1080.jpg">
+            <!--Article First Parallax-->
+            <div class="article-parallax-group">
+                <div class="article-parallax-back">
+                    <!--Article Parallax Background-->
+                    <div class="a-image-container">
+                        <img src="../img/coffee_beans_coffee_cup_198851_3648x4072.jpg">
                     </div>
                 </div>
-                <div class="admin-profile-parallax-base">
-                    <!--Admin Profile Parallax Quote-->
-                    <div class="quote-container">
-                        <p>Have A Nice Day Ahead, Admin</p>
+                <div class="article-parallax-base">
+                    <div class="article-container">
+
+                        <?php
+                            include("conn.php");
+                            $editID = $_GET["Coffeepedia_ID"];
+                            $editData = mysqli_query($con, "SELECT * FROM coffeepedia WHERE Coffeepedia_ID=$editID");
+                            $row = mysqli_fetch_assoc($editData);
+                        
+                            $displayArticle = '
+                            
+                                <div class="article-title">
+
+                                    <h2>Article Title</h2>
+
+                                </div>
+
+                                <div class="article-source">
+
+                                    <div class="article-mention">
+
+                                        <h4>Written By: '.$row["Author"].'</h4>
+
+                                        <h4>Posted By: Admin '.$row["Admin_ID"].'</h4>
+
+                                    </div>
+
+                                    <div class="article-date">
+
+                                        <h4>Date: '.$row["Written_Date"].'</h4>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="article-content">
+
+                                    <p>'.$row["Content"].'</p>
+
+                                </div>
+                                
+                            ';
+
+                            echo $displayArticle;
+                        
+                            mysqli_close($con);
+                        ?>
                     </div>
-                    <!--Admin Profile Personal Information Container-->
-                    <div class="admin-profile-container">
-                        <div class="admin-information-container">
-                            <div class="admin-information-title">
-                                <h3>Admin Details</h3>
-                            </div>
-                            <div class="admin-information">
-                                <p>Username: </p>
-                                <p>Email: </p>
-                                <p>Password: </p>
-                            </div>
-                        </div>
-                        <div class="admin-function-container">
-                            <div class="afc-top">
-                                <h5><a href="checkfeedback.php">View Feedback</a></h5>
-                                <h5><a href="checkcustomer.php">Manage Customer</a></h5>
-                                <h5><a href="checkorder.php">Manage Order</a></h5>
-                            </div>
-                            <div class="afc-bottom">
-                                <h5><a href="report.php">Generate Monthly Report</a></h5>
-                                <h5><a href="addbeanpage.php">Add New Coffee Bean</a></h5>
-                            </div>
-                        </div>
-                    </div>
+
                     <!--Footer-->
                     <div class="footer-container">
                         <div class="footer-quote-container">

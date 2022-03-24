@@ -38,17 +38,17 @@
         <!--Sticky Navigation Bar-->
         <div class="nav-bar">
             <div class="nav-bar-left">
-                <h3><a href="bean.html">Bean</a></h3>
-                <h3><a href="coffeepedia_c.html">Coffeepedia</a></h3>
-                <h3><a href="aboutus.html">About Us</a></h3>
-                <h3><a href="contactus.html">Contact Us</a></h3>
+                <h3><a href="bean_c.php">Bean</a></h3>
+                <h3><a href="coffeepedia_c.php">Coffeepedia</a></h3>
+                <h3><a href="../aboutus.html">About Us</a></h3>
+                <h3><a href="../contactus.html">Contact Us</a></h3>
             </div>
             <div class="nav-bar-logo">
-                <a href="home.html"><img src="../img/BeanBrosLogo1.png"></a>
+                <a href="../home.html"><img src="../img/BeanBrosLogo1.png"></a>
             </div>
             <div class="nav-bar-right">
-                <h3><a href="signuploginforgot.html">Sign Up</a></h3>
-                <h3><a href="signuploginforgot.html">Log In</a></h3>
+                <h3><a href="signuploginforgot.php">Sign Up</a></h3>
+                <h3><a href="signuploginforgot.php">Log In</a></h3>
             </div>
         </div>
 
@@ -165,11 +165,11 @@
                         </div>
                         <div class="footer-sub-container">
                             <div class="footer-nav">
-                                <p><a href="home.html">Home</a></p>
-                                <p><a href="bean.html">Bean</a></p>
-                                <p><a href="coffeepedia_c.html">Coffeepedia</a></p>
-                                <p><a href="aboutus.html">About Us</a></p>
-                                <p><a href="contactus.html">Contact Us</a></p>
+                                <p><a href="../home.html">Home</a></p>
+                                <p><a href="bean_c.php">Bean</a></p>
+                                <p><a href="coffeepedia_c.php">Coffeepedia</a></p>
+                                <p><a href="../aboutus.html">About Us</a></p>
+                                <p><a href="../contactus.html">Contact Us</a></p>
                             </div>
                             <div class="footer-social-media">
                                 <div class="fsm-title">
@@ -179,7 +179,7 @@
                                     <p>Facebook</p>
                                     <p>Instagram</p>
                                     <p>Twitter</p>
-                                    <p><a href="faq.html">FAQ</a></p>
+                                    <p><a href="../faq.html">FAQ</a></p>
                                 </div>
                             </div>
                             <div class="footer-contact-us">
