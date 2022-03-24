@@ -14,10 +14,10 @@
         <meta name = "copyright" content = "Copyright 2022 @ Bean Bros Wholesaler">
 
         <!--Link to CSS-->
-        <link rel = "stylesheet" href = "../css/coffeepedia_c.css">
+        <link rel = "stylesheet" href = "../css/editcoffeepediapage.css">
 
         <!--Link to JavaScript-->
-        <script src="../js/script.js"></script>
+        <script src="../js/script.js" defer></script>
 
         <!--Link to Font Awesome v4 and v5-->
         <link rel = "stylesheet" href = "https://use.fontawesome.com/releases/v5.15.4/css/all.css">
@@ -32,7 +32,7 @@
         <link rel = "icon" type = image/png href = "../img/BeanBrosLogo.png">
 
         <!--Title-->
-        <title>Bean Bros - Coffeepedia</title>
+        <title>Bean Bros - Edit Coffeepedia</title>
     </head>
     <body>
         <!--Sticky Navigation Bar-->
@@ -52,58 +52,44 @@
             </div>
         </div>
 
-        <!--Coffeepedia Page Parallax-->
-        <div class="coffeepedia-page">
+        <!--Edit Coffeepedia Page Parallax-->
+        <div class="edit-coffeepedia">
 
-            <!--Coffeepedia First Parallax-->
-            <div class="coffeepedia-parallax-group">
-                <div class="coffeepedia-parallax-back">
-                    <!--Abous Us Parallax Background-->
-                    <div class="cp-image-container">
-                        <img src="../img/Nicholas-Keeler-Vineyard-Night.jpg">
+            <!--Edit Coffeepedia Page Parallax-->
+            <div class="edit-coffeepedia-parallax-group">
+                <div class="edit-coffeepedia-parallax-back">
+                    <!--Edit Coffeepedia Page Parallax Background-->
+                    <div class="ec-image-container">
+                        <img src="../img/coffee_beans_coffee_cup_198851_3648x4072.jpg">
                     </div>
                 </div>
-                <div class="coffeepedia-parallax-base">
-                    <!--Coffeepedia Parallax Quote-->
-                    <div class="quote-container">
-                        <p>What's more to enjoy coffee while reading</p>
-                    </div>
-                    
-                    <div class="coffeepedia-container">
-                        <div class="coffeepedia-search-container">
-                            <form>
-                                <input type="text" placeholder="Search...">
-                                <input type="submit" value="Go">
+                <div class="edit-coffeepedia-parallax-base">
+                    <!--Edit Coffeepedia Container-->
+                    <div class="edit-coffeepedia-container">
+                        <div class="edit-coffeepedia-title">
+                            <h2>Updating an Old Blog in Coffeepedia for Customer</h2>
+                        </div>
+                        <div class="edit-coffeepedia-form">
+                            <form method="POST" action="addcoffeepedia.php">
+                                <label>Article Title</label>
+                                <input type="text" name="title" required>
+                                
+                                <label>Author</label>
+                                <input type="text" name="author" required>
+                                
+                                <label>Written Date</label>
+                                <input type="text" name="date" required>
+                                
+                                <label>Content</label>
+                                <textarea name="content" placeholder="Max: 432 words" required rows="10" cols="100"></textarea>
+                                
+                                <div class="submit-reset-container">
+                                    <input type="submit" value="New Blog!">
+                                    <input type="reset">
+                                </div>
                             </form>
                         </div>
-                        <div class="coffeepedia-selection">
-                            <div class="coffeepedia-article-container">
-                                <div class="coffeepedia-article">
-                                    
-                                </div>
-                                <div class="coffeepedia-article-title">
-                                    <h2>Title</h2>
-                                </div>
-                            </div>
-                            <div class="coffeepedia-article-container">
-                                <div class="coffeepedia-article">
-                                    
-                                </div>
-                                <div class="coffeepedia-article-title">
-                                    <h2>Title</h2>
-                                </div>
-                            </div>
-                            <div class="coffeepedia-article-container">
-                                <div class="coffeepedia-article">
-                                    
-                                </div>
-                                <div class="coffeepedia-article-title">
-                                    <h2>Title</h2>
-                                </div>
-                            </div>
-                        </div>
                     </div>
-
                     <!--Footer-->
                     <div class="footer-container">
                         <div class="footer-quote-container">
@@ -147,5 +133,5 @@
                 </div>
             </div>
         </div>
-    </body>
+    </body> 
 </html>

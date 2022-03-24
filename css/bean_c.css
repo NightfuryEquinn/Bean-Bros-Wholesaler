@@ -117,22 +117,6 @@ a {
     z-index: 5;
 }
 
-.beanpage-parallax-group:nth-child(2) {
-    margin-top: 1500px;
-    position: relative;
-    height: 100vh;
-    transform-style: preserve-3d;
-    z-index: 4;
-}
-
-.beanpage-parallax-group:nth-child(3) {
-    margin-top: 1500px;
-    position: relative;
-    height: 100vh;
-    transform-style: preserve-3d;
-    z-index: 3;
-}
-
 .beanpage-parallax-back {
     top: 0;
     right: 0;

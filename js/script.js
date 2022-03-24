@@ -1,4 +1,18 @@
 /**
+ * Randomize the image for coffeepedia article (Coffeepedia Page)
+*/ 
+window.onload = () => {
+    var targetArticle = document.getElementsByClassName("coffeepedia-article")
+
+    var randomIMG = ["<img src='../img/Coffee1.jpg'>", "<img src='../img/Coffee2.jpg'>", "<img src='../img/Coffee3.jpg'>"]
+    
+    for(let i = 0; i < targetArticle.length; i++)
+    {
+        targetArticle[i].innerHTML = randomIMG[Math.floor(Math.random() * randomIMG.length)];
+    }
+}
+
+/**
  * Popup Function (Customer Profile Page) (Inefficient)
  */
 // Modals
@@ -45,10 +59,9 @@ var targetTitle = document.getElementsByClassName("confirm-subscription-notes")[
 var targetSub = document.getElementById("sub")
 
 function silver() {
-    targetTitle.innerHTML = "You are changing your subscription to Silver."
-    targetSub.value = "Silver"
-
     targetOpenButtonSilver.onclick = () => {
+        targetTitle.innerHTML = "You are changing your subscription to Silver."
+        targetSub.value = "Silver"
         targetModal2b.style.display = "block"
     }
 
@@ -58,10 +71,9 @@ function silver() {
 }
 
 function gold() {
-    targetTitle.innerHTML = "You are changing your subscription to Gold."
-    targetSub.value = "Gold"
-
     targetOpenButtonGold.onclick = () => {
+        targetTitle.innerHTML = "You are changing your subscription to Gold."
+        targetSub.value = "Gold"
         targetModal2b.style.display = "block"
     }
 
@@ -71,10 +83,9 @@ function gold() {
 }
 
 function platinum() {
-    targetTitle.innerHTML = "You are changing your subscription to Platinum."
-    targetSub.value = "Platinum"
-
     targetOpenButtonPlatinum.onclick = () => {
+        targetTitle.innerHTML = "You are changing your subscription to Platinum."
+        targetSub.value = "Platinum"
         targetModal2b.style.display = "block"
     }
 
@@ -193,6 +204,3 @@ function select4() {
     aim3.style.display = "none"
     aim4.style.display = "flex"
 }
-
-
-    

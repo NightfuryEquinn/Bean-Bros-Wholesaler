@@ -1,30 +1,45 @@
+/* 
+Color Palettes 
+
+-- Font Color --
+Thamar Black - 181818 
+Cornsilk - FEFAE0
+
+-- Design Color --
+Cape Palliser - 784830
+Liver Dogs - BC6C25
+Fawn - DDA15E
+Kombu Green - 283618
+Dark Oliver Green - 606C38
+*/
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
+}
   
-  body,
-  p {
+body,
+p {
     font-family: "Old Standard TT", serif;
-  }
+}
   
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: "Oxygen", sans-serif;
-  }
+}
 
-  a {
+a {
     text-decoration: none;
     color: inherit;
 }
-  
-  /* Sticky Navigation Bar */
-  .nav-bar {
+
+/* Sticky Navigation Bar */
+.nav-bar {
     top: 0;
     left: 0;
     right: 0;
@@ -38,9 +53,9 @@
     align-content: center;
     justify-content: center;
     z-index: 100;
-  }
+}
   
-  .nav-bar-left {
+.nav-bar-left {
     height: 100px;
     width: 700px;
     display: flex;
@@ -48,28 +63,28 @@
     align-content: center;
     justify-content: center;
     align-items: center;
-  }
+}
   
-  .nav-bar-left h3 {
+.nav-bar-left h3 {
     margin: 5px;
     padding: 10px;
     font-size: 16px;
     letter-spacing: 1.5px;
-  }
+}
   
-  .nav-bar-logo {
+.nav-bar-logo {
     margin-left: 10px;
     margin-right: 10px;
     height: 100px;
     width: 100px;
-  }
+}
   
-  .nav-bar-logo img {
+.nav-bar-logo img {
     height: 100px;
     width: 100px;
-  }
+}
   
-  .nav-bar-right {
+.nav-bar-right {
     height: 100px;
     width: 700px;
     display: flex;
@@ -77,48 +92,48 @@
     align-content: center;
     justify-content: center;
     align-items: center;
-  }
+}
   
-  .nav-bar-right h3 {
+.nav-bar-right h3 {
     margin: 5px;
     padding: 10px;
     font-size: 16px;
     letter-spacing: 1.5px;
-  }
-  
-  .product-page {
+}
+
+/* Add Coffeepedia Page Parallax */
+.add-coffeepedia {
     perspective: 1px;
     height: 100vh;
     overflow-x: hidden;
     overflow-y: auto;
-  }
+}
   
-  .product-parallax-group {
+/* Add Coffeepedia Page Parallax Background */
+.add-coffeepedia-parallax-group {
     position: relative;
     height: 100vh;
     transform-style: preserve-3d;
     z-index: 5;
-  }
+}
   
-  .product-parallax-back {
+.add-coffeepedia-parallax-back {
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     position: relative;
-    transform: translateX(-1050px) translateY(-1750px) translateZ(-1.25px);
-  }
-  .image-container img {
-    margin-top: 20%;
-  }
-  .image-container {
-    height: max-content;
-    width: max-content;
-    overflow: hidden;
-  }
+    transform: translateX(-1050px) translateY(-1850px) translateZ(-1.25px);
+}
   
-  /* add product page item */
-  .product-parallax-base {
+.ac-image-container {
+    width: max-content;
+    height: max-content;
+    overflow: hidden;
+}
+
+/* Add Coffeepedia Container */
+.add-coffeepedia-parallax-base {
     top: 0;
     right: 0;
     bottom: 0;
@@ -127,108 +142,151 @@
     display: flex;
     flex-direction: column;
     transform: translateZ(0);
-  }
-  .row {
-    margin: 0;
-    padding: 0;
-    height: auto;
-    margin-top: 10%;
-    z-index: 10;
-  }
-  .row::after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
-  .column {
-    width: 100%;
-    padding: 10px;
-    height: 25%;
-    padding-left: 30%;
-    padding-right: 30%;
-  }
-  .title-container {
-    width: 100%;
-    margin-top: 5%;
-  }
-  .title-design {
-    height: 20px;
-    width: 641px;
-    background-color: #bc6c25;
-  }
-  
-  .content-title {
-    font-family: "Old Standard TT";
-    font-size: 30px;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    color: #fff;
-    text-align: center;
-  }
-  
-  .add-product {
-    display: inline-block;
-    position: absolute;
-    top: 450px;
-    left: 260px;
-    height: 1300px;
-    width: 1050px;
-    background-color: rgba(255, 255, 255, 0.5);
-  }
-  .add-product-content {
-    height: 95%;
-    width: 100%;
-  }
-  .button {
-    color: #000;
-    height: 5%;
-    width: 100%;
-  }
-  .add-btn {
-    float: left;
-    width: 50%;
-    height: 100%;
-    font-size: 30px;
-    text-align: center;
-    cursor: pointer;
-  }
-  .reset-btn {
-    float: left;
-    width: 50%;
-    height: 100%;
-    font-size: 30px;
-    text-align: center;
-    cursor: pointer;
-  }
-  /* Footer */
-  .footer-container {
-    margin-top: 140%;
+}
+
+.add-coffeepedia-container {
+    margin: 325px 200px 100px 200px;
     height: auto;
     width: auto;
-    color: #181818;
-    background-color: #f3eec8;
+    background-color: #18181880;
     display: flex;
     flex-direction: column;
     align-content: center;
     justify-content: center;
-  }
+    align-items: center;
+}
+
+.add-coffeepedia-title {
+    margin: 50px;
+    padding: 25px;
+    height: auto;
+    width: auto;
+    border: 10px double #BC6C25;
+}
+
+.add-coffeepedia-title h2 {
+    color: #fefae0;
+    font-size: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1.5px;
+}
+
+.add-coffeepedia-form {
+    margin: 0 100px;
+    height: auto;
+    width: auto;
+}
+
+.submit-reset-container {
+    margin: 25px;
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+form label {
+    color: #fefae0;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+}
+
+form input {
+    right: 0;
+    margin: 10px 10px 25px 10px;
+    padding: 10px;
+    width: 300px;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    font-family: "Old Standard TT", serif;
+    background: linear-gradient(to left, #fefae0 50%, #DDa15e 50%) right;
+    background-size: 200%;
+    border: none;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+}
+
+form input[type=submit], form input[type=reset] {
+    margin: 0 25px;
+    width: 150px;
+    background: linear-gradient(to left, #fefae0 50%, #283618 50%) right;
+    background-size: 200%;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+}
+
+form input:focus {
+    background-position: left;
+    outline: none;
+}
+
+form input[type=submit]:hover, form input[type=reset]:hover {
+    color: #fefae0;
+    background-position: left;
+}
+
+form textarea {
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    line-height: 1.5;
+    font-family: "Old Standard TT", serif;
+    background: linear-gradient(to left, #fefae0 50%, #DDa15e 50%) right;
+    background-size: 200%;
+    resize: none;
+    border: none;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+}
+
+form textarea:focus {
+    background-position: left;  
+    outline: none;
+}
+
+/* Footer */
+.footer-container {
+    margin-top: 450px;
+    height: auto;
+    width: auto;
+    color: #181818;
+    background-color: #F3EEC8;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
   
-  .footer-quote-container {
+.footer-quote-container {
     margin: 50px;
     height: auto;
     width: auto;
-  }
+}
   
-  .footer-quote {
+.footer-quote {
     height: auto;
     width: auto;
     font-size: 30px;
     font-weight: bold;
     letter-spacing: 1.5px;
-  }
+}
   
-  .footer-sub-container {
+.footer-sub-container {
     height: auto;
     width: auto;
     display: flex;
@@ -236,9 +294,9 @@
     align-content: center;
     justify-content: space-around;
     align-items: center;
-  }
+}
   
-  .footer-nav {
+.footer-nav {
     height: auto;
     width: auto;
     font-size: 20px;
@@ -248,13 +306,13 @@
     flex-direction: column;
     align-content: center;
     justify-content: center;
-  }
+}
   
-  .footer-nav p {
+.footer-nav p {
     margin-top: 15px;
-  }
+}
   
-  .footer-social-media {
+.footer-social-media {
     height: auto;
     width: auto;
     display: flex;
@@ -262,18 +320,18 @@
     align-content: center;
     justify-content: center;
     align-items: center;
-  }
+}
   
-  .fsm-title {
+.fsm-title {
     margin: 15px;
     height: auto;
     width: auto;
     font-size: 30px;
     font-weight: bold;
     letter-spacing: 1.5px;
-  }
+}
   
-  .fsm-content {
+.fsm-content {
     height: auto;
     width: auto;
     font-size: 20px;
@@ -283,13 +341,13 @@
     flex-direction: column;
     align-content: center;
     justify-content: center;
-  }
+}
   
-  .fsm-content p {
+.fsm-content p {
     margin-top: 15px;
-  }
+}
   
-  .footer-contact-us {
+.footer-contact-us {
     margin: 15px;
     height: auto;
     width: auto;
@@ -297,18 +355,18 @@
     flex-direction: column;
     align-content: center;
     justify-content: center;
-  }
+}
   
-  .fcu-title {
+.fcu-title {
     margin: 15px;
     height: auto;
     width: auto;
     font-size: 30px;
     font-weight: bold;
     letter-spacing: 1.5px;
-  }
+}
   
-  .fcu-content {
+.fcu-content {
     margin-top: 15px;
     height: auto;
     width: auto;
@@ -319,13 +377,13 @@
     flex-direction: column;
     align-content: center;
     justify-content: center;
-  }
+}
   
-  .fcu-content p {
+.fcu-content p {
     margin-top: 15px;
-  }
+}
   
-  .footer-copyright {
+.footer-copyright {
     margin: 25px;
     height: auto;
     width: auto;
@@ -333,8 +391,8 @@
     letter-spacing: 1.5px;
     text-align: right;
     border-top: 2.5px solid #181818;
-  }
+}
   
-  .footer-copyright p {
+.footer-copyright p {
     margin-top: 25px;
-  }
+}

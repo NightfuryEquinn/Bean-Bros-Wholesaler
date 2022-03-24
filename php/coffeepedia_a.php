@@ -14,10 +14,10 @@
         <meta name = "copyright" content = "Copyright 2022 @ Bean Bros Wholesaler">
 
         <!--Link to CSS-->
-        <link rel = "stylesheet" href = "../css/coffeepedia_ad.css">
+        <link rel = "stylesheet" href = "../css/coffeepedia_a.css">
 
         <!--Link to JavaScript-->
-        <script src="../js/script.js" defer></script>
+        <script src="../js/script.js"></script>
 
         <!--Link to Font Awesome v4 and v5-->
         <link rel = "stylesheet" href = "https://use.fontawesome.com/releases/v5.15.4/css/all.css">
@@ -34,146 +34,135 @@
         <!--Title-->
         <title>Bean Bros - Coffeepedia</title>
     </head>
-    
     <body>
         <!--Sticky Navigation Bar-->
         <div class="nav-bar">
             <div class="nav-bar-left">
-                <h3><a href="../php/bean_a.php">Bean</a></h3>
-                <h3><a href="../php/coffeepedia_a.php">Coffeepedia</a></h3>
-                <h3><a href="../php/aboutus.php">About Us</a></h3>
-                <h3><a href="../php/contactus.php">Contact Us</a></h3>
+                <h3><a href="bean.html">Bean</a></h3>
+                <h3><a href="coffeepedia_c.html">Coffeepedia</a></h3>
+                <h3><a href="aboutus.html">About Us</a></h3>
+                <h3><a href="contactus.html">Contact Us</a></h3>
             </div>
             <div class="nav-bar-logo">
-                <a href="../home.php"><img src="../img\BeanBrosLogo1.png"></a>
+                <a href="home.html"><img src="../img/BeanBrosLogo1.png"></a>
             </div>
             <div class="nav-bar-right">
-                <h3><a href="../php/adminprofile.php">Profile</a></h3>
-                <h3><a href="../php/monthlyreport.php">Report</a></h3>
-                <h3><a href="../php/checkfeedback.php">Feedback</a></h3>
-                <h3><a href="../php/checkcustomer.php">Customers</a></h3>
-                <h3><a href="../php/checkorder.php">Orders</a></h3>
-                <h3>Log Out</h3>
+                <h3><a href="signuploginforgot.html">Sign Up</a></h3>
+                <h3><a href="signuploginforgot.html">Log In</a></h3>
             </div>
         </div>
 
         <!--Add Beans Button-->
-        <div class="addicon">
-            <a href="addcoffeepedia.php"><i class="fas fa-plus-circle fa-5x"></i></a>
+        <div class="add-button">
+            <a href=""><i class="fas fa-plus-circle fa-5x"></i></a>
         </div>
 
-        <!--Homepage Parallax-->
-        <div class="homepage">
-            <div class="homepage-parallax-group">
-                <div class="homepage-parallax-back">
-                    <!--Homepage Parallax Background-->
-                    <div class="hpb-image-container">
-                        <img src="../img\Nicholas-Keeler-Vineyard-Night.jpg">
+        <!--Coffeepedia Page Parallax-->
+        <div class="coffeepedia-page">
+
+            <!--Coffeepedia First Parallax-->
+            <div class="coffeepedia-parallax-group">
+                <div class="coffeepedia-parallax-back">
+                    <!--Abous Us Parallax Background-->
+                    <div class="cp-image-container">
+                        <img src="../img/Nicholas-Keeler-Vineyard-Night.jpg">
                     </div>
                 </div>
-                <div class="homepage-parallax-base">
-                    <!--Homepage Parallax Quote-->
+                <div class="coffeepedia-parallax-base">
+                    <!--Coffeepedia Parallax Quote-->
                     <div class="quote-container">
-                        <p>What's more to enjoy a coffee while reading?</p>
+                        <p>What's more to enjoy coffee while reading</p>
                     </div>
-                </div>              
-            </div>
-            
-            <!--Blog Container-->
-            <div class="row2">
-                <div class="blog-container">
-
-                    <div class="search-text"></div>
-                    <div class="search-box">
-                        <form method="POST">
-                            <input type="text" name="searchC" placeholder="Search..." required>  
-                            <input type="submit" name="searchI" class="fas fa-search fa-1x" value="GO" onclick="rndm()">                    
-                        </form>                                                 
-                        
-                        <?php 
-                            include("conn.php");
-
-                            $searchText = "";
-
-                            if(isset($_POST["searchI"])) 
-                            {
-                                $searchText = $_POST['searchC'];
-                            }
-
-                            $searchResult = mysqli_query($con, "SELECT * FROM coffeepedia WHERE Title LIKE '%$searchText%'");
-                        ?>                       
-                    </div>
-                    <div class="box2"></div>
-                    <div class="blog-content-container">                        
-                        <?php
-                            while($row = mysqli_fetch_assoc($searchResult))
-                            {
-                                $displayCpd = '
-                                <div class="coffeepda">                          
-
-                                    <div class="admin-function">
-
-                                        <div class="title1">
-                                            <h2>'.$row["Title"].'</h2>                               
-                                        </div>  
-
-                                        <a href=\'editcoffeepedia.php?Bean_ID='.$row["Coffeepedia_ID"].'\' onclick="return confirm(\'Edit '.$row['Title'].' details?\');"><i class="fas fa-edit fa-2x"></i></a>                                      
-                                        <a href=\'delete.php?Bean_ID='.$row["Coffeepedia_ID"].'\' onclick="return confirm(\'Delete '.$row['Title'].' order? This CANNOT be undone!\');"><i class="fas fa-trash-alt fa-2x"></i></a>
-
-                                    </div>
-                                </div>                             
-
-                                ';
-
-                                echo $displayCpd;
-                            }
-
-                            mysqli_close($con);
-                        ?>
-                    </div>                  
-                </div>                                        
-            </div>
-
-            <!--Footer-->
-            <div class="footer-container">
-                <div class="footer-quote-container">
-                    <div class="footer-quote">
-                        <p>When you need beans, <br>you know where to find us.</p>
-                    </div>
-                </div>
-                <div class="footer-sub-container">
-                    <div class="footer-nav">
-                        <p><a href="home.html">Home</a></p>
-                        <p><a href="bean.html">Bean</a></p>
-                        <p><a href="coffeepedia_c.html">Coffeepedia</a></p>
-                        <p><a href="aboutus.html">About Us</a></p>
-                        <p><a href="contactus.html">Contact Us</a></p>
-                    </div>
-                    <div class="footer-social-media">
-                        <div class="fsm-title">
-                            <p>Social Media</p>
+                    
+                    <div class="coffeepedia-container">
+                        <div class="coffeepedia-search-container">
+                            <form>
+                                <input type="text" placeholder="Search...">
+                                <input type="submit" value="Go">
+                            </form>
                         </div>
-                        <div class="fsm-content">
-                            <p>Facebook</p>
-                            <p>Instagram</p>
-                            <p>Twitter</p>
-                            <p><a href="faq.html">FAQ</a></p>
+                        <div class="coffeepedia-selection">
+                            <div class="coffeepedia-article-container">
+                                <div class="coffeepedia-article">
+                                    
+                                </div>
+                                <div class="coffeepedia-article-title">
+                                    <h2>Title</h2>
+                                </div>
+                                <div class="admin-function">
+                                    <i class="fas fa-edit fa-1x"></i>
+                                    <i class="fas fa-trash-alt fa-1x"></i>
+                                </div>
+                            </div>
+                            <div class="coffeepedia-article-container">
+                                <div class="coffeepedia-article">
+                                    
+                                </div>
+                                <div class="coffeepedia-article-title">
+                                    <h2>Title</h2>
+                                </div>
+                                <div class="admin-function">
+                                    <i class="fas fa-edit fa-1x"></i>
+                                    <i class="fas fa-trash-alt fa-1x"></i>
+                                </div>
+                            </div>
+                            <div class="coffeepedia-article-container">
+                                <div class="coffeepedia-article">
+                                    
+                                </div>
+                                <div class="coffeepedia-article-title">
+                                    <h2>Title</h2>
+                                </div>
+                                <div class="admin-function">
+                                    <i class="fas fa-edit fa-1x"></i>
+                                    <i class="fas fa-trash-alt fa-1x"></i>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="footer-contact-us">
-                        <div class="fcu-title">
-                            <p>Have a coffee with us</p>
+
+                    <!--Footer-->
+                    <div class="footer-container">
+                        <div class="footer-quote-container">
+                            <div class="footer-quote">
+                                <p>When you need beans, <br>you know where to find us.</p>
+                            </div>
                         </div>
-                        <div class="fcu-content">
-                            <p>Customer Service: <br>03-222-3333</p>
-                            <p>Address: <br>85a, 85b, 85c, Jalan Bukit Bintang, <br>Kuala Lumpur, <br>55100 Malaysia</p>
+                        <div class="footer-sub-container">
+                            <div class="footer-nav">
+                                <p><a href="home.html">Home</a></p>
+                                <p><a href="bean.html">Bean</a></p>
+                                <p><a href="coffeepedia_c.html">Coffeepedia</a></p>
+                                <p><a href="aboutus.html">About Us</a></p>
+                                <p><a href="contactus.html">Contact Us</a></p>
+                            </div>
+                            <div class="footer-social-media">
+                                <div class="fsm-title">
+                                    <p>Social Media</p>
+                                </div>
+                                <div class="fsm-content">
+                                    <p>Facebook</p>
+                                    <p>Instagram</p>
+                                    <p>Twitter</p>
+                                    <p><a href="faq.html">FAQ</a></p>
+                                </div>
+                            </div>
+                            <div class="footer-contact-us">
+                                <div class="fcu-title">
+                                    <p>Have a coffee with us</p>
+                                </div>
+                                <div class="fcu-content">
+                                    <p>Customer Service: <br>03-222-3333</p>
+                                    <p>Address: <br>85a, 85b, 85c, Jalan Bukit Bintang, <br>Kuala Lumpur, <br>55100 Malaysia</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-copyright">
+                            <p>Est. 2022 @ Bean Bros Wholesaler</p>
                         </div>
                     </div>
                 </div>
-                <div class="footer-copyright">
-                    <p>Est. 2022 @ Bean Bros Wholesaler</p>
-                </div>
             </div>
-        </div>     
+        </div>
     </body>
 </html>

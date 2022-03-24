@@ -113,23 +113,23 @@ a {
     cursor: pointer;
 }
 
-/* Beanpage Parallax */
-.beanpage {
+/* Coffeepedia Parallax */
+.coffeepedia-page {
     perspective: 1px;
     height: 100vh;
     overflow-x: hidden;
     overflow-y: auto;
 }
 
-/* Beanpage Parallax Background */
-.beanpage-parallax-group {
+/* Coffeepedia Parallax Background */
+.coffeepedia-parallax-group {
     position: relative;
     height: 100vh;
     transform-style: preserve-3d;
     z-index: 5;
 }
 
-.beanpage-parallax-back {
+.coffeepedia-parallax-back {
     top: 0;
     right: 0;
     bottom: 0;
@@ -138,14 +138,14 @@ a {
     transform: translateX(-450px) translateY(-200px) translateZ(-1.625px) scale(2.5);
 }
 
-.bp-image-container {
+.cp-image-container {
     width: max-content;
     height: max-content;
     overflow: hidden;
 }
 
-/* Beanpage Parallax Quote */
-.beanpage-parallax-base {
+/* Coffeepedia Parallax Quote */
+.coffeepedia-parallax-base {
     top: 0;
     right: 0;
     bottom: 0;
@@ -172,42 +172,36 @@ a {
     text-align: center;
 }
 
-.beanpage-container {
+.coffeepedia-container {
     margin-top: 450px;
     height: auto;
     width: auto;
     display: flex;
-    flex-direction: row;
-}
-
-.beanpage-right {
-    height: auto;
-    width: 25%;
-    background-color: #DDA15E;
-    display: flex;
-    flex-direction: column;
-}
-
-.beanpage-right form {
-    margin: 150px 10px ;
-    height: auto;
-    width: auto;
-    display: flex;
+    background-color: #fefae0;
     flex-direction: column;
     align-content: center;
     justify-content: center;
     align-items: center;
 }
 
-.beanpage-right form label {
-    margin: 10px;
+.coffeepedia-search-container {
+    margin: 50px;
     height: auto;
     width: auto;
-    font-size: 20px;
-    letter-spacing: 1.5px;
 }
 
-.beanpage-right form input {
+.coffeepedia-search-container form {
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 10px solid #606C38;
+}
+
+.coffeepedia-search-container form input {
     right: 0;
     margin: 10px;
     padding: 10px;
@@ -216,114 +210,90 @@ a {
     font-weight: bold;
     letter-spacing: 1.5px;
     font-family: "Old Standard TT", serif;
-    background: linear-gradient(to left, #fefae0 50%, #BC6C25 50%) right;
+    background: linear-gradient(to left, #DDA15E 50%, #BC6C25 50%) right;
     background-size: 200%;
     border: none;
     transition-duration: 0.5s;
     transition-timing-function: ease-out;
 }
 
-.beanpage-right form input[type=submit] {
+.coffeepedia-search-container form input[type=submit] {
     width: 150px;
-    background: linear-gradient(to left, #fefae0 50%, #BC6C25 50%) right;
+    background: linear-gradient(to left, #DDA15E 50%, #BC6C25 50%) right;
     background-size: 200%;
     transition-duration: 0.5s;
     transition-timing-function: ease-out;
 }
 
-.beanpage-right form input:focus {
+.coffeepedia-search-container form input:focus {
     background-position: left;
     outline: none;
 }
 
-.beanpage-right form input[type=submit]:hover {
-    color: #fefae0;
+.coffeepedia-search-container form input[type=submit]:hover {
     background-position: left;
 }
 
-.search-bar {
-    height: auto;
-    width: auto;
-}
-
-.beanpage-left {
-    height: auto;
-    width: 75%;
-    background-color: #fefae0;
-}
-
-.bean-container {
-    margin: 50px;
+.coffeepedia-selection {
+    margin: 0 100px 50px 100px;
     height: auto;
     width: auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-content: center;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: center;
+    align-content: center;
 }
 
-.bean {
-    margin: 25px;
-    height: 410px;
-    width: 350px;
-    cursor: pointer;
-    border-bottom: 10px solid #784830;
-    overflow: hidden;
-}
-
-.bean img {
-    height: 400px;
-    width: 350px;
-}
-
-.bean-information {
-    height: 400px;
-    width: 350px;
-    color: #fefae0;
-    background-color: #784830;
+.coffeepedia-article-container {
+    margin: 50px;
+    height: auto;
+    width: auto;
     display: flex;
     flex-direction: column;
     align-content: center;
     justify-content: center;
     align-items: center;
-    transform: translateY(0);
-    opacity: 0;
-    transition-duration: 0.3s;
-    transition-timing-function: ease-out;
 }
 
-.bean-information h2 {
-    margin: 20px;
-    font-size: 20px;
+.coffeepedia-article {
+    height: 200px;
+    width: 310px;
+    border-right: 10px solid #283618;
+}
+
+.coffeepedia-article img {
+    height: 200px;
+    width: 300px;
+}
+
+.coffeepedia-article-title {
+    margin: 10px;
+    height: auto;
+    width: auto;
+}
+
+.coffeepedia-article-title h2 {
+    font-size: 25px;
+    font-weigth: bold;
     letter-spacing: 1.5px;
     text-transform: uppercase;
     text-align: center;
 }
 
-.bean-information p {
-    margin: 10px;
-    font-size: 16px;
-    letter-spacing: 1.5px;
-    text-align: center;
-}
-
-.bean:hover .bean-information {
-    transform: translateY(-400px);
-    opacity: 1;
-}
-
 .admin-function {
+    margin: 10px;
     height: auto;
     width: auto;
-    position: fixed;
-    transform: translate(115px, -400px);
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-around;
 }
 
 .admin-function i {
-    margin: 10px 20px;
-    cursor: pointer;
+    margin: 0 50px;
 }
 
 /* Footer */

@@ -18,12 +18,12 @@ Dark Oliver Green - 606C38
     padding: 0;
     box-sizing: border-box;
 }
-
+  
 body,
 p {
-    font-family: "Old Standard TT", serif;  
+    font-family: "Old Standard TT", serif;
 }
-
+  
 h1,
 h2,
 h3,
@@ -54,7 +54,7 @@ a {
     justify-content: center;
     z-index: 100;
 }
-
+  
 .nav-bar-left {
     height: 100px;
     width: 700px;
@@ -64,26 +64,26 @@ a {
     justify-content: center;
     align-items: center;
 }
-
+  
 .nav-bar-left h3 {
     margin: 5px;
     padding: 10px;
     font-size: 16px;
     letter-spacing: 1.5px;
 }
-
+  
 .nav-bar-logo {
     margin-left: 10px;
     margin-right: 10px;
     height: 100px;
     width: 100px;
 }
-
+  
 .nav-bar-logo img {
     height: 100px;
     width: 100px;
 }
-
+  
 .nav-bar-right {
     height: 100px;
     width: 700px;
@@ -93,7 +93,7 @@ a {
     justify-content: center;
     align-items: center;
 }
-
+  
 .nav-bar-right h3 {
     margin: 5px;
     padding: 10px;
@@ -101,51 +101,39 @@ a {
     letter-spacing: 1.5px;
 }
 
-/* Add Beans Button */
-.add-button {
-    left: 0;
-    bottom: 0;
-    margin: 25px;
-    background-color: #fefae0;
-    position: fixed;
-    border-radius: 50%;
-    z-index: 50;
-    cursor: pointer;
-}
-
-/* Beanpage Parallax */
-.beanpage {
+/* Edit Coffeepedia Page Parallax */
+.edit-coffeepedia {
     perspective: 1px;
     height: 100vh;
     overflow-x: hidden;
     overflow-y: auto;
 }
-
-/* Beanpage Parallax Background */
-.beanpage-parallax-group {
+  
+/* Edit Coffeepedia Page Parallax Background */
+.edit-coffeepedia-parallax-group {
     position: relative;
     height: 100vh;
     transform-style: preserve-3d;
     z-index: 5;
 }
-
-.beanpage-parallax-back {
+  
+.edit-coffeepedia-parallax-back {
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     position: relative;
-    transform: translateX(-450px) translateY(-200px) translateZ(-1.625px) scale(2.5);
+    transform: translateX(-1050px) translateY(-1850px) translateZ(-1.25px);
 }
-
-.bp-image-container {
+  
+.ec-image-container {
     width: max-content;
     height: max-content;
     overflow: hidden;
 }
 
-/* Beanpage Parallax Quote */
-.beanpage-parallax-base {
+/* Edit Coffeepedia Container */
+.edit-coffeepedia-parallax-base {
     top: 0;
     right: 0;
     bottom: 0;
@@ -156,42 +144,11 @@ a {
     transform: translateZ(0);
 }
 
-.quote-container {
-    margin: 325px 300px 0 300px;
-    padding: 15px;
-    width: auto;
-    height: auto;
-    background-color: #181818DD;
-    border-radius: 5px;
-}
-
-.quote-container p {
-    color: #fefae0;
-    font-size: 28px;
-    letter-spacing: 0.5px;
-    text-align: center;
-}
-
-.beanpage-container {
-    margin-top: 450px;
+.edit-coffeepedia-container {
+    margin: 325px 200px 100px 200px;
     height: auto;
     width: auto;
-    display: flex;
-    flex-direction: row;
-}
-
-.beanpage-right {
-    height: auto;
-    width: 25%;
-    background-color: #DDA15E;
-    display: flex;
-    flex-direction: column;
-}
-
-.beanpage-right form {
-    margin: 150px 10px ;
-    height: auto;
-    width: auto;
+    background-color: #18181880;
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -199,135 +156,112 @@ a {
     align-items: center;
 }
 
-.beanpage-right form label {
-    margin: 10px;
+.edit-coffeepedia-title {
+    margin: 50px;
+    padding: 25px;
     height: auto;
     width: auto;
+    border: 10px double #BC6C25;
+}
+
+.edit-coffeepedia-title h2 {
+    color: #fefae0;
+    font-size: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1.5px;
+}
+
+.edit-coffeepedia-form {
+    margin: 0 100px;
+    height: auto;
+    width: auto;
+}
+
+.submit-reset-container {
+    margin: 25px;
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+form label {
+    color: #fefae0;
     font-size: 20px;
     letter-spacing: 1.5px;
 }
 
-.beanpage-right form input {
+form input {
     right: 0;
-    margin: 10px;
+    margin: 10px 10px 25px 10px;
     padding: 10px;
-    width: 200px;
+    width: 300px;
     font-size: 16px;
     font-weight: bold;
     letter-spacing: 1.5px;
     font-family: "Old Standard TT", serif;
-    background: linear-gradient(to left, #fefae0 50%, #BC6C25 50%) right;
+    background: linear-gradient(to left, #fefae0 50%, #DDa15e 50%) right;
     background-size: 200%;
     border: none;
     transition-duration: 0.5s;
     transition-timing-function: ease-out;
 }
 
-.beanpage-right form input[type=submit] {
+form input[type=submit], form input[type=reset] {
+    margin: 0 25px;
     width: 150px;
-    background: linear-gradient(to left, #fefae0 50%, #BC6C25 50%) right;
+    background: linear-gradient(to left, #fefae0 50%, #283618 50%) right;
     background-size: 200%;
     transition-duration: 0.5s;
     transition-timing-function: ease-out;
 }
 
-.beanpage-right form input:focus {
+form input:focus {
     background-position: left;
     outline: none;
 }
 
-.beanpage-right form input[type=submit]:hover {
+form input[type=submit]:hover, form input[type=reset]:hover {
     color: #fefae0;
     background-position: left;
 }
 
-.search-bar {
-    height: auto;
-    width: auto;
-}
-
-.beanpage-left {
-    height: auto;
-    width: 75%;
-    background-color: #fefae0;
-}
-
-.bean-container {
-    margin: 50px;
-    height: auto;
-    width: auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.bean {
-    margin: 25px;
-    height: 410px;
-    width: 350px;
-    cursor: pointer;
-    border-bottom: 10px solid #784830;
-    overflow: hidden;
-}
-
-.bean img {
-    height: 400px;
-    width: 350px;
-}
-
-.bean-information {
-    height: 400px;
-    width: 350px;
-    color: #fefae0;
-    background-color: #784830;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    transform: translateY(0);
-    opacity: 0;
-    transition-duration: 0.3s;
+form textarea {
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    line-height: 1.5;
+    font-family: "Old Standard TT", serif;
+    background: linear-gradient(to left, #fefae0 50%, #DDa15e 50%) right;
+    background-size: 200%;
+    resize: none;
+    border: none;
+    transition-duration: 0.5s;
     transition-timing-function: ease-out;
 }
 
-.bean-information h2 {
-    margin: 20px;
-    font-size: 20px;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    text-align: center;
-}
-
-.bean-information p {
-    margin: 10px;
-    font-size: 16px;
-    letter-spacing: 1.5px;
-    text-align: center;
-}
-
-.bean:hover .bean-information {
-    transform: translateY(-400px);
-    opacity: 1;
-}
-
-.admin-function {
-    height: auto;
-    width: auto;
-    position: fixed;
-    transform: translate(115px, -400px);
-}
-
-.admin-function i {
-    margin: 10px 20px;
-    cursor: pointer;
+form textarea:focus {
+    background-position: left;  
+    outline: none;
 }
 
 /* Footer */
 .footer-container {
+    margin-top: 450px;
     height: auto;
     width: auto;
     color: #181818;
@@ -337,13 +271,13 @@ a {
     align-content: center;
     justify-content: center;
 }
-
+  
 .footer-quote-container {
     margin: 50px;
     height: auto;
     width: auto;
 }
-
+  
 .footer-quote {
     height: auto;
     width: auto;
@@ -351,7 +285,7 @@ a {
     font-weight: bold;
     letter-spacing: 1.5px;
 }
-
+  
 .footer-sub-container {
     height: auto;
     width: auto;
@@ -361,7 +295,7 @@ a {
     justify-content: space-around;
     align-items: center;
 }
-
+  
 .footer-nav {
     height: auto;
     width: auto;
@@ -373,11 +307,11 @@ a {
     align-content: center;
     justify-content: center;
 }
-
+  
 .footer-nav p {
     margin-top: 15px;
 }
-
+  
 .footer-social-media {
     height: auto;
     width: auto;
@@ -387,7 +321,7 @@ a {
     justify-content: center;
     align-items: center;
 }
-
+  
 .fsm-title {
     margin: 15px;
     height: auto;
@@ -396,7 +330,7 @@ a {
     font-weight: bold;
     letter-spacing: 1.5px;
 }
-
+  
 .fsm-content {
     height: auto;
     width: auto;
@@ -408,11 +342,11 @@ a {
     align-content: center;
     justify-content: center;
 }
-
+  
 .fsm-content p {
     margin-top: 15px;
 }
-
+  
 .footer-contact-us {
     margin: 15px;
     height: auto;
@@ -422,7 +356,7 @@ a {
     align-content: center;
     justify-content: center;
 }
-
+  
 .fcu-title {
     margin: 15px;
     height: auto;
@@ -431,7 +365,7 @@ a {
     font-weight: bold;
     letter-spacing: 1.5px;
 }
-
+  
 .fcu-content {
     margin-top: 15px;
     height: auto;
@@ -444,11 +378,11 @@ a {
     align-content: center;
     justify-content: center;
 }
-
+  
 .fcu-content p {
     margin-top: 15px;
 }
-
+  
 .footer-copyright {
     margin: 25px;
     height: auto;
@@ -458,7 +392,7 @@ a {
     text-align: right;
     border-top: 2.5px solid #181818;
 }
-
+  
 .footer-copyright p {
     margin-top: 25px;
 }
