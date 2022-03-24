@@ -81,9 +81,13 @@
                             </div>
                             <div class="admin-information">
                                 <?php
+                                    include("conn.php");
+                                    
                                     $adminID = $_SESSION["Admin_ID"];
 
-                                    $getAdmin = mysqli_query($con, "SELECT * FROM admin WHERE Admin_ID = $adminID;");
+                                    $getQuery = "SELECT * FROM admin WHERE Admin_ID = '$adminID';";
+
+                                    $getAdmin = mysqli_query($con, $getQuery);
 
                                     $row = mysqli_fetch_assoc($getAdmin);
                                     
