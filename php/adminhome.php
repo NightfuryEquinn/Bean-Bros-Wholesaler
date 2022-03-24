@@ -81,17 +81,17 @@
                             </div>
                             <div class="ps-beans-container">
                                 <div class="ps-beans">
-                                    <a href="bean_c.php">
+                                    <a href="bean_a.php">
                                         <img src="../img/ethiopia.jpg">
                                     </a>
                                 </div>
                                 <div class="ps-beans">
-                                    <a href="bean_c.php">
+                                    <a href="bean_a.php">
                                         <img src="../img/hawaiian-kona.jpg">
                                     </a>
                                 </div>
                                 <div class="ps-beans">
-                                    <a href="bean_c.php">
+                                    <a href="bean_a.php">
                                         <img src="../img/guatemala.jpg">
                                     </a>
                                 </div>
@@ -100,17 +100,17 @@
                         <div class="fresh-arrival-container">
                             <div class="fa-beans-container">
                                 <div class="fa-beans">
-                                    <a href="bean_c.php">
+                                    <a href="bean_a.php">
                                         <img src="../img/tanzanian-peaberry.jpg">
                                     </a>
                                 </div>
                                 <div class="fa-beans">
-                                    <a href="bean_c.php">
+                                    <a href="bean_a.php">
                                         <img src="../img/mocha-java-coffee.jpg">
                                     </a>
                                 </div>
                                 <div class="fa-beans">
-                                    <a href="bean_c.php">
+                                    <a href="bean_a.php">
                                         <img src="../img/KenyaAA.jpg">
                                     </a>
                                 </div>
