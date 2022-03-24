@@ -17,7 +17,7 @@
         <link rel = "stylesheet" href = "../css/signuploginforgot.css">
 
         <!--Link to JavaScript-->
-        <script src="../js/script.js" defer></script>
+        <script src="../js/script.js"></script>
 
         <!--Link to Font Awesome v4 and v5-->
         <link rel = "stylesheet" href = "https://use.fontawesome.com/releases/v5.15.4/css/all.css">

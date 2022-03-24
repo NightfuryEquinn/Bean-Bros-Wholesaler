@@ -2,9 +2,6 @@
 // Connect to database
 include("conn.php");
 
-// Start a session
-session_start();
-
 // Confirm server method POST
 if($_SERVER["REQUEST_METHOD"] == "POST")
 {

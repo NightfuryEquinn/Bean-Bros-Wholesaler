@@ -51,7 +51,7 @@
             <div class="nav-bar-right">
                 <h3><a href="customerprofile.php">Profile</a></h3>
                 <h3><a href="feedback.php">Feedback</a></h3>
-                <h3>Log Out</h3>
+                <h3><a href="logout.php">Log Out</a></h3>
             </div>
         </div>
 

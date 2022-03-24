@@ -53,7 +53,7 @@
                 <h3><a href="checkfeedback.php">Feedback</a></h3>
                 <h3><a href="checkcustomer.php">Customers</a></h3>
                 <h3><a href="checkorder.php">Orders</a></h3>
-                <h3>Log Out</h3>
+                <h3><a href="logout.php">Log Out</a></h3>
             </div>
         </div>
 
@@ -80,9 +80,27 @@
                                 <h3>Admin Details</h3>
                             </div>
                             <div class="admin-information">
-                                <p>Username: </p>
-                                <p>Email: </p>
-                                <p>Password: </p>
+                                <?php
+                                    $adminID = $_SESSION["Admin_ID"];
+
+                                    $getAdmin = mysqli_query($con, "SELECT * FROM admin WHERE Admin_ID = $adminID;");
+
+                                    $row = mysqli_fetch_assoc($getAdmin);
+                                    
+                                    $displayAdmin = '
+
+                                        <p>Username: '.$row["Username"].'</p>
+
+                                        <p>Email: '.$row["Email"].'</p>
+
+                                        <p>Password: *#*#*#*#</p>
+
+                                    ';
+
+                                    echo $displayAdmin;
+
+                                    mysqli_close($con);
+                                ?>
                             </div>
                         </div>
                         <div class="admin-function-container">

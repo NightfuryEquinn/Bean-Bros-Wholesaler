@@ -53,7 +53,7 @@
                 <h3><a href="checkfeedback.php">Feedback</a></h3>
                 <h3><a href="checkcustomer.php">Customers</a></h3>
                 <h3><a href="checkorder.php">Orders</a></h3>
-                <h3>Log Out</h3>
+                <h3><a href="logout.php">Log Out</a></h3>
             </div>
         </div>
         
@@ -81,18 +81,18 @@
                             </div>
                             <div class="ps-beans-container">
                                 <div class="ps-beans">
-                                    <a href="bean_a.php">
-                                        <p>Bean One</p>
+                                    <a href="php/bean_c.php">
+                                        <img src="../img/ethiopia.jpg">
                                     </a>
                                 </div>
                                 <div class="ps-beans">
-                                    <a href="bean_a.php">
-                                        <p>Bean Two</p>
+                                    <a href="php/bean_c.php">
+                                        <img src="../img/hawaiian-kona.jpg">
                                     </a>
                                 </div>
                                 <div class="ps-beans">
-                                    <a href="bean_a.php">
-                                        <p>Bean Three</p>
+                                    <a href="php/bean_c.php">
+                                        <img src="../img/guatemala.jpg">
                                     </a>
                                 </div>
                             </div>
@@ -100,18 +100,18 @@
                         <div class="fresh-arrival-container">
                             <div class="fa-beans-container">
                                 <div class="fa-beans">
-                                    <a href="bean_a.php">
-                                        <p>Bean One</p>
+                                    <a href="php/bean_c.php">
+                                        <img src="../img/tanzanian-peaberry.jpg">
                                     </a>
                                 </div>
                                 <div class="fa-beans">
-                                    <a href="bean_a.php">
-                                        <p>Bean Two</p>
+                                    <a href="php/bean_c.php">
+                                        <img src="../img/mocha-java-coffee.jpg">
                                     </a>
                                 </div>
                                 <div class="fa-beans">
-                                    <a href="bean_a.php">
-                                        <p>Bean Three</p>
+                                    <a href="php/bean_c.php">
+                                        <img src="../img/KenyaAA.jpg">
                                     </a>
                                 </div>
                             </div>
