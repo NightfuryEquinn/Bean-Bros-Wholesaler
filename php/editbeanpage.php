@@ -100,7 +100,7 @@
                                 <textarea name="description" placeholder="Max: 432 words" required rows="10" cols="100"><?php echo $row["Description"]?></textarea>
                                 
                                 <div class="submit-reset-container">
-                                    <input type="submit" value="Beans Out!">
+                                    <input type="submit" value="Update">
                                     <input type="reset">
                                 </div>
                             </form>

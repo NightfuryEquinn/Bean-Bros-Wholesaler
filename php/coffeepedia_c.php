@@ -71,36 +71,50 @@
                     
                     <div class="coffeepedia-container">
                         <div class="coffeepedia-search-container">
-                            <form>
-                                <input type="text" placeholder="Search...">
-                                <input type="submit" value="Go">
+                            <form method="POST">
+                                <input type="text" placeholder="Search..." name="searchText">
+                                <input type="submit" value="Go" name="search">
                             </form>
+
+                            <?php
+                                    include("conn.php");
+                                    
+                                    $searchText = "";
+
+                                    if(isset($_POST["search"]))
+                                    {
+                                        $searchText = $_POST['searchText'];
+                                    }
+                                    
+                                    $searchResult = mysqli_query($con, "SELECT * FROM coffeepedia WHERE Title LIKE '%$searchText%';");
+                            ?>
                         </div>
                         <div class="coffeepedia-selection">
-                            <div class="coffeepedia-article-container">
-                                <div class="coffeepedia-article">
+                            <?php
+                                while($row = mysqli_fetch_assoc($searchResult))
+                                {
+                                    $displayText = '
+                                    <div class="coffeepedia-article-container">
+
+                                        <div class="coffeepedia-article">
+                                            
+                                        </div>
+
+                                        <div class="coffeepedia-article-title">
+
+                                            <a href=\'article.php?Coffeepedia_ID='.$row['Coffeepedia_ID'].'\' onclick="return confirm(\'Read '.$row["Title"].'?\');"><h2>'.$row["Title"].'</h2></a>
+
+                                        </div>
+
+                                    </div>
                                     
-                                </div>
-                                <div class="coffeepedia-article-title">
-                                    <h2>Title</h2>
-                                </div>
-                            </div>
-                            <div class="coffeepedia-article-container">
-                                <div class="coffeepedia-article">
-                                    
-                                </div>
-                                <div class="coffeepedia-article-title">
-                                    <h2>Title</h2>
-                                </div>
-                            </div>
-                            <div class="coffeepedia-article-container">
-                                <div class="coffeepedia-article">
-                                    
-                                </div>
-                                <div class="coffeepedia-article-title">
-                                    <h2>Title</h2>
-                                </div>
-                            </div>
+                                    ';
+
+                                    echo $displayText;
+                                }
+
+                                mysqli_close($con);
+                            ?>
                         </div>
                     </div>
 

@@ -123,7 +123,7 @@ a {
     bottom: 0;
     left: 0;
     position: relative;
-    transform: translateX(-1050px) translateY(-1850px) translateZ(-1.25px);
+    transform: translateX(-1050px) translateY(-750px) translateZ(-1.25px);
 }
   
 .a-image-container {

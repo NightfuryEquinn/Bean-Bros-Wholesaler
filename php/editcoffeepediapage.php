@@ -70,21 +70,30 @@
                             <h2>Updating an Old Blog in Coffeepedia for Customer</h2>
                         </div>
                         <div class="edit-coffeepedia-form">
-                            <form method="POST" action="addcoffeepedia.php">
+                            <?php
+                                include("conn.php");
+                                $editID = $_GET["Coffeepedia_ID"];
+                                $editData = mysqli_query($con, "SELECT * FROM coffeepedia WHERE Coffeepedia_ID=$editID");
+                                $row = mysqli_fetch_assoc($editData);
+                            ?>
+
+                            <form method="POST" action="editcoffeepedia.php">
+                                <input type="hidden" name="id" value="<?php echo $row["Coffeepedia_ID"]?>">
+
                                 <label>Article Title</label>
-                                <input type="text" name="title" required>
+                                <input type="text" name="title" value="<?php echo $row["Title"]?>" required>
                                 
                                 <label>Author</label>
-                                <input type="text" name="author" required>
+                                <input type="text" name="author" value="<?php echo $row["Author"]?>" required>
                                 
                                 <label>Written Date</label>
-                                <input type="text" name="date" required>
+                                <input type="text" name="date" value="<?php echo $row["Written_Date"]?>" required>
                                 
                                 <label>Content</label>
-                                <textarea name="content" placeholder="Max: 432 words" required rows="10" cols="100"></textarea>
+                                <textarea name="content" placeholder="Max: 432 words" required rows="10" cols="100"><?php echo $row["Content"]?>"</textarea>
                                 
                                 <div class="submit-reset-container">
-                                    <input type="submit" value="New Blog!">
+                                    <input type="submit" value="Update">
                                     <input type="reset">
                                 </div>
                             </form>

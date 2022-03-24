@@ -263,6 +263,7 @@ a {
 }
 
 .coffeepedia-article-title h2 {
+    width: 310px;
     font-size: 25px;
     font-weigth: bold;
     letter-spacing: 1.5px;

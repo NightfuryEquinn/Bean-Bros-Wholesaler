@@ -65,21 +65,51 @@
                 </div>
                 <div class="article-parallax-base">
                     <div class="article-container">
-                        <div class="article-title">
-                            <h2>Article Title</h2>
-                        </div>
-                        <div class="article-source">
-                            <div class="article-mention">
-                                <h4>Written By:</h4>
-                                <h4>Posted By: Admin</h4>
-                            </div>
-                            <div class="article-date">
-                                <h4>Date:</h4>
-                            </div>
-                        </div>
-                        <div class="article-content">
-                            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
-                        </div>
+
+                        <?php
+                            include("conn.php");
+                            $editID = $_GET["Coffeepedia_ID"];
+                            $editData = mysqli_query($con, "SELECT * FROM coffeepedia WHERE Coffeepedia_ID=$editID");
+                            $row = mysqli_fetch_assoc($editData);
+                        
+                            $displayArticle = '
+                            
+                                <div class="article-title">
+
+                                    <h2>Article Title</h2>
+
+                                </div>
+
+                                <div class="article-source">
+
+                                    <div class="article-mention">
+
+                                        <h4>Written By: '.$row["Author"].'</h4>
+
+                                        <h4>Posted By: Admin '.$row["Admin_ID"].'</h4>
+
+                                    </div>
+
+                                    <div class="article-date">
+
+                                        <h4>Date: '.$row["Written_Date"].'</h4>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="article-content">
+
+                                    <p>'.$row["Content"].'</p>
+
+                                </div>
+                                
+                            ';
+
+                            echo $displayArticle;
+                        
+                            mysqli_close($con);
+                        ?>
                     </div>
 
                     <!--Footer-->
