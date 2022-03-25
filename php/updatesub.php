@@ -1,7 +1,7 @@
 <?php
     include("conn.php");
 
-    $getCustomer = '2';
+    $getCustomer = $_SESSION['Customer_ID'];
 
     $getSub = mysqli_real_escape_string($con, $_POST['sub']);
 
@@ -13,6 +13,8 @@
 
     $updateSub = "UPDATE customer SET Subscription = '$getSub' WHERE Customer_ID = '$getCustomer';";
 
+    $updateSubQuery = mysqli_query($con, $updateSub);
+
     if($getSub == $row["Subscription"])
     {
         echo
@@ -23,12 +25,12 @@
     }
     else
     {
-        if(mysqli_query($con, $updateSub))
+        if($updateSubQuery)
         {
             echo
             '<script>
             alert("Subscription has changed. Bean Bros thanks for your support.");
-            window.location.href = "customerprofile.php";
+            
             </script>';
         }
         else
