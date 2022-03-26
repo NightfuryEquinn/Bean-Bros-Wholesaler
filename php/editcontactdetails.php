@@ -1,7 +1,9 @@
 <?php
     include("conn.php");
 
-    $selectCustomer = '2';
+    include("session.php");
+
+    $selectCustomer = $_SESSION['Customer_ID'];
 
     // Customer Info and Validation
     $company_contact = mysqli_real_escape_string($con, $_POST['company_contact']);
@@ -14,11 +16,14 @@
     $validate_company_contact = mysqli_query($con, $check_company_contact);
     $validate_personal_contact = mysqli_query($con, $check_personal_contact);
 
+    $row_Company = mysqli_fetch_assoc($validate_company_contact);
+    $row_Personal = mysqli_fetch_assoc($validate_personal_contact);
+
     $updateQuery = "UPDATE customer SET Company_Contact = '$company_contact', Personal_Contact = '$personal_contact' WHERE Customer_ID = '$selectCustomer'";
 
-    if(mysqli_num_rows($validate_company_contact) == 0)
+    if((mysqli_num_rows($validate_company_contact) == 0) && (mysqli_num_rows($validate_personal_contact) == 0))
     {
-        if(mysqli_num_rows($validate_personal_contact) == 0)
+        if(($company_contact != $row_Company["Company_Contact"]) || ($personal_contact != $row_Personal["Personal_Contact"]) )
         {
             if(mysqli_query($con, $updateQuery))
             {
@@ -41,7 +46,7 @@
         {
             echo
             '<script>
-            alert("Someone has registered an account with this contact number. Please provide a different contact number.");
+            alert("Both of your contact details are the same as previous. Please provide a different contact number.");
             window.location.href = "customerprofile.php";
             </script>';
         }

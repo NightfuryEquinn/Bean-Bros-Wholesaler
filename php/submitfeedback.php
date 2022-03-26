@@ -2,8 +2,11 @@
 // Connect to database
 include("conn.php");
 
+include("session.php");
+
 // Customer Info and Feedback and Date
 $customerID = $_SESSION['Customer_ID'];
+
 $feedback = mysqli_real_escape_string($con, $_POST['feedback']);
 $date = date('Y-m-d');
 
@@ -17,7 +20,7 @@ if($insert)
     echo
     '<script>
     alert("Feedback submitted. Thank you for your time.");
-    window.location.href = "feedback.php";
+    window.location.href = "customerprofile.php";
     </script>';
 }
 else
@@ -25,7 +28,7 @@ else
     echo
     '<script>
     alert("Failed to submit feedback. Please try again");
-    
+   
     </script>';
 }
 

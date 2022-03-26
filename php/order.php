@@ -1,7 +1,9 @@
 <?php
     include("conn.php");
 
-    $customerID = '2';
+    include("session.php");
+
+    $customerID = $_SESSION['Customer_ID'];
 
     $beanID = mysqli_real_escape_string($con, $_POST['coffee-bean']);
     $beanAmount = mysqli_real_escape_string($con, $_POST['amount']);
@@ -59,7 +61,7 @@
         echo 
         '<script>
         alert("Failed to make order. Please try again later.");
-        
+        window.location.href = "customerprofile.php";
         </script>';
     }
 

@@ -31,32 +31,36 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 
         if($findID)
         {
-            $fetchID = mysqli_fetch_assoc($findID);
+            $rowCount = mysqli_num_rows($findID);
         
-            if($result = mysqli_query($con, $getID))
+            if($rowCount == 1)
             {
-                $rowCount = mysqli_num_rows($result);
-            
-                if($rowCount == 1)
-                {
-                    session_start();
-                    $_SESSION['Customer_ID'] = $fetchID['Customer_ID'];
+                session_start();
+                $fetchID = mysqli_fetch_assoc($findID);
+                $_SESSION['Customer_ID'] = $fetchID['Customer_ID'];
 
-                    echo
-                    '<script>
-                    alert("Login successful. Welcome to Bean Bros!");
-                    window.location.href = "home.php";
-                    </script>';
-                }
-                else
-                {
-                    echo
-                    '<script>
-                    alert("Either username or password is incorrect. Please try again.");
-                    window.location.href = "signuploginforgot.php";
-                    </script>';
-                };
+                echo
+                '<script>
+                alert("Login successful. Welcome to Bean Bros!");
+                window.location.href = "home.php";
+                </script>';
+            }
+            else
+            {
+                echo
+                '<script>
+                alert("Either username or password is incorrect. Please try again.");
+                window.location.href = "signuploginforgot.php";
+                </script>';
             };
+        }
+        else
+        {
+            echo
+            '<script>
+            alert("SQL Localhost Error.");
+            window.location.href = "signuploginforgot.php";
+            </script>';
         };
     };
 };

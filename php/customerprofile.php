@@ -71,7 +71,7 @@
                     <div class="editable-personal-information">
 
                         <?php
-                            $getCustomerInfo = mysqli_query($con, "SELECT * FROM customer WHERE Customer_ID = $customerID;");
+                            $getCustomerInfo = mysqli_query($con, "SELECT * FROM customer WHERE Customer_ID = '$customerID';");
 
                             $row = mysqli_fetch_assoc($getCustomerInfo);
                         ?>
@@ -265,7 +265,7 @@
                             </tr>
 
                             <?php
-                                $history = mysqli_query($con, "SELECT * FROM customer_order WHERE Customer_ID = '$customerID' LIMIT 60;");
+                                $history = mysqli_query($con, "SELECT * FROM customer_order WHERE Customer_ID = '$customerID' ORDER BY Order_ID DESC LIMIT 60;");
 
                                 while($table = mysqli_fetch_assoc($history))
                                 {

@@ -1,4 +1,5 @@
 <?php
+    include("conn.php");
     include("session.php");
     $customerID = $_SESSION['Customer_ID'];
 ?>
@@ -83,8 +84,6 @@
                             </form>
 
                             <?php
-                                    include("conn.php");
-                                    
                                     $searchText = "";
 
                                     if(isset($_POST["search"]))

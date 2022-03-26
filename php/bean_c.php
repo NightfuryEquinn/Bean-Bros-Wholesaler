@@ -1,4 +1,5 @@
 <?php
+    include("conn.php");
     include("session.php");
     $customerID = $_SESSION['Customer_ID'];
 ?>
@@ -84,8 +85,6 @@
                                 </form>
 
                                 <?php
-                                    include("conn.php");
-                                    
                                     $searchBean = "";
 
                                     if(isset($_POST["search"]))
@@ -127,6 +126,8 @@
 
                                         echo $displayBean;                            
                                     };
+
+                                    mysqli_close($con);
                                 ?>
                             </div>
                         </div>

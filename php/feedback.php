@@ -1,7 +1,6 @@
 <?php
     include("conn.php");
     include("session.php");
-    $customerID = $_SESSION['Customer_ID'];
 ?>
 
 <!DOCTYPE html>
@@ -78,7 +77,7 @@
                             <h1>Feedback Form</h1>
                         </div>
                         <div class="feedback-form">
-                            <form action="submitfeedback.php" method="POST">
+                            <form method="POST" action="submitfeedback.php" >
                                 <textarea name="feedback" placeholder="Tell us your opinion about us and give us some feedback about our services... Max: 432 words" required rows="10" cols="100"></textarea>
                                 <input type="submit">
                             </form>
