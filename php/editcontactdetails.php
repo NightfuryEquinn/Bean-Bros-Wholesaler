@@ -21,32 +21,21 @@
 
     $updateQuery = "UPDATE customer SET Company_Contact = '$company_contact', Personal_Contact = '$personal_contact' WHERE Customer_ID = '$selectCustomer'";
 
-    if((mysqli_num_rows($validate_company_contact) == 0) && (mysqli_num_rows($validate_personal_contact) == 0))
+    if(($company_contact != $row_Company["Company_Contact"]) || ($personal_contact != $row_Personal["Personal_Contact"]))
     {
-        if(($company_contact != $row_Company["Company_Contact"]) || ($personal_contact != $row_Personal["Personal_Contact"]) )
+        if(mysqli_query($con, $updateQuery))
         {
-            if(mysqli_query($con, $updateQuery))
-            {
-                echo
-                '<script>
-                alert("Contact details changed successfully. If you wish to change username/password, please kindly proceed to Log In page.");
-                window.location.href = "customerprofile.php";
-                </script>';
-            }
-            else
-            {
-                echo
-                '<script>
-                alert("Failed to change contact details. Please try again.");
-                window.location.href = "customerprofile.php";
-                </script>';
-            }
+            echo
+            '<script>
+            alert("Contact details changed successfully. If you wish to change username/password, please kindly proceed to Log In page.");
+            window.location.href = "customerprofile.php";
+            </script>';
         }
         else
         {
             echo
             '<script>
-            alert("Both of your contact details are the same as previous. Please provide a different contact number.");
+            alert("Failed to change contact details. Please try again.");
             window.location.href = "customerprofile.php";
             </script>';
         }
@@ -55,7 +44,7 @@
     {
         echo
         '<script>
-        alert("Someone has registered an account with this contact number. Please provide a different contact number.");
+        alert("Both of your contact details are the same as previous. Please provide a different contact number.");
         window.location.href = "customerprofile.php";
         </script>';
     }
