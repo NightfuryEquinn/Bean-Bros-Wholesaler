@@ -127,7 +127,7 @@
                             <div class="profitable">
                                 
                                 <?php
-                                    $mostProfit = mysqli_query($con, "SELECT co.Coffee_Bean, SUM(co.Total) AS Profit, b.Coffee_Bean_Image FROM coffee_bean b, customer_order co WHERE co.Order_Date LIKE '%$selectMonth%' GROUP BY co.Coffee_Bean, b.Coffee_Bean_Image ORDER BY Profit DESC LIMIT 1;");
+                                    $mostProfit = mysqli_query($con, "SELECT co.Coffee_Bean, SUM(co.Total) AS Profit, b.Coffee_Bean_Image FROM coffee_bean b, customer_order co WHERE co.Bean_ID = b.Bean_ID AND co.Order_Date LIKE '%$selectMonth%' GROUP BY co.Coffee_Bean ORDER BY Profit DESC LIMIT 1;");
 
                                     $rowProfit = mysqli_fetch_assoc($mostProfit);
 
@@ -160,7 +160,7 @@
 
                             <div class="popular">
                                 <?php
-                                    $mostPopular = mysqli_query($con, "SELECT co.Coffee_Bean, COUNT(co.Coffee_Bean) AS Popular, b.Coffee_Bean_Image FROM coffee_bean b, customer_order co WHERE co.Order_Date LIKE '%$selectMonth%' GROUP BY co.Coffee_Bean, b.Coffee_Bean_Image ORDER BY Popular DESC LIMIT 1;");
+                                    $mostPopular = mysqli_query($con, "SELECT co.Coffee_Bean, COUNT(co.Coffee_Bean) AS Popular, b.Coffee_Bean_Image FROM coffee_bean b, customer_order co WHERE co.Bean_ID = b.Bean_ID AND co.Order_Date LIKE '%$selectMonth%' GROUP BY co.Coffee_Bean ORDER BY Popular DESC LIMIT 1;");
 
                                     $rowPopular = mysqli_fetch_assoc($mostPopular);
                                 
@@ -168,7 +168,7 @@
 
                                         <div class="image">
 
-                                            <img src="data:image/jpg;base64, '.base64_encode($rowProfit["Coffee_Bean_Image"]).'">
+                                            <img src="data:image/jpg;base64, '.base64_encode($rowPopular["Coffee_Bean_Image"]).'">
 
                                         </div>
 
@@ -192,7 +192,7 @@
 
                             <div class="most-spent">
                                 <?php
-                                    $mostSpent = mysqli_query($con, "SELECT c.Username, c.Email, SUM(co.Total) AS Spent FROM customer c, customer_order co WHERE co.Order_Date LIKE '%$selectMonth%' GROUP BY c.Customer_ID ORDER BY Spent DESC LIMIT 1;");
+                                    $mostSpent = mysqli_query($con, "SELECT c.Username, c.Email, SUM(co.Total) AS Spent FROM customer c, customer_order co WHERE co.Customer_ID = c.Customer_ID AND co.Order_Date LIKE '%$selectMonth%' GROUP BY c.Customer_ID ORDER BY Spent DESC LIMIT 1");
 
                                     $rowSpent = mysqli_fetch_assoc($mostSpent);
                                 
@@ -220,7 +220,7 @@
 
                             <div class="most-order">
                                 <?php
-                                    $mostOrder = mysqli_query($con, "SELECT c.Username, c.Email, COUNT(co.Customer_ID) AS MostOrder FROM customer c, customer_order co WHERE co.Order_Date LIKE '%$selectMonth%' GROUP BY c.Customer_ID ORDER BY MostOrder DESC LIMIT 1;");
+                                    $mostOrder = mysqli_query($con, "SELECT c.Username, c.Email, COUNT(co.Customer_ID) AS MostOrder FROM customer c, customer_order co WHERE co.Customer_ID = c.Customer_ID AND co.Order_Date LIKE '%$selectMonth%' GROUP BY c.Customer_ID ORDER BY MostOrder DESC LIMIT 1;");
 
                                     $rowOrder = mysqli_fetch_assoc($mostOrder);
                                 

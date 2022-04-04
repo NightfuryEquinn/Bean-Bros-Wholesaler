@@ -84,7 +84,7 @@
                             
                                 <div class="article-title">
 
-                                    <h2>Article Title</h2>
+                                    <h2>'.$row["Title"].'</h2>
 
                                 </div>
 
