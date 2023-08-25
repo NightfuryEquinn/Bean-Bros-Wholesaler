@@ -1,8 +1,4 @@
-# Bean-Bros-Wholesaler-Website
-## Diploma Final Year Project Assignment with Kishanraj a/ K.Alagayah, Marcus Ong Jin Rong, and Ong Lit Tsen
+# ☕️ Bean-Bros-Wholesaler-Website
+## Team Members: Yip Zi Xian, Kishanraj a/ K.Alagayah, Marcus Ong Jin Rong, Ong Lit Tsen
 
-Written in HTML, CSS, JavaScript, PHP, and MySQL. 
-Installation Guide and User Manual are pprovided as mentioned in our university assignment.
-
-The purpose of GitHub upload is to display our project to the public.
-Feel free to take a look. 
+It only works using WampServer and a database is present to store all information regarding our online pet shop.
